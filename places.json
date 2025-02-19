@@ -37,7 +37,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/pendzer_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["specialty_coffee", "pets_allowed"]
+        "attributes": ["specialty", "pets_allowed"]
     },
     {
         "name": "Kafetea",
