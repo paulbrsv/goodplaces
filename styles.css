@@ -47,9 +47,14 @@ h1 {
     color: #333; /* Белый текст */
 }
 
-.filter:hover {
-    background-color: #e0e0e0;  /* Легкий фон при наведении */
-}
+/*.filter:hover {
+    background-color: #e0e0e0;   Легкий фон при наведении*/
+/*}
+
+.filter:focus {
+    background-color: #ADD8E6;  /*Тот же активный фон при фокусе */
+/*    color: #333; /*Тот же цвет текста
+}*/
 
 #sidebar {
     width: 320px;

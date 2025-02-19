@@ -54,40 +54,30 @@
     };
 
     document.querySelectorAll('.filter').forEach(filter => {
-    // Добавляем класс hover при наведении мыши
-    filter.addEventListener('mouseenter', () => {
-        filter.style.backgroundColor = '#e0e0e0';  // Цвет при наведении
-    });
+      filter.addEventListener('click', () => {
+          const filterId = filter.dataset.filter;
 
-    // Убираем класс hover при уходе мыши
-    filter.addEventListener('mouseleave', () => {
-        filter.style.backgroundColor = '';  // Сбрасываем цвет
-    });
+          // Если фильтр уже активен, удаляем его
+          if (activeFilters.includes(filterId)) {
+              activeFilters = activeFilters.filter(f => f !== filterId);
+              filter.classList.remove('active');
+          } else {
+              // Если фильтр не активен, добавляем его
+              activeFilters.push(filterId);
+              filter.classList.add('active');
+          }
 
-    // Обработчик клика
-    filter.addEventListener('click', () => {
-        const filterId = filter.dataset.filter;
+          // Снимаем фокус с кнопки и задержка перед снятием состояния hover
+          filter.blur();
 
-        // Если фильтр уже активен, удаляем его
-        if (activeFilters.includes(filterId)) {
-            activeFilters = activeFilters.filter(f => f !== filterId);
-            filter.classList.remove('active');
-        } else {
-            // Если фильтр не активен, добавляем его
-            activeFilters.push(filterId);
-            filter.classList.add('active');
-        }
+          // Немного ждем перед сбросом hover
+          setTimeout(() => {
+              filter.classList.remove('hover'); // Убираем класс hover после клика
+          }, 10);
 
-        // Снимаем фокус с кнопки
-        filter.blur();
-
-        // Убираем стиль hover сразу после клика
-        filter.style.backgroundColor = '';  // Снимаем цвет hover
-
-        updateMap();
-    });
-});
-
+          updateMap();
+      });
+  });
 
 
 
