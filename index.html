@@ -14,24 +14,23 @@
     <div id="map"></div>
     <script>
         // Инициализация карты
-        var map = L.map('map').setView([55.751244, 37.618423], 12); // Координаты Москвы
+        var map = L.map('map').setView([55.751244, 37.618423], 12);
 
-        // Добавляем слой карты OpenStreetMap
+        // Добавляем OpenStreetMap слой
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Данные о местах (можно вынести в отдельный JSON-файл)
-        var places = [
-            { "name": "Кофейня 1", "lat": 55.76, "lng": 37.62, "link": "https://example.com" },
-            { "name": "Кофейня 2", "lat": 55.75, "lng": 37.61, "link": "https://example.com" }
-        ];
-
-        // Добавляем метки на карту
-        places.forEach(place => {
-            L.marker([place.lat, place.lng]).addTo(map)
-                .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
-        });
+        // Загружаем данные из places.json
+        fetch('places.json')
+            .then(response => response.json())
+            .then(places => {
+                places.forEach(place => {
+                    L.marker([place.lat, place.lng]).addTo(map)
+                        .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
+                });
+            })
+            .catch(error => console.error('Ошибка загрузки данных:', error));
     </script>
 </body>
 </html>
