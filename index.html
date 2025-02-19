@@ -45,6 +45,14 @@
     var placesData = [];
     let activeFilters = [];
 
+    // Объект с названиями атрибутов
+    const attributeNames = {
+        "specialty": "Спешелти кофе",
+        "desserts": "Десерты",
+        "no_smoking": "Не курят",
+        "pets_allowed": "Можно с животными"
+    };
+
     document.querySelectorAll('.filter').forEach(filter => {
         filter.addEventListener('click', () => {
             const filterId = filter.dataset.filter;
@@ -72,13 +80,16 @@
         markers = [];
 
         filteredPlaces.forEach(place => {
+            // Заменяем ID атрибутов на их названия
+            const attributeLabels = place.attributes.map(attr => attributeNames[attr] || attr).join(' | ');
+
             const popupContent = `
                 <div class="popup-content">
                     <img src="${place.image}" alt="${place.name}">
                     <div class="popup-text">
                         <h3>${place.name}</h3>
                         <p>${place.description}</p>
-                        <div class="popup-attributes">${place.attributes.join(' | ')}</div>
+                        <div class="popup-attributes">${attributeLabels}</div>
                         <div class="popup-links">
                             <a href="${place.link}" target="_blank">🌐 Сайт</a>
                             <a href="${place.instagram}" target="_blank">📸 Instagram</a>
@@ -140,6 +151,7 @@
         return place.attributes.some(attr => activeFilters.includes(attr));
     })));
 </script>
+
 
 </body>
 </html>
