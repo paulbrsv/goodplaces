@@ -7,7 +7,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/izlet_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["☕ Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["specialty_coffee", "desserts", "no-smoking", "pets-allowed"]
     },
     {
         "name": "Zenit",
@@ -17,7 +17,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/zenit_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["specialty_coffee", "no-smoking", "pets-allowed"]
     },
     {
         "name": "Urbano",
@@ -27,7 +27,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/urbano_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["desserts", "no-smoking"]
     },
     {
         "name": "Pendzer",
@@ -37,7 +37,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/pendzer_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["specialty_coffee", "pets-allowed"]
     },
     {
         "name": "Kafetea",
@@ -47,7 +47,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/kafetea_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["specialty_coffee", "desserts", "no-smoking", "pets-allowed"]
     },
     {
         "name": "Block 32",
@@ -57,6 +57,6 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/block32_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["specialty_coffee", "desserts", "no-smoking", "pets-allowed"]
     }
 ]

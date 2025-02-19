@@ -13,10 +13,10 @@
 <header>
     <h1>GOOD PLACES</h1>
     <div class="filters">
-        <span class="filter">☕ Спешелти кофе</span>
-        <span class="filter">🍰 Десерты</span>
-        <span class="filter">🚭 Не курят</span>
-        <span class="filter">🐾 Можно с животными</span>
+        <span class="filter" data-id="specialty">☕ Спешелти кофе</span>
+        <span class="filter" data-id="desserts">🍰 Десерты</span>
+        <span class="filter" data-id="no-smoking">🚭 Не курят</span>
+        <span class="filter" data-id="pets-allowed">🐾 Можно с животными</span>
     </div>
 </header>
 
@@ -47,12 +47,12 @@
 
     document.querySelectorAll('.filter').forEach(filter => {
         filter.addEventListener('click', () => {
-            const filterText = filter.innerText.trim();
-            if (activeFilters.includes(filterText)) {
-                activeFilters = activeFilters.filter(f => f !== filterText);
+            const filterId = filter.getAttribute('data-id');
+            if (activeFilters.includes(filterId)) {
+                activeFilters = activeFilters.filter(f => f !== filterId);
                 filter.style.color = "#333";
             } else {
-                activeFilters.push(filterText);
+                activeFilters.push(filterId);
                 filter.style.color = "#007BFF";
             }
             updateMap();
@@ -75,7 +75,7 @@
                     <div class="popup-text">
                         <h3>${place.name}</h3>
                         <p>${place.description}</p>
-                        <div class="popup-attributes">${place.attributes.join(' | ')}</div>
+                        <div class="popup-attributes">${place.attributes.map(attr => `#${attr}`).join(' | ')}</div>
                         <div class="popup-links">
                             <a href="${place.link}" target="_blank">🌐 Сайт</a>
                             <a href="${place.instagram}" target="_blank">📸 Instagram</a>
@@ -97,6 +97,7 @@
     function updateSidebar(filteredPlaces) {
         const visibleList = document.getElementById("visible-places");
         const outsideList = document.getElementById("outside-places");
+
         visibleList.innerHTML = "";
         outsideList.innerHTML = "";
 
@@ -114,7 +115,7 @@
             placeElement.onclick = () => {
                 map.setView([place.lat, place.lng], 16, { animate: true });
                 setTimeout(() => {
-                    markers.find(m => m.placeName === place.name)?.openPopup();
+                    markers.find(m => m.placeName === place.name).openPopup();
                 }, 300);
             };
 
@@ -134,7 +135,7 @@
         })
         .catch(error => console.error('Ошибка загрузки данных:', error));
 
-    map.on('moveend', () => updateSidebar(placesData));
+    map.on('moveend', updateMap);
 </script>
 
 </body>
