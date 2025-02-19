@@ -10,15 +10,15 @@
 </head>
 <body>
 
-<header>
-    <h1>GOOD PLACES</h1>
-    <div class="filters">
-        <span class="filter">☕ Спешелти кофе</span>
-        <span class="filter">🍰 Десерты</span>
-        <span class="filter">🚭 Не курят</span>
-        <span class="filter">🐾 Можно с животными</span>
-    </div>
-</header>
+  <header>
+      <h1>GOOD PLACES</h1>
+      <div class="filters">
+          <span class="filter">☕ Спешелти кофе</span>
+          <span class="filter">🍰 Десерты</span>
+          <span class="filter">🚭 Не курят</span>
+          <span class="filter">🐾 Можно с животными</span>
+      </div>
+  </header>
 
 <div id="sidebar">
     <h2>Кофейни</h2>
@@ -62,7 +62,7 @@
     function updateMap() {
         const filteredPlaces = placesData.filter(place => {
             if (activeFilters.length === 0) return true;
-            return activeFilters.every(filter => place.attributes.includes(filter));
+            return activeFilters.some(filter => place.attributes.includes(filter));
         });
 
         markers.forEach(marker => marker.remove());
@@ -131,11 +131,33 @@
         .then(response => response.json())
         .then(data => {
             placesData = data;
-            updateMap();
+            data.forEach(place => {
+                var popupContent = `
+                    <div class="popup-content">
+                        <img src="${place.image}" alt="${place.name}">
+                        <div class="popup-text">
+                            <h3>${place.name}</h3>
+                            <p>${place.description}</p>
+                            <div class="popup-attributes">${place.attributes.join(' | ')}</div>
+                            <div class="popup-links">
+                                <a href="${place.link}" target="_blank">🌐 Сайт</a>
+                                <a href="${place.instagram}" target="_blank">📸 Instagram</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                var marker = L.marker([place.lat, place.lng])
+                    .addTo(map)
+                    .bindPopup(popupContent);
+                marker.placeName = place.name;
+                markers.push(marker);
+            });
+            updateSidebar();
         })
         .catch(error => console.error('Ошибка загрузки данных:', error));
 
-    map.on('moveend', () => updateSidebar(placesData));
+    map.on('moveend', updateSidebar);
 </script>
 
 </body>
