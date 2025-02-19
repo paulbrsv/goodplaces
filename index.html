@@ -14,7 +14,6 @@
             font-family: Arial, sans-serif;
             display: flex;
             height: 100vh;
-            flex-direction: column;
         }
 
         header {
@@ -70,7 +69,7 @@
 
         #map {
             flex: 1;
-            height: 100%; /* Снимаем лишний отступ перед футером */
+            height: calc(100vh - 60px); /* Карта занимает остальную часть экрана */
             margin-left: 320px; /* Отступ слева для боковой панели */
             position: relative;
             z-index: 0; /* Убедимся, что карта ниже по слою, чем header и боковая панель */
