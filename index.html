@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <style>
         body {
-            display: flex;
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh; /* Обеспечиваем полное использование высоты */
+            flex-direction: row;
         }
 
         header {
@@ -51,21 +53,24 @@
         }
 
         #sidebar, #map {
-            margin-top: 60px; /* Смещение вниз, чтобы не залезало под header */
+            margin-top: 60px; /* Отступ от header */
         }
 
         #sidebar {
             width: 320px;
-            height: 100vh;
+            height: calc(100vh - 60px); /* Высота учитывает header */
             overflow-y: auto;
             padding: 10px;
             background: #f8f8f8;
             border-right: 1px solid #ddd;
+            position: sticky;
+            top: 60px; /* Фиксируем боковую панель */
         }
         #map {
             flex: 1;
-            height: 100vh;
+            height: calc(100vh - 60px); /* Высота карты с учетом header */
         }
+
         h2, h3 {
             margin: 10px 0;
             font-size: 16px;
@@ -101,7 +106,8 @@
             font-size: 12px;
             color: #555;
         }
-        /* Увеличиваем ширину всего попапа */
+
+        /* Увеличиваем ширину попапа */
         .leaflet-popup-content-wrapper {
             max-width: 500px !important; /* Ширина белого фона */
             width: 500px !important;
