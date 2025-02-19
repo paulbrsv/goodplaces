@@ -42,18 +42,19 @@
     <div id="map"></div>
 
     <script>
-        var map = L.map('map').setView([45.255, 19.844], 12);
+        var map = L.map('map'); // Создаем карту без начальных координат
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        var placesData = []; // Сохраняем загруженные кофейни
-        var markers = []; // Сохраняем маркеры для управления ими
+        var placesData = [];
+        var markers = [];
 
         function updatePlacesList() {
             var placesList = document.getElementById('places-list');
             placesList.innerHTML = ''; // Очищаем список
-            
+
             var bounds = map.getBounds(); // Получаем текущие границы карты
             var visiblePlaces = placesData.filter(place => 
                 bounds.contains([place.lat, place.lng])
@@ -79,19 +80,22 @@
             .then(response => response.json())
             .then(places => {
                 placesData = places;
+                var bounds = L.latLngBounds(places.map(p => [p.lat, p.lng])); 
+                map.fitBounds(bounds); // 📌 Авто-зум на все кофейни
+
                 places.forEach(place => {
                     var marker = L.marker([place.lat, place.lng]).addTo(map)
                         .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
                     
-                    place.marker = marker; // Сохраняем маркер в объекте места
+                    place.marker = marker;
                     markers.push(marker);
                 });
 
-                updatePlacesList(); // Обновляем список сразу после загрузки
+                updatePlacesList();
             })
             .catch(error => console.error('Ошибка загрузки данных:', error));
 
-        map.on('moveend', updatePlacesList); // Обновляем список при перемещении карты
+        map.on('moveend', updatePlacesList);
     </script>
 </body>
 </html>
