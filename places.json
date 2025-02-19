@@ -7,7 +7,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/izlet_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
+        "attributes": ["☕ Спешелти кофе", "Десерты", "Не курят"]
     },
     {
         "name": "Zenit",
