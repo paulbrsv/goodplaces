@@ -47,30 +47,51 @@
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        fetch('places.json')
-            .then(response => response.json())
-            .then(places => {
-                var placesList = document.getElementById('places-list');
-                placesList.innerHTML = ''; // Очищаем "Загрузка..."
-                
-                places.forEach(place => {
-                    // Создаём маркер на карте
-                    var marker = L.marker([place.lat, place.lng]).addTo(map)
-                        .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
+        var placesData = []; // Сохраняем загруженные кофейни
+        var markers = []; // Сохраняем маркеры для управления ими
 
-                    // Добавляем кофейню в список
+        function updatePlacesList() {
+            var placesList = document.getElementById('places-list');
+            placesList.innerHTML = ''; // Очищаем список
+            
+            var bounds = map.getBounds(); // Получаем текущие границы карты
+            var visiblePlaces = placesData.filter(place => 
+                bounds.contains([place.lat, place.lng])
+            );
+
+            if (visiblePlaces.length === 0) {
+                placesList.innerHTML = '<p>Нет кофеен в этой области</p>';
+            } else {
+                visiblePlaces.forEach(place => {
                     var placeItem = document.createElement('div');
                     placeItem.className = 'place';
                     placeItem.innerHTML = `<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`;
                     placeItem.onclick = () => {
-                        map.setView([place.lat, place.lng], 14); // При клике на список — приближаем к маркеру
-                        marker.openPopup(); // Открываем всплывающее окно
+                        map.setView([place.lat, place.lng], 14);
+                        place.marker.openPopup();
                     };
-
                     placesList.appendChild(placeItem);
                 });
+            }
+        }
+
+        fetch('places.json')
+            .then(response => response.json())
+            .then(places => {
+                placesData = places;
+                places.forEach(place => {
+                    var marker = L.marker([place.lat, place.lng]).addTo(map)
+                        .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
+                    
+                    place.marker = marker; // Сохраняем маркер в объекте места
+                    markers.push(marker);
+                });
+
+                updatePlacesList(); // Обновляем список сразу после загрузки
             })
             .catch(error => console.error('Ошибка загрузки данных:', error));
+
+        map.on('moveend', updatePlacesList); // Обновляем список при перемещении карты
     </script>
 </body>
 </html>
