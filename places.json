@@ -1,8 +1,50 @@
 [
-    { "name": "Izlet", "lat": 45.25, "lng": 19.85, "link": "https://example.com" },
-    { "name": "Zenit", "lat": 45.2570, "lng": 19.8426, "link": "https://example.com" },
-    { "name": "Urbano", "lat": 45.2487, "lng": 19.8329, "link": "https://example.com" },
-    { "name": "Pendzer", "lat": 45.2608, "lng": 19.8198, "link": "https://example.com" },
-    { "name": "Kafetea", "lat": 45.2616, "lng": 19.8520, "link": "https://example.com" },
-    { "name": "Block 32", "lat": 45.2605, "lng": 19.8302, "link": "https://example.com" }
+    {
+        "name": "Izlet",
+        "lat": 45.25,
+        "lng": 19.85,
+        "description": "Уютное место с атмосферой путешествий и отличным спешелти кофе.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/izlet_coffee"
+    },
+    {
+        "name": "Zenit",
+        "lat": 45.2570,
+        "lng": 19.8426,
+        "description": "Современная кофейня с авторскими напитками и десертами.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/zenit_coffee"
+    },
+    {
+        "name": "Urbano",
+        "lat": 45.2487,
+        "lng": 19.8329,
+        "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/urbano_coffee"
+    },
+    {
+        "name": "Pendzer",
+        "lat": 45.2608,
+        "lng": 19.8198,
+        "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/pendzer_coffee"
+    },
+    {
+        "name": "Kafetea",
+        "lat": 45.2616,
+        "lng": 19.8520,
+        "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/kafetea_coffee"
+    },
+    {
+        "name": "Block 32",
+        "lat": 45.2605,
+        "lng": 19.8302,
+        "description": "Современный кофейный бар с минималистичным интерьером.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/block32_coffee"
+    }
 ]
