@@ -10,15 +10,15 @@
 </head>
 <body>
 
-  <header>
-      <h1>GOOD PLACES</h1>
-      <div class="filters">
-          <span class="filter">☕ Спешелти кофе</span>
-          <span class="filter">🍰 Десерты</span>
-          <span class="filter">🚭 Не курят</span>
-          <span class="filter">🐾 Можно с животными</span>
-      </div>
-  </header>
+<header>
+    <h1>GOOD PLACES</h1>
+    <div class="filters">
+        <span class="filter">☕ Спешелти кофе</span>
+        <span class="filter">🍰 Десерты</span>
+        <span class="filter">🚭 Не курят</span>
+        <span class="filter">🐾 Можно с животными</span>
+    </div>
+</header>
 
 <div id="sidebar">
     <h2>Кофейни</h2>
@@ -97,7 +97,6 @@
     function updateSidebar(filteredPlaces) {
         const visibleList = document.getElementById("visible-places");
         const outsideList = document.getElementById("outside-places");
-
         visibleList.innerHTML = "";
         outsideList.innerHTML = "";
 
@@ -115,7 +114,7 @@
             placeElement.onclick = () => {
                 map.setView([place.lat, place.lng], 16, { animate: true });
                 setTimeout(() => {
-                    markers.find(m => m.placeName === place.name).openPopup();
+                    markers.find(m => m.placeName === place.name)?.openPopup();
                 }, 300);
             };
 
@@ -128,41 +127,14 @@
     }
 
     fetch('places.json')
-    .then(response => response.json())
-    .then(data => {
-        placesData = data;
-        data.forEach(place => {
-            var popupContent = `
-                <div class="popup-content">
-                    <img src="${place.image}" alt="${place.name}">
-                    <div class="popup-text">
-                        <h3>${place.name}</h3>
-                        <p>${place.description}</p>
-                        <div class="popup-attributes">☕ Спешелти кофе | 🍰 Десерты | 🚭 Не курят</div>
-                        <div class="popup-links">
-                            <a href="${place.link}" target="_blank">🌐 Сайт</a>
-                            <a href="${place.instagram}" target="_blank">📸 Instagram</a>
-                            <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            var marker = L.marker([place.lat, place.lng])
-                .addTo(map)
-                .bindPopup(popupContent);
-            marker.placeName = place.name;
-            markers.push(marker);
-        });
+        .then(response => response.json())
+        .then(data => {
+            placesData = data;
+            updateMap();
+        })
+        .catch(error => console.error('Ошибка загрузки данных:', error));
 
-        updateSidebar(); // ✅ Гарантируем, что список мест загрузится сразу
-    })
-    .catch(error => console.error('Ошибка загрузки данных:', error));
-
-// ✅ Добавляем обновление боковой панели при движении карты
-map.on('moveend', function () {
-    updateSidebar();
-});
-
+    map.on('moveend', () => updateSidebar(placesData));
 </script>
 
 </body>
