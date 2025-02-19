@@ -23,6 +23,13 @@
             flex: 1;
             height: 100vh;
         }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .place-list {
+            margin-bottom: 20px;
+        }
         .place {
             display: flex;
             align-items: center;
@@ -91,7 +98,14 @@
 
 <div id="sidebar">
     <h2>Кофейни</h2>
-    <div id="places-list"></div>
+    <div class="place-list">
+        <h3>📍 В этом районе</h3>
+        <div id="visible-places"></div>
+    </div>
+    <div class="place-list">
+        <h3>🌍 За пределами видимой области</h3>
+        <div id="outside-places"></div>
+    </div>
 </div>
 
 <div id="map"></div>
@@ -108,25 +122,30 @@
 
     function updateSidebar() {
         var bounds = map.getBounds();
-        var list = document.getElementById("places-list");
-        list.innerHTML = "";
+        var visibleList = document.getElementById("visible-places");
+        var outsideList = document.getElementById("outside-places");
+        visibleList.innerHTML = "";
+        outsideList.innerHTML = "";
 
         placesData.forEach(place => {
+            var placeElement = document.createElement("div");
+            placeElement.className = "place";
+            placeElement.innerHTML = `
+                <img src="${place.image}" alt="${place.name}">
+                <div class="place-info">
+                    <h3>${place.name}</h3>
+                    <p>${place.description}</p>
+                </div>
+            `;
+            placeElement.onclick = () => {
+                map.setView([place.lat, place.lng], 16);
+                markers.find(m => m.placeName === place.name).openPopup();
+            };
+
             if (bounds.contains([place.lat, place.lng])) {
-                var placeElement = document.createElement("div");
-                placeElement.className = "place";
-                placeElement.innerHTML = `
-                    <img src="${place.image}" alt="${place.name}">
-                    <div class="place-info">
-                        <h3>${place.name}</h3>
-                        <p>${place.description}</p>
-                    </div>
-                `;
-                placeElement.onclick = () => {
-                    map.setView([place.lat, place.lng], 16);
-                    markers.find(m => m.placeName === place.name).openPopup();
-                };
-                list.appendChild(placeElement);
+                visibleList.appendChild(placeElement);
+            } else {
+                outsideList.appendChild(placeElement);
             }
         });
     }
