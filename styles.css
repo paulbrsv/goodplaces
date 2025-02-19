@@ -29,7 +29,7 @@ h1 {
 
 .filters {
     display: flex;
-    gap: 15px;
+    gap: 5px;
     margin-top: 5px;
 }
 
@@ -37,11 +37,18 @@ h1 {
     font-size: 14px;
     cursor: pointer;
     color: #333;
-    transition: color 0.2s;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 8px 4px;
+    border-radius: 9px;
+}
+
+.filter.active {
+    background-color: #ADD8E6; /* Голубой фон */
+    color: #333; /* Белый текст */
 }
 
 .filter:hover {
-    color: #007BFF;
+    background-color: #e0e0e0;  /* Легкий фон при наведении */
 }
 
 #sidebar {

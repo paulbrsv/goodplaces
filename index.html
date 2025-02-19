@@ -53,34 +53,34 @@
         "pets_allowed": "🐾 Можно с животными"
     };
 
+    // Добавление слушателей для фильтров
     document.querySelectorAll('.filter').forEach(filter => {
         filter.addEventListener('click', () => {
             const filterId = filter.dataset.filter;
             if (activeFilters.includes(filterId)) {
                 activeFilters = activeFilters.filter(f => f !== filterId);
-                filter.style.color = "#333";
+                filter.classList.remove('active');  // Убираем активный класс
             } else {
                 activeFilters.push(filterId);
-                filter.style.color = "#007BFF";
+                filter.classList.add('active');  // Добавляем активный класс
             }
-            console.log('Active Filters:', activeFilters); // Добавлен вывод активных фильтров
             updateMap();
         });
     });
 
+    // Функция обновления карты
     function updateMap() {
         const filteredPlaces = placesData.filter(place => {
             if (activeFilters.length === 0) return true;
             return place.attributes.some(attr => activeFilters.includes(attr));
         });
 
-        console.log('Filtered Places:', filteredPlaces); // Добавлен вывод отфильтрованных данных
+        console.log('Filtered Places:', filteredPlaces); // Для отладки
 
         markers.forEach(marker => marker.remove());
         markers = [];
 
         filteredPlaces.forEach(place => {
-            // Заменяем ID атрибутов на их названия
             const attributeLabels = place.attributes.map(attr => attributeNames[attr] || attr).join(' | ');
 
             const popupContent = `
@@ -107,6 +107,7 @@
         updateSidebar(filteredPlaces);
     }
 
+    // Функция обновления боковой панели
     function updateSidebar(filteredPlaces) {
         const visibleList = document.getElementById("visible-places");
         const outsideList = document.getElementById("outside-places");
@@ -138,6 +139,7 @@
         });
     }
 
+    // Загрузка данных из файла
     fetch('places.json')
         .then(response => response.json())
         .then(data => {
@@ -146,12 +148,12 @@
         })
         .catch(error => console.error('Ошибка загрузки данных:', error));
 
+    // Обработчик события при изменении области карты
     map.on('moveend', () => updateSidebar(placesData.filter(place => {
         if (activeFilters.length === 0) return true;
         return place.attributes.some(attr => activeFilters.includes(attr));
     })));
 </script>
-
 
 </body>
 </html>
