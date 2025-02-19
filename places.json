@@ -6,7 +6,7 @@
         "description": "Уютное место с атмосферой путешествий и отличным спешелти кофе.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/izlet_coffee",
-        "image": "https://example.com/images/izlet.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
     },
     {
         "name": "Zenit",
@@ -15,7 +15,7 @@
         "description": "Современная кофейня с авторскими напитками и десертами.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/zenit_coffee",
-        "image": "https://example.com/images/zenit.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
     },
     {
         "name": "Urbano",
@@ -24,7 +24,7 @@
         "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/urbano_coffee",
-        "image": "https://example.com/images/urbano.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
     },
     {
         "name": "Pendzer",
@@ -33,7 +33,7 @@
         "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/pendzer_coffee",
-        "image": "https://example.com/images/pendzer.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
     },
     {
         "name": "Kafetea",
@@ -42,7 +42,7 @@
         "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/kafetea_coffee",
-        "image": "https://example.com/images/kafetea.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
     },
     {
         "name": "Block 32",
@@ -51,6 +51,6 @@
         "description": "Современный кофейный бар с минималистичным интерьером.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/block32_coffee",
-        "image": "https://example.com/images/block32.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
     }
 ]
