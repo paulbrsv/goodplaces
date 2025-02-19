@@ -6,7 +6,8 @@
         "description": "Уютное место с атмосферой путешествий и отличным спешелти кофе.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/izlet_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
     },
     {
         "name": "Zenit",
@@ -15,7 +16,8 @@
         "description": "Современная кофейня с авторскими напитками и десертами.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/zenit_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
     },
     {
         "name": "Urbano",
@@ -24,7 +26,8 @@
         "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/urbano_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
     },
     {
         "name": "Pendzer",
@@ -33,7 +36,8 @@
         "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/pendzer_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
     },
     {
         "name": "Kafetea",
@@ -42,7 +46,8 @@
         "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/kafetea_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
     },
     {
         "name": "Block 32",
@@ -51,6 +56,7 @@
         "description": "Современный кофейный бар с минималистичным интерьером.",
         "link": "https://example.com",
         "instagram": "https://instagram.com/block32_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg"
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["Спешелти кофе", "Десерты", "Не курят"]
     }
 ]
