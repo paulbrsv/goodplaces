@@ -63,12 +63,19 @@
             padding: 10px;
             background: #f8f8f8;
             border-right: 1px solid #ddd;
-            position: sticky;
+            position: fixed;
             top: 60px; /* Фиксируем боковую панель */
+            left: 0; /* Прикрепляем к левому краю */
+            z-index: 500;
         }
         #map {
             flex: 1;
             height: calc(100vh - 60px); /* Высота карты с учетом header */
+            position: fixed;
+            top: 60px; /* Фиксируем карту */
+            left: 320px; /* Делаем отступ, чтобы карта не перекрывала боковую панель */
+            right: 0;
+            z-index: 400;
         }
 
         h2, h3 {
