@@ -58,59 +58,78 @@
             font-size: 12px;
             color: #555;
         }
-        /* Попап */
-        .popup-content {
-    display: flex;
-    align-items: center;
-    max-width: 450px; /* Увеличили ширину */
-}
+        /* Увеличиваем ширину всего попапа */
+  .leaflet-popup-content-wrapper {
+      max-width: 450px !important; /* Ширина белого фона */
+      width: 450px !important;
+  }
 
-.popup-content img {
-    width: 140px; /* Увеличили фото */
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 10px;
-}
+  .leaflet-popup-content {
+      max-width: 450px !important; /* Ширина содержимого */
+      width: 450px !important;
+  }
 
-.popup-text {
-    flex: 1;
-    min-width: 0;
-}
+  /* Контент попапа */
+  .popup-content {
+      display: flex;
+      align-items: center;
+      width: 100%; /* Растягиваем на всю ширину */
+  }
 
-.popup-text h3 {
-    margin: 0 0 5px;
-    font-size: 16px;
-}
+  /* Картинка в попапе */
+  .popup-content img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 10px;
+  }
 
-.popup-text p {
-    margin: 5px 0;
-    font-size: 14px;
-}
+  /* Текстовый блок */
+  .popup-text {
+      flex: 1;
+      min-width: 0;
+  }
 
-.popup-attributes {
-    display: flex;
-    flex-wrap: nowrap; /* Запрещаем перенос */
-    gap: 8px; /* Расстояние между элементами */
-    font-size: 13px;
-    color: #555;
-    margin-bottom: 5px;
-    white-space: nowrap; /* Гарантированно запрещаем перенос */
-    overflow: hidden; /* Обрезка, если вдруг не влезет */
-    text-overflow: ellipsis;
-}
+  /* Название */
+  .popup-text h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+  }
 
-.popup-links {
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
-}
+  /* Абзац с описанием */
+  .popup-text p {
+      margin: 5px 0;
+      font-size: 14px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+  }
 
-.popup-links a {
-    text-decoration: none;
-    white-space: nowrap;
-    display: inline-block;
-}
+  /* Атрибуты кофеен */
+  .popup-attributes {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+      font-size: 13px;
+      color: #555;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  /* Ссылки */
+  .popup-links {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+  }
+
+  .popup-links a {
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+  }
+
 
     </style>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
