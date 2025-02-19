@@ -55,6 +55,7 @@
                 activeFilters.push(filterId);
                 filter.style.color = "#007BFF";
             }
+            console.log('Active Filters:', activeFilters); // Добавлен вывод активных фильтров
             updateMap();
         });
     });
@@ -64,6 +65,8 @@
             if (activeFilters.length === 0) return true;
             return place.attributes.some(attr => activeFilters.includes(attr));
         });
+
+        console.log('Filtered Places:', filteredPlaces); // Добавлен вывод отфильтрованных данных
 
         markers.forEach(marker => marker.remove());
         markers = [];
