@@ -188,21 +188,19 @@ h2, h3 {
 
 /* Мобильная версия */
 @media (max-width: 768px) {
+    /* Для карты и боковой панели */
     #sidebar {
-        width: 100%; /* Панель занимает 100% ширины экрана на мобильных */
-        position: absolute;
-        top: 60px; /* Смещаем от header */
-        left: 0;
-        display: block; /* Панель будет показываться */
+        display: none; /* Скрываем боковую панель */
     }
 
     #map {
-        margin-left: 0; /* Карта будет занимать всю ширину */
+        margin-left: 0; /* Карта занимает всю ширину экрана */
     }
 
+    /* Для попапов */
     .leaflet-popup-content-wrapper,
     .leaflet-popup-content {
-        width: 100% !important; /* Попапы занимают всю ширину на мобильных */
+        width: 100% !important; /* Попап будет на всю ширину экрана */
         max-width: 100% !important;
     }
 
