@@ -7,27 +7,67 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <style>
-        #map { height: 100vh; }
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        #sidebar {
+            width: 300px;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 10px;
+            background: #f8f9fa;
+            border-right: 1px solid #ddd;
+        }
+        #map {
+            flex: 1;
+            height: 100vh;
+        }
+        .place {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .place:hover {
+            background: #e9ecef;
+        }
     </style>
 </head>
 <body>
+    <div id="sidebar">
+        <h3>Кофейни</h3>
+        <div id="places-list">Загрузка...</div>
+    </div>
     <div id="map"></div>
-    <script>
-        // Инициализация карты
-        var map = L.map('map').setView([55.751244, 37.618423], 12);
 
-        // Добавляем OpenStreetMap слой
+    <script>
+        var map = L.map('map').setView([55.751244, 37.618423], 12);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Загружаем данные из places.json
         fetch('places.json')
             .then(response => response.json())
             .then(places => {
+                var placesList = document.getElementById('places-list');
+                placesList.innerHTML = ''; // Очищаем "Загрузка..."
+                
                 places.forEach(place => {
-                    L.marker([place.lat, place.lng]).addTo(map)
+                    // Создаём маркер на карте
+                    var marker = L.marker([place.lat, place.lng]).addTo(map)
                         .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
+
+                    // Добавляем кофейню в список
+                    var placeItem = document.createElement('div');
+                    placeItem.className = 'place';
+                    placeItem.innerHTML = `<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`;
+                    placeItem.onclick = () => {
+                        map.setView([place.lat, place.lng], 14); // При клике на список — приближаем к маркеру
+                        marker.openPopup(); // Открываем всплывающее окно
+                    };
+
+                    placesList.appendChild(placeItem);
                 });
             })
             .catch(error => console.error('Ошибка загрузки данных:', error));
