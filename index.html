@@ -13,10 +13,10 @@
 <header>
     <h1>GOOD PLACES</h1>
     <div class="filters">
-        <span class="filter" data-id="specialty">☕ Спешелти кофе</span>
-        <span class="filter" data-id="desserts">🍰 Десерты</span>
-        <span class="filter" data-id="no-smoking">🚭 Не курят</span>
-        <span class="filter" data-id="pets-allowed">🐾 Можно с животными</span>
+        <span class="filter" data-filter="specialty">☕ Спешелти кофе</span>
+        <span class="filter" data-filter="desserts">🍰 Десерты</span>
+        <span class="filter" data-filter="no_smoking">🚭 Не курят</span>
+        <span class="filter" data-filter="pets_allowed">🐾 Можно с животными</span>
     </div>
 </header>
 
@@ -47,7 +47,7 @@
 
     document.querySelectorAll('.filter').forEach(filter => {
         filter.addEventListener('click', () => {
-            const filterId = filter.getAttribute('data-id');
+            const filterId = filter.dataset.filter;
             if (activeFilters.includes(filterId)) {
                 activeFilters = activeFilters.filter(f => f !== filterId);
                 filter.style.color = "#333";
@@ -62,7 +62,7 @@
     function updateMap() {
         const filteredPlaces = placesData.filter(place => {
             if (activeFilters.length === 0) return true;
-            return activeFilters.some(filter => place.attributes.includes(filter));
+            return place.attributes.some(attr => activeFilters.includes(attr));
         });
 
         markers.forEach(marker => marker.remove());
@@ -75,7 +75,7 @@
                     <div class="popup-text">
                         <h3>${place.name}</h3>
                         <p>${place.description}</p>
-                        <div class="popup-attributes">${place.attributes.map(attr => `#${attr}`).join(' | ')}</div>
+                        <div class="popup-attributes">${place.attributes.join(' | ')}</div>
                         <div class="popup-links">
                             <a href="${place.link}" target="_blank">🌐 Сайт</a>
                             <a href="${place.instagram}" target="_blank">📸 Instagram</a>
@@ -90,14 +90,12 @@
             marker.placeName = place.name;
             markers.push(marker);
         });
-
         updateSidebar(filteredPlaces);
     }
 
     function updateSidebar(filteredPlaces) {
         const visibleList = document.getElementById("visible-places");
         const outsideList = document.getElementById("outside-places");
-
         visibleList.innerHTML = "";
         outsideList.innerHTML = "";
 
@@ -118,7 +116,6 @@
                     markers.find(m => m.placeName === place.name).openPopup();
                 }, 300);
             };
-
             if (bounds.contains([place.lat, place.lng])) {
                 visibleList.appendChild(placeElement);
             } else {
@@ -135,7 +132,10 @@
         })
         .catch(error => console.error('Ошибка загрузки данных:', error));
 
-    map.on('moveend', updateMap);
+    map.on('moveend', () => updateSidebar(placesData.filter(place => {
+        if (activeFilters.length === 0) return true;
+        return place.attributes.some(attr => activeFilters.includes(attr));
+    })));
 </script>
 
 </body>
