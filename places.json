@@ -5,7 +5,8 @@
         "lng": 19.85,
         "description": "Уютное место с атмосферой путешествий и отличным спешелти кофе.",
         "link": "https://example.com",
-        "instagram": "https://instagram.com/izlet_coffee"
+        "instagram": "https://instagram.com/izlet_coffee",
+        "image": "https://example.com/images/izlet.jpg"
     },
     {
         "name": "Zenit",
@@ -13,7 +14,8 @@
         "lng": 19.8426,
         "description": "Современная кофейня с авторскими напитками и десертами.",
         "link": "https://example.com",
-        "instagram": "https://instagram.com/zenit_coffee"
+        "instagram": "https://instagram.com/zenit_coffee",
+        "image": "https://example.com/images/zenit.jpg"
     },
     {
         "name": "Urbano",
@@ -21,7 +23,8 @@
         "lng": 19.8329,
         "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
         "link": "https://example.com",
-        "instagram": "https://instagram.com/urbano_coffee"
+        "instagram": "https://instagram.com/urbano_coffee",
+        "image": "https://example.com/images/urbano.jpg"
     },
     {
         "name": "Pendzer",
@@ -29,7 +32,8 @@
         "lng": 19.8198,
         "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
         "link": "https://example.com",
-        "instagram": "https://instagram.com/pendzer_coffee"
+        "instagram": "https://instagram.com/pendzer_coffee",
+        "image": "https://example.com/images/pendzer.jpg"
     },
     {
         "name": "Kafetea",
@@ -37,7 +41,8 @@
         "lng": 19.8520,
         "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
         "link": "https://example.com",
-        "instagram": "https://instagram.com/kafetea_coffee"
+        "instagram": "https://instagram.com/kafetea_coffee",
+        "image": "https://example.com/images/kafetea.jpg"
     },
     {
         "name": "Block 32",
@@ -45,6 +50,7 @@
         "lng": 19.8302,
         "description": "Современный кофейный бар с минималистичным интерьером.",
         "link": "https://example.com",
-        "instagram": "https://instagram.com/block32_coffee"
+        "instagram": "https://instagram.com/block32_coffee",
+        "image": "https://example.com/images/block32.jpg"
     }
 ]
