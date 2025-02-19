@@ -152,10 +152,18 @@
                     <p>${place.description}</p>
                 </div>
             `;
-            placeElement.onclick = () => {
-                map.setView([place.lat, place.lng], 16);
-                markers.find(m => m.placeName === place.name).openPopup();
-            };
+            placeElement.addEventListener("click", function () {
+    map.setView([place.lat, place.lng], 16, { animate: true });
+
+    // Находим метку по координатам и открываем попап
+    markers.forEach(marker => {
+        const markerLatLng = marker.getLatLng();
+        if (markerLatLng.lat === place.lat && markerLatLng.lng === place.lng) {
+            marker.openPopup();
+        }
+    });
+});
+
 
             if (bounds.contains([place.lat, place.lng])) {
                 visibleList.appendChild(placeElement);
