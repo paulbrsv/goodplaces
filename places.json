@@ -1,5 +1,5 @@
 [
-    { "name": "Кофейня 1", "lat": 55.76, "lng": 37.62, "link": "https://example.com" },
-    { "name": "Кофейня 2", "lat": 55.75, "lng": 37.61, "link": "https://example.com" },
-    { "name": "Кофейня 3", "lat": 55.74, "lng": 37.60, "link": "https://example.com" }
+    { "name": "Izlet", "lat": 45.25, "lng": 19.85, "link": "https://example.com" },
+    { "name": "Zenit", "lat": 45.2570, "lng": 19.8426, "link": "https://example.com" },
+    { "name": "Block 32", "lat": 45.2605, "lng": 19.8302, "link": "https://example.com" }
 ]
