@@ -7,7 +7,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/izlet_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["specialty_coffee", "desserts", "no-smoking", "pets-allowed"]
+        "attributes": ["specialty", "desserts", "no-smoking", "pets-allowed"]
     },
     {
         "name": "Zenit",
@@ -17,7 +17,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/zenit_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["specialty_coffee", "no-smoking", "pets-allowed"]
+        "attributes": ["specialty", "no_smoking", "pets_allowed"]
     },
     {
         "name": "Urbano",
@@ -27,7 +27,7 @@
         "link": "https://example.com",
         "instagram": "https://instagram.com/urbano_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["desserts", "no-smoking"]
+        "attributes": ["desserts", "no_smoking"]
     },
     {
         "name": "Pendzer",
