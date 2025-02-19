@@ -59,52 +59,57 @@
             color: #555;
         }
         .popup-content {
-    display: flex;
-    align-items: center;
-    max-width: 450px; /* Установил фиксированную ширину */
-}
+      display: flex;
+      align-items: center;
+      max-width: 450px; /* Устанавливаем максимальную ширину */
+      min-width: 300px; /* Добавляем минимальную ширину */
+      padding: 10px;
+  }
 
-.popup-content img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 10px;
-}
+  .popup-content img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 10px;
+  }
 
-.popup-text {
-    flex: 1;
-    min-width: 0; /* Чтобы текст не раздвигал блок */
-}
+  .popup-text {
+      flex: 1;
+      min-width: 0; /* Чтобы текст не раздвигал блок */
+      word-wrap: break-word; /* Разрешаем перенос длинных слов */
+      overflow-wrap: break-word;
+  }
 
-.popup-text h3 {
-    margin: 0 0 5px;
-    font-size: 16px;
-}
+  .popup-text h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+  }
 
-.popup-text p {
-    margin: 5px 0;
-    font-size: 14px;
-    word-wrap: break-word; /* Чтобы длинные слова не ломали верстку */
-}
+  .popup-text p {
+      margin: 5px 0;
+      font-size: 14px;
+      white-space: normal; /* Разрешаем перенос строк */
+  }
 
-.popup-attributes,
-.popup-links {
-    white-space: nowrap; /* Запрещаем перенос строк */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Обрезка длинного текста, если что */
-    display: block; /* Делаем строку отдельным блоком */
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 5px;
-}
+  .popup-attributes,
+  .popup-links {
+      display: flex;
+      flex-wrap: wrap; /* Позволяем перенос строк при нехватке места */
+      gap: 8px; /* Добавляем отступы между элементами */
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 5px;
+  }
 
-.popup-links a {
-    text-decoration: none;
-    margin-right: 8px;
-    font-size: 14px;
-    display: inline-block;
-}
+  .popup-links a {
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+  }
+
 
     </style>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
