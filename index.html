@@ -154,12 +154,15 @@
             markers.push(marker);
         });
 
-        updateSidebar(); // Добавляем этот вызов сразу после загрузки данных
+        updateSidebar(); // ✅ Гарантируем, что список мест загрузится сразу
     })
     .catch(error => console.error('Ошибка загрузки данных:', error));
 
+// ✅ Добавляем обновление боковой панели при движении карты
+map.on('moveend', function () {
+    updateSidebar();
+});
 
-    map.on('moveend', updateSidebar);
 </script>
 
 </body>
