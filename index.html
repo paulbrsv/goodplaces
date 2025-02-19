@@ -128,34 +128,36 @@
     }
 
     fetch('places.json')
-        .then(response => response.json())
-        .then(data => {
-            placesData = data;
-            data.forEach(place => {
-                var popupContent = `
-                    <div class="popup-content">
-                        <img src="${place.image}" alt="${place.name}">
-                        <div class="popup-text">
-                            <h3>${place.name}</h3>
-                            <p>${place.description}</p>
-                            <div class="popup-attributes">${place.attributes.join(' | ')}</div>
-                            <div class="popup-links">
-                                <a href="${place.link}" target="_blank">🌐 Сайт</a>
-                                <a href="${place.instagram}" target="_blank">📸 Instagram</a>
-                                <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
-                            </div>
+    .then(response => response.json())
+    .then(data => {
+        placesData = data;
+        data.forEach(place => {
+            var popupContent = `
+                <div class="popup-content">
+                    <img src="${place.image}" alt="${place.name}">
+                    <div class="popup-text">
+                        <h3>${place.name}</h3>
+                        <p>${place.description}</p>
+                        <div class="popup-attributes">☕ Спешелти кофе | 🍰 Десерты | 🚭 Не курят</div>
+                        <div class="popup-links">
+                            <a href="${place.link}" target="_blank">🌐 Сайт</a>
+                            <a href="${place.instagram}" target="_blank">📸 Instagram</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
                         </div>
                     </div>
-                `;
-                var marker = L.marker([place.lat, place.lng])
-                    .addTo(map)
-                    .bindPopup(popupContent);
-                marker.placeName = place.name;
-                markers.push(marker);
-            });
-            updateSidebar();
-        })
-        .catch(error => console.error('Ошибка загрузки данных:', error));
+                </div>
+            `;
+            var marker = L.marker([place.lat, place.lng])
+                .addTo(map)
+                .bindPopup(popupContent);
+            marker.placeName = place.name;
+            markers.push(marker);
+        });
+
+        updateSidebar(); // Добавляем этот вызов сразу после загрузки данных
+    })
+    .catch(error => console.error('Ошибка загрузки данных:', error));
+
 
     map.on('moveend', updateSidebar);
 </script>
