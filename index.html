@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Карта кофеен</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map { height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Инициализация карты
+        var map = L.map('map').setView([55.751244, 37.618423], 12); // Координаты Москвы
+
+        // Добавляем слой карты OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Данные о местах (можно вынести в отдельный JSON-файл)
+        var places = [
+            { "name": "Кофейня 1", "lat": 55.76, "lng": 37.62, "link": "https://example.com" },
+            { "name": "Кофейня 2", "lat": 55.75, "lng": 37.61, "link": "https://example.com" }
+        ];
+
+        // Добавляем метки на карту
+        places.forEach(place => {
+            L.marker([place.lat, place.lng]).addTo(map)
+                .bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Подробнее</a>`);
+        });
+    </script>
+</body>
+</html>
