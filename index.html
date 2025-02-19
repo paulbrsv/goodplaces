@@ -10,15 +10,15 @@
 </head>
 <body>
 
-  <header>
-      <h1>GOOD PLACES</h1>
-      <div class="filters">
-          <span class="filter">☕ Спешелти кофе</span>
-          <span class="filter">🍰 Десерты</span>
-          <span class="filter">🚭 Не курят</span>
-          <span class="filter">🐾 Можно с животными</span>
-      </div>
-  </header>
+<header>
+    <h1>GOOD PLACES</h1>
+    <div class="filters">
+        <span class="filter">☕ Спешелти кофе</span>
+        <span class="filter">🍰 Десерты</span>
+        <span class="filter">🚭 Не курят</span>
+        <span class="filter">🐾 Можно с животными</span>
+    </div>
+</header>
 
 <div id="sidebar">
     <h2>Кофейни</h2>
@@ -38,22 +38,72 @@
     var map = L.map('map').setView([45.25, 19.85], 14);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors & Carto'
+        attribution: '&copy; OpenStreetMap contributors & Carto'
     }).addTo(map);
-
 
     var markers = [];
     var placesData = [];
+    let activeFilters = [];
 
-    function updateSidebar() {
-        var bounds = map.getBounds();
-        var visibleList = document.getElementById("visible-places");
-        var outsideList = document.getElementById("outside-places");
+    document.querySelectorAll('.filter').forEach(filter => {
+        filter.addEventListener('click', () => {
+            const filterText = filter.innerText.trim();
+            if (activeFilters.includes(filterText)) {
+                activeFilters = activeFilters.filter(f => f !== filterText);
+                filter.style.color = "#333";
+            } else {
+                activeFilters.push(filterText);
+                filter.style.color = "#007BFF";
+            }
+            updateMap();
+        });
+    });
+
+    function updateMap() {
+        const filteredPlaces = placesData.filter(place => {
+            if (activeFilters.length === 0) return true;
+            return activeFilters.every(filter => place.attributes.includes(filter));
+        });
+
+        markers.forEach(marker => marker.remove());
+        markers = [];
+
+        filteredPlaces.forEach(place => {
+            const popupContent = `
+                <div class="popup-content">
+                    <img src="${place.image}" alt="${place.name}">
+                    <div class="popup-text">
+                        <h3>${place.name}</h3>
+                        <p>${place.description}</p>
+                        <div class="popup-attributes">${place.attributes.join(' | ')}</div>
+                        <div class="popup-links">
+                            <a href="${place.link}" target="_blank">🌐 Сайт</a>
+                            <a href="${place.instagram}" target="_blank">📸 Instagram</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            const marker = L.marker([place.lat, place.lng])
+                .addTo(map)
+                .bindPopup(popupContent);
+            marker.placeName = place.name;
+            markers.push(marker);
+        });
+
+        updateSidebar(filteredPlaces);
+    }
+
+    function updateSidebar(filteredPlaces) {
+        const visibleList = document.getElementById("visible-places");
+        const outsideList = document.getElementById("outside-places");
+
         visibleList.innerHTML = "";
         outsideList.innerHTML = "";
 
-        placesData.forEach(place => {
-            var placeElement = document.createElement("div");
+        const bounds = map.getBounds();
+        filteredPlaces.forEach(place => {
+            const placeElement = document.createElement("div");
             placeElement.className = "place";
             placeElement.innerHTML = `
                 <img src="${place.image}" alt="${place.name}">
@@ -81,33 +131,11 @@
         .then(response => response.json())
         .then(data => {
             placesData = data;
-            data.forEach(place => {
-                var popupContent = `
-                    <div class="popup-content">
-                        <img src="${place.image}" alt="${place.name}">
-                        <div class="popup-text">
-                            <h3>${place.name}</h3>
-                            <p>${place.description}</p>
-                            <div class="popup-attributes">☕ Спешелти кофе | 🍰 Десерты | 🚭 Не курят</div>
-                            <div class="popup-links">
-                                <a href="${place.link}" target="_blank">🌐 Сайт</a>
-                                <a href="${place.instagram}" target="_blank">📸 Instagram</a>
-                                <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                var marker = L.marker([place.lat, place.lng])
-                    .addTo(map)
-                    .bindPopup(popupContent);
-                marker.placeName = place.name;
-                markers.push(marker);
-            });
-            updateSidebar();
+            updateMap();
         })
         .catch(error => console.error('Ошибка загрузки данных:', error));
 
-    map.on('moveend', updateSidebar);
+    map.on('moveend', () => updateSidebar(placesData));
 </script>
 
 </body>
