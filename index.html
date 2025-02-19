@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карта кофеен</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Подключаем внешний файл стилей -->
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 </head>
-
 <body>
 
   <header>
@@ -20,7 +19,7 @@
       </div>
   </header>
 
-<div id="sidebar">
+  <div id="sidebar">
     <h2>Кофейни</h2>
     <div class="place-list">
         <h3>📍 В этом районе</h3>
@@ -30,85 +29,84 @@
         <h3>🌍 За пределами видимой области</h3>
         <div id="outside-places"></div>
     </div>
-</div>
+  </div>
 
-<div id="map"></div>
+  <div id="map"></div>
 
-<script>
-    var map = L.map('map').setView([45.25, 19.85], 14);
+  <script>
+      var map = L.map('map').setView([45.25, 19.85], 14);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors & Carto'
-    }).addTo(map);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; OpenStreetMap contributors & Carto'
+      }).addTo(map);
 
+      var markers = [];
+      var placesData = [];
 
-    var markers = [];
-    var placesData = [];
+      function updateSidebar() {
+          var bounds = map.getBounds();
+          var visibleList = document.getElementById("visible-places");
+          var outsideList = document.getElementById("outside-places");
+          visibleList.innerHTML = "";
+          outsideList.innerHTML = "";
 
-    function updateSidebar() {
-        var bounds = map.getBounds();
-        var visibleList = document.getElementById("visible-places");
-        var outsideList = document.getElementById("outside-places");
-        visibleList.innerHTML = "";
-        outsideList.innerHTML = "";
+          placesData.forEach(place => {
+              var placeElement = document.createElement("div");
+              placeElement.className = "place";
+              placeElement.innerHTML = `
+                  <img src="${place.image}" alt="${place.name}">
+                  <div class="place-info">
+                      <h3>${place.name}</h3>
+                      <p>${place.description}</p>
+                  </div>
+              `;
+              placeElement.onclick = () => {
+                  map.setView([place.lat, place.lng], 16, { animate: true });
+                  setTimeout(() => {
+                      markers.find(m => m.placeName === place.name).openPopup();
+                  }, 300);
+              };
 
-        placesData.forEach(place => {
-            var placeElement = document.createElement("div");
-            placeElement.className = "place";
-            placeElement.innerHTML = `
-                <img src="${place.image}" alt="${place.name}">
-                <div class="place-info">
-                    <h3>${place.name}</h3>
-                    <p>${place.description}</p>
-                </div>
-            `;
-            placeElement.onclick = () => {
-                map.setView([place.lat, place.lng], 16, { animate: true });
-                setTimeout(() => {
-                    markers.find(m => m.placeName === place.name).openPopup();
-                }, 300);
-            };
+              if (bounds.contains([place.lat, place.lng])) {
+                  visibleList.appendChild(placeElement);
+              } else {
+                  outsideList.appendChild(placeElement);
+              }
+          });
+      }
 
-            if (bounds.contains([place.lat, place.lng])) {
-                visibleList.appendChild(placeElement);
-            } else {
-                outsideList.appendChild(placeElement);
-            }
-        });
-    }
+      fetch('places.json')
+          .then(response => response.json())
+          .then(data => {
+              placesData = data;
+              data.forEach(place => {
+                  var popupContent = `
+                      <div class="popup-content">
+                          <img src="${place.image}" alt="${place.name}">
+                          <div class="popup-text">
+                              <h3>${place.name}</h3>
+                              <p>${place.description}</p>
+                              <div class="popup-attributes">☕ Спешелти кофе | 🍰 Десерты | 🚭 Не курят</div>
+                              <div class="popup-links">
+                                  <a href="${place.link}" target="_blank">🌐 Сайт</a>
+                                  <a href="${place.instagram}" target="_blank">📸 Instagram</a>
+                                  <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+                  var marker = L.marker([place.lat, place.lng])
+                      .addTo(map)
+                      .bindPopup(popupContent);
+                  marker.placeName = place.name;
+                  markers.push(marker);
+              });
+              updateSidebar();
+          })
+          .catch(error => console.error('Ошибка загрузки данных:', error));
 
-    fetch('places.json')
-        .then(response => response.json())
-        .then(data => {
-            placesData = data;
-            data.forEach(place => {
-                var popupContent = `
-                    <div class="popup-content">
-                        <img src="${place.image}" alt="${place.name}">
-                        <div class="popup-text">
-                            <h3>${place.name}</h3>
-                            <p>${place.description}</p>
-                            <div class="popup-attributes">☕ Спешелти кофе | 🍰 Десерты | 🚭 Не курят</div>
-                            <div class="popup-links">
-                                <a href="${place.link}" target="_blank">🌐 Сайт</a>
-                                <a href="${place.instagram}" target="_blank">📸 Instagram</a>
-                                <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                var marker = L.marker([place.lat, place.lng])
-                    .addTo(map)
-                    .bindPopup(popupContent);
-                marker.placeName = place.name;
-                markers.push(marker);
-            });
-            updateSidebar();
-        })
-        .catch(error => console.error('Ошибка загрузки данных:', error));
-
-    map.on('moveend', updateSidebar);
-</script>
+      map.on('moveend', updateSidebar);
+  </script>
 
 </body>
 </html>

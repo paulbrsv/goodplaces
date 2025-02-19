@@ -1,3 +1,4 @@
+/* Стили для страницы */
 body {
     display: flex;
     margin: 0;
@@ -46,7 +47,6 @@ h1 {
     margin-top: 60px; /* Смещение вниз, чтобы не залезало под header */
 }
 
-
 #sidebar {
     width: 320px;
     height: 100vh;
@@ -55,17 +55,21 @@ h1 {
     background: #f8f8f8;
     border-right: 1px solid #ddd;
 }
+
 #map {
     flex: 1;
-    height: calc(100vh - 60px); /* Высота карты, чтобы не перекрывать header */
+    height: calc(100vh - 60px);
 }
+
 h2, h3 {
     margin: 10px 0;
     font-size: 16px;
 }
+
 .place-list {
     margin-bottom: 20px;
 }
+
 .place {
     display: flex;
     align-items: center;
@@ -75,9 +79,11 @@ h2, h3 {
     background: white;
     transition: background 0.3s;
 }
+
 .place:hover {
     background: #f0f0f0;
 }
+
 .place img {
     width: 50px;
     height: 50px;
@@ -85,34 +91,34 @@ h2, h3 {
     border-radius: 6px;
     margin-right: 10px;
 }
+
 .place-info h3 {
     margin: 0;
     font-size: 14px;
 }
+
 .place-info p {
     margin: 2px 0 5px;
     font-size: 12px;
     color: #555;
 }
-/* Увеличиваем ширину всего попапа */
+
 .leaflet-popup-content-wrapper {
-    max-width: 500px !important; /* Ширина белого фона */
+    max-width: 500px !important;
     width: 500px !important;
 }
 
 .leaflet-popup-content {
-    max-width: 500px !important; /* Ширина содержимого */
+    max-width: 500px !important;
     width: 500px !important;
 }
 
-/* Контент попапа */
 .popup-content {
     display: flex;
     align-items: center;
-    width: 100%; /* Растягиваем на всю ширину */
+    width: 100%;
 }
 
-/* Картинка в попапе */
 .popup-content img {
     width: 120px;
     height: 120px;
@@ -121,7 +127,6 @@ h2, h3 {
     margin-right: 10px;
 }
 
-/* Текстовый блок */
 .popup-text {
     flex: 1;
     min-width: 0;
@@ -129,13 +134,11 @@ h2, h3 {
     overflow-wrap: break-word;
 }
 
-/* Название */
 .popup-text h3 {
     margin: 0 0 5px;
     font-size: 16px;
 }
 
-/* Абзац с описанием */
 .popup-text p {
     margin: 5px 0;
     font-size: 14px;
@@ -143,7 +146,6 @@ h2, h3 {
     overflow-wrap: break-word;
 }
 
-/* Атрибуты кофеен */
 .popup-attributes {
     display: flex;
     flex-wrap: nowrap;
@@ -155,7 +157,6 @@ h2, h3 {
     text-overflow: ellipsis;
 }
 
-/* Ссылки */
 .popup-links {
     display: flex;
     gap: 10px;
