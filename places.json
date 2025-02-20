@@ -88,13 +88,15 @@
         "name": "ANANDA VEGAN RESTAURANT",
         "lat": 45.24948867,
         "lng": 19.83951697,
-        "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači?\n\n1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća\n2. Peciva koja sami kreiramo i pečemo.\n3. Namazi koje pravimo na licu mesta, po domaćim receptima.\n4. Obilne porcije (još nije z",
-        "link": "",
-        "instagram": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
+        "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači?\r\n\r\n1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća\r\n2. Peciva koja sami kreiramo i pečemo.\r\n3. Namazi koje pravimo na licu mesta, po domaćim receptima.\r\n4. Obilne porcije (još nije z",
+        "link": "https:\/\/ananda.rs\/",
+        "instagram": "https:\/\/www.instagram.com\/ananda_vegan_restaurant\/",
         "maps_url": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/ananda.jpg",
         "attributes": [
-            "specialty"
+            "no_smoking",
+            "cafe",
+            "food"
         ],
         "verified": false
     },
@@ -103,12 +105,13 @@
         "lat": 45.25333086,
         "lng": 19.84536255,
         "description": "Отличный книжный магазин и небольшая кофейня",
-        "link": "",
-        "instagram": "https:\/\/www.facebook.com\/BulevarBooks\/",
+        "link": "https:\/\/bulevarbooks.com\/",
+        "instagram": "https:\/\/www.instagram.com\/bulevarbooks\/",
         "maps_url": "https:\/\/goo.gl\/maps\/nU2SUP9ScpwjAyzk7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/bulevar.jpg",
         "attributes": [
-            "specialty"
+            "coffee_shop",
+            "no_smoking"
         ],
         "verified": false
     },
