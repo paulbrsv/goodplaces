@@ -113,40 +113,85 @@ h2, h3 {
 }
 
 /* Для кастомного попапа */
-.custom-popup {
+#custom-popup {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background: white;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    right: 0;
+    background-color: white;
+    border-top: 2px solid #333;
+    padding: 20px;
+    max-height: 60%;
+    overflow-y: auto;
     display: none; /* Скрыт по умолчанию */
-    box-sizing: border-box;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Тень для попапа */
 }
 
-.custom-popup img {
-    width: 120px;
+#custom-popup .popup-content {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание элементов */
+    justify-content: flex-start; /* Элементы выравниваются по левому краю */
+}
+
+#custom-popup img {
+    width: 120px; /* Размер картинки */
     height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 10px;
+    object-fit: cover; /* Чтобы картинка не искажалась */
+    border-radius: 8px; /* Скругленные углы */
+    margin-right: 20px; /* Отступ справа от картинки */
 }
 
-.custom-popup .popup-text {
-    flex: 1;
+#custom-popup .popup-text {
+    flex: 1; /* Текст будет занимать оставшееся пространство */
 }
 
-.custom-popup h3 {
-    margin: 0 0 5px;
-    font-size: 16px;
+#custom-popup .popup-text h3 {
+    margin: 0 0 5px 0;  /* Отступы для заголовка */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
-.custom-popup p {
+#custom-popup .popup-text p {
     margin: 5px 0;
     font-size: 14px;
+    color: #666;
+}
+
+#custom-popup .popup-links {
+    display: flex;
+    gap: 10px; /* Расстояние между элементами */
+    justify-content: flex-start; /* Выравнивание элементов по левому краю */
+    flex-wrap: wrap; /* Чтобы элементы не выходили за пределы экрана на мобильных устройствах */
+}
+
+#custom-popup .popup-links a {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#custom-popup .popup-links a:hover {
+    text-decoration: underline;
+}
+
+/* Крестик для закрытия */
+#custom-popup .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+#custom-popup .popup-close:hover {
+    color: #ff0000; /* Красный цвет при наведении */
 }
 
 /* Мобильная версия */
@@ -168,18 +213,21 @@ h2, h3 {
     }
 
     .popup-content {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Картинка слева, текст справа */
+        justify-content: flex-start;
     }
 
     .popup-content img {
         width: 80px;
         height: 80px;
-        margin-bottom: 10px;
+        margin-right: 20px; /* Отступ между картинкой и текстом */
     }
 
     .popup-text {
         width: 100%;
+        padding-right: 10px;
     }
 
     .popup-attributes {
@@ -188,35 +236,7 @@ h2, h3 {
     }
 
     .popup-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
-    }
-
-    /* Для мобильных попапов */
-    .custom-popup {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 10px;
-        border-top: 1px solid #ddd;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        z-index: 9999;
-        display: none; /* Скрыт по умолчанию */
-        box-sizing: border-box;
-    }
-
-    .custom-popup img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .custom-popup h3 {
-        font-size: 18px;
-    }
-
-    .custom-popup p {
-        font-size: 16px;
     }
 }

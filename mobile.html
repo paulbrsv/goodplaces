@@ -7,46 +7,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <link rel="stylesheet" href="mobile.css">
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-    <style>
-        /* Стили для кастомного попапа */
-        #custom-popup {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: white;
-            border-top: 2px solid #333;
-            padding: 20px;
-            max-height: 50%;
-            overflow-y: auto;
-            display: none; /* Скрыт по умолчанию */
-            z-index: 9999;
-        }
-
-        #custom-popup img {
-            max-width: 100px;
-            height: auto;
-            margin-right: 15px;
-        }
-
-        #custom-popup .popup-content {
-            display: flex;
-            align-items: center;
-        }
-
-        #custom-popup .popup-text {
-            max-width: calc(100% - 120px);
-        }
-
-        #custom-popup .popup-links a {
-            display: block;
-            margin-top: 10px;
-        }
-
-        .filter {
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 
@@ -75,8 +35,9 @@
 <div id="map"></div>
 
 <!-- Кастомный попап -->
-<div id="custom-popup">
+<div id="custom-popup" style="display: none;">
     <div class="popup-content">
+        <span class="popup-close" id="popup-close">✖</span>
         <img id="popup-image" src="" alt="">
         <div class="popup-text">
             <h3 id="popup-name"></h3>
@@ -199,6 +160,11 @@
         // Показываем кастомный попап
         document.getElementById('custom-popup').style.display = 'block';
     }
+
+    // Обработчик закрытия попапа
+    document.getElementById('popup-close').addEventListener('click', function() {
+        document.getElementById('custom-popup').style.display = 'none';
+    });
 
     // Функция обновления боковой панели
     function updateSidebar(filteredPlaces) {
