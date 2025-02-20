@@ -181,8 +181,8 @@ h2, h3 {
 /* Крестик для закрытия */
 #custom-popup .popup-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 5px;
     font-size: 20px;
     color: #333;
     background: none;
