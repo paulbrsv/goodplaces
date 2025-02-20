@@ -121,25 +121,16 @@
         "lng": 19.84845344,
         "description": "Mesto unikatnih kafa, koktela i poslastica.",
         "link": "",
-        "instagram": "https:\/\/www.facebook.com\/gabbycaffe\/",
+        "instagram": "https:\/\/www.instagram.com\/cafe_gabby\/",
         "maps_url": "https:\/\/goo.gl\/maps\/X9KGHUybdjUT7PAKA",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/gabby.jpg",
         "attributes": [
-            "specialty"
-        ],
-        "verified": false
-    },
-    {
-        "name": "Klub Kulture \"Crna Ovca\"",
-        "lat": 45.25428691,
-        "lng": 19.84389187,
-        "description": "Crna Ovca je aktivistički prostor Rebuild Collective-a koji se bavi promocijom kulture i subkulture",
-        "link": "",
-        "instagram": "https:\/\/www.facebook.com\/crna.ovca.novisad\/",
-        "maps_url": "https:\/\/goo.gl\/maps\/8UC54qpzDFBA96MG6",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
-        "attributes": [
-            "specialty"
+            "food",
+            "cafe",
+            "no_smoking",
+            "bar",
+            "beer",
+            "wine"
         ],
         "verified": false
     },
@@ -149,11 +140,16 @@
         "lng": 19.84828467,
         "description": "Spot for doggos, coffee, booze&brews, activism & solidarity. 100% smoke free.100% pet friendly, no place for racism, sexism, homophobia",
         "link": "",
-        "instagram": "https:\/\/www.facebook.com\/crniovan.ns\/",
+        "instagram": "https:\/\/www.instagram.com\/crniovan\/",
         "maps_url": "https:\/\/goo.gl\/maps\/jMF1AGERLYxAh9Lt6",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/crniovan.jpg",
         "attributes": [
-            "specialty"
+            "cafe",
+            "bar",
+            "beer",
+            "coffee_shop",
+            "pet_friendly",
+            "no_smoking"
         ],
         "verified": false
     },
