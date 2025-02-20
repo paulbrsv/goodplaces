@@ -7,6 +7,46 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <link rel="stylesheet" href="mobile.css">
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style>
+        /* Стили для кастомного попапа */
+        #custom-popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border-top: 2px solid #333;
+            padding: 20px;
+            max-height: 50%;
+            overflow-y: auto;
+            display: none; /* Скрыт по умолчанию */
+            z-index: 9999;
+        }
+
+        #custom-popup img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        #custom-popup .popup-content {
+            display: flex;
+            align-items: center;
+        }
+
+        #custom-popup .popup-text {
+            max-width: calc(100% - 120px);
+        }
+
+        #custom-popup .popup-links a {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .filter {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,6 +73,23 @@
 </div>
 
 <div id="map"></div>
+
+<!-- Кастомный попап -->
+<div id="custom-popup">
+    <div class="popup-content">
+        <img id="popup-image" src="" alt="">
+        <div class="popup-text">
+            <h3 id="popup-name"></h3>
+            <p id="popup-description"></p>
+            <div id="popup-attributes"></div>
+            <div class="popup-links">
+                <a id="popup-link-website" href="" target="_blank">🌐 Сайт</a>
+                <a id="popup-link-instagram" href="" target="_blank">📸 Instagram</a>
+                <a id="popup-link-map" href="" target="_blank">📍 Карта</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     var map = L.map('map').setView([45.25, 19.85], 14);
@@ -120,11 +177,27 @@
             `;
             const marker = L.marker([place.lat, place.lng])
                 .addTo(map)
-                .bindPopup(popupContent);
+                .on('click', function() {
+                    openCustomPopup(place);
+                });
             marker.placeName = place.name;
             markers.push(marker);
         });
         updateSidebar(filteredPlaces);
+    }
+
+    // Функция для открытия кастомного попапа
+    function openCustomPopup(place) {
+        document.getElementById('popup-image').src = place.image;
+        document.getElementById('popup-name').innerText = place.name;
+        document.getElementById('popup-description').innerText = place.description;
+        document.getElementById('popup-attributes').innerHTML = place.attributes.map(attr => attributeNames[attr] || attr).join(' | ');
+        document.getElementById('popup-link-website').href = place.link;
+        document.getElementById('popup-link-instagram').href = place.instagram;
+        document.getElementById('popup-link-map').href = `https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}`;
+
+        // Показываем кастомный попап
+        document.getElementById('custom-popup').style.display = 'block';
     }
 
     // Функция обновления боковой панели

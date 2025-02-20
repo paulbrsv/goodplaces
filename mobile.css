@@ -112,26 +112,22 @@ h2, h3 {
     color: #555;
 }
 
-/* Увеличиваем ширину попапа */
-.leaflet-popup-content-wrapper {
-    max-width: 500px !important; /* Ширина белого фона */
-    width: 500px !important;
-}
-
-.leaflet-popup-content {
-    max-width: 500px !important; /* Ширина содержимого */
-    width: 500px !important;
-}
-
-/* Контент попапа */
-.popup-content {
-    display: flex;
-    align-items: center;
+/* Для кастомного попапа */
+.custom-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    background: white;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none; /* Скрыт по умолчанию */
+    box-sizing: border-box;
 }
 
-/* Картинка в попапе */
-.popup-content img {
+.custom-popup img {
     width: 120px;
     height: 120px;
     object-fit: cover;
@@ -139,51 +135,18 @@ h2, h3 {
     margin-right: 10px;
 }
 
-/* Текстовый блок */
-.popup-text {
+.custom-popup .popup-text {
     flex: 1;
-    min-width: 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
-/* Название */
-.popup-text h3 {
+.custom-popup h3 {
     margin: 0 0 5px;
     font-size: 16px;
 }
 
-/* Абзац с описанием */
-.popup-text p {
+.custom-popup p {
     margin: 5px 0;
     font-size: 14px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Атрибуты кофеен */
-.popup-attributes {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    font-size: 13px;
-    color: #555;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* Ссылки */
-.popup-links {
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
-}
-
-.popup-links a {
-    text-decoration: none;
-    white-space: nowrap;
-    display: inline-block;
 }
 
 /* Мобильная версия */
@@ -197,10 +160,10 @@ h2, h3 {
         margin-left: 0; /* Карта занимает всю ширину экрана */
     }
 
-    /* Для попапов */
+    /* Попап будет растягиваться на всю ширину экрана */
     .leaflet-popup-content-wrapper,
     .leaflet-popup-content {
-        width: 100% !important; /* Попап будет на всю ширину экрана */
+        width: 100% !important;
         max-width: 100% !important;
     }
 
