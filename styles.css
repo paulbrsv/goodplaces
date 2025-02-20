@@ -74,6 +74,26 @@ h1 {
     background-color: #ffbbbb;
 }
 
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    padding: 0px 40px;
+}
+
+.language-switcher button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #ddd;
+}
 
 /*.filter:hover {
     background-color: #e0e0e0;   Легкий фон при наведении*/
@@ -184,6 +204,7 @@ h2, h3 {
     min-width: 0;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    margin-right: 20px;
 }
 
 /* Название */

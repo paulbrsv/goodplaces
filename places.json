@@ -5,12 +5,18 @@
         "lng": 19.84743287,
         "description": "🐩Pet friendly",
         "link": "",
-        "instagram": "https://www.facebook.com/biciklana.ns/",
-        "maps_url": "https://goo.gl/maps/cCWtgfoQ8YfxmLwS7",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/biciklana.ns\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/cCWtgfoQ8YfxmLwS7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/biciklana.jpg",
         "attributes": [
-            "specialty"
-        ]
+            "pet_friendly",
+            "no_smoking",
+            "cafe",
+            "coffee_shop",
+            "desserts",
+            "snacks"
+        ],
+        "verified": false
     },
     {
         "name": "Le Bol NS",
@@ -18,12 +24,19 @@
         "lng": 19.84919648,
         "description": "Pet Friendly 🐾",
         "link": "",
-        "instagram": "https://www.instagram.com/lebolns/",
-        "maps_url": "https://goo.gl/maps/XWRaLduEZV8YgXcw5",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/lebolns\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/XWRaLduEZV8YgXcw5",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/lebol.jpg",
         "attributes": [
-            "specialty"
-        ]
+            "pet_friendly",
+            "no_smoking",
+            "cafe",
+            "wine",
+            "coffee_shop",
+            "desserts",
+            "food"
+        ],
+        "verified": false
     },
     {
         "name": "Juice bar HeyDay",
@@ -31,12 +44,13 @@
         "lng": 19.83820296,
         "description": "Koncept Juice bar-a HeyDay ogleda se u čaši punoj 100% hladno cedjenog voća i povrća, u Vašoj potrebi da date sami sebi prednost u svakodnevnoj trci za uspehom.",
         "link": "",
-        "instagram": "https://www.facebook.com/juicebarheyday/",
-        "maps_url": "https://goo.gl/maps/nLL1mtc4F8Qf5bie8",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/juicebarheyday\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/nLL1mtc4F8Qf5bie8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Panuša Palačinkarnica",
@@ -44,12 +58,13 @@
         "lng": 19.83175227,
         "description": "Kod nas će uvek uživati svi ljubitelji palačinki koje polako osvajaju srca, prijatelji koji su došli na kafu, parovi na prvom sastanku, porodice, društvo, komšije na šoljici razgovora, ljubitelji lepog i originalnog mesta koji ne liči na druge.",
         "link": "",
-        "instagram": "https://www.instagram.com/panusa.novisad/",
-        "maps_url": "https://goo.gl/maps/9kZEErQkgtirN7wE6",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/panusa.novisad\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/9kZEErQkgtirN7wE6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Sweet & Green",
@@ -57,12 +72,13 @@
         "lng": 19.84676623,
         "description": "Salate i cedjeni sokovi",
         "link": "",
-        "instagram": "https://sweetandgreens.com/",
-        "maps_url": "https://goo.gl/maps/Ffq17dbGzLRgUnvAA",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/sweetandgreens.com\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/Ffq17dbGzLRgUnvAA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Vege Vegan - Restoran zdrave hrane",
@@ -70,12 +86,13 @@
         "lng": 19.8397541,
         "description": "🍽 Ketering zdrave hrane, najukusniji burgeri , kolači i torte ...",
         "link": "",
-        "instagram": "https://www.instagram.com/vegeveganorganicfood",
-        "maps_url": "https://goo.gl/maps/DSHs3XPzWqYeJ2Si8",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/vegeveganorganicfood",
+        "maps_url": "https:\/\/goo.gl\/maps\/DSHs3XPzWqYeJ2Si8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Organic factory",
@@ -83,12 +100,13 @@
         "lng": 19.83740056,
         "description": "Porodična manufaktura, osnovana 1989. godine, postaje organska manufakturna fabrika zdrave hrane",
         "link": "",
-        "instagram": "https://www.facebook.com/organicfactory.novisad/",
-        "maps_url": "https://goo.gl/maps/U6s8M6K2w5jzdrYJ6",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/organicfactory.novisad\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/U6s8M6K2w5jzdrYJ6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "ANANDA VEGAN RESTAURANT",
@@ -96,12 +114,13 @@
         "lng": 19.83951697,
         "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači?\n\n1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća\n2. Peciva koja sami kreiramo i pečemo.\n3. Namazi koje pravimo na licu mesta, po domaćim receptima.\n4. Obilne porcije (još nije z",
         "link": "",
-        "instagram": "https://goo.gl/maps/xfHhYgozHhqJBpwRA",
-        "maps_url": "https://goo.gl/maps/xfHhYgozHhqJBpwRA",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
+        "maps_url": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Bulevar Books",
@@ -109,12 +128,13 @@
         "lng": 19.84536255,
         "description": "Отличный книжный магазин и небольшая кофейня",
         "link": "",
-        "instagram": "https://www.facebook.com/BulevarBooks/",
-        "maps_url": "https://goo.gl/maps/nU2SUP9ScpwjAyzk7",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/BulevarBooks\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/nU2SUP9ScpwjAyzk7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Gabby Caffe & Bar",
@@ -122,12 +142,13 @@
         "lng": 19.84845344,
         "description": "Mesto unikatnih kafa, koktela i poslastica.",
         "link": "",
-        "instagram": "https://www.facebook.com/gabbycaffe/",
-        "maps_url": "https://goo.gl/maps/X9KGHUybdjUT7PAKA",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/gabbycaffe\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/X9KGHUybdjUT7PAKA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Klub Kulture \"Crna Ovca\"",
@@ -135,12 +156,13 @@
         "lng": 19.84389187,
         "description": "Crna Ovca je aktivistički prostor Rebuild Collective-a koji se bavi promocijom kulture i subkulture",
         "link": "",
-        "instagram": "https://www.facebook.com/crna.ovca.novisad/",
-        "maps_url": "https://goo.gl/maps/8UC54qpzDFBA96MG6",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/crna.ovca.novisad\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/8UC54qpzDFBA96MG6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Crni Ovan",
@@ -148,12 +170,13 @@
         "lng": 19.84828467,
         "description": "Spot for doggos, coffee, booze&brews, activism & solidarity. 100% smoke free.100% pet friendly, no place for racism, sexism, homophobia",
         "link": "",
-        "instagram": "https://www.facebook.com/crniovan.ns/",
-        "maps_url": "https://goo.gl/maps/jMF1AGERLYxAh9Lt6",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/crniovan.ns\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/jMF1AGERLYxAh9Lt6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Fresh food caffe 021",
@@ -161,12 +184,13 @@
         "lng": 19.83122664,
         "description": "Unesite sve što je važno u jednom obroku, uz naše obrok salate. Pogodne su i za vegane, ai za one koji to nisu, a ono što im je zajedničko je svežina i poseban ukus!",
         "link": "",
-        "instagram": "https://www.instagram.com/freshfoodcaffe021/",
-        "maps_url": "https://goo.gl/maps/ccJgtABKyLaFTCY27",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/freshfoodcaffe021\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/ccJgtABKyLaFTCY27",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Šećernema",
@@ -174,12 +198,13 @@
         "lng": 19.83931447,
         "description": "Izaberite vašu kombinaciju 🎀\nNaš ceo asortiman je postan, bez dodatog šećera, vegan i 100% prirodan 💖",
         "link": "",
-        "instagram": "https://www.facebook.com/secernema/",
-        "maps_url": "https://goo.gl/maps/j2fUkvcEVqASgYWR8",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/secernema\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/j2fUkvcEVqASgYWR8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Šećernema",
@@ -187,12 +212,13 @@
         "lng": 19.84760767,
         "description": "Izaberite vašu kombinaciju 🎀\nNaš ceo asortiman je postan, bez dodatog šećera, vegan i 100% prirodan 💖",
         "link": "",
-        "instagram": "https://www.facebook.com/secernema/",
-        "maps_url": "https://goo.gl/maps/pnEZ6goHqChTmXFy5",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.facebook.com\/secernema\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/pnEZ6goHqChTmXFy5",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Izlet",
@@ -200,25 +226,27 @@
         "lng": 19.85169916,
         "description": "Кофейня и продажа кофе",
         "link": "",
-        "instagram": "https://www.instagram.com/_izlet",
-        "maps_url": "https://goo.gl/maps/tTq27yBpApmx4cDr9",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/_izlet",
+        "maps_url": "https:\/\/goo.gl\/maps\/tTq27yBpApmx4cDr9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Toster Bar",
         "lat": 45.2562211,
         "lng": 19.84431976,
         "description": "Бургеры из 100% говядины и крафтовое пиво",
-        "link": "https://tosterbar.rs/",
+        "link": "https:\/\/tosterbar.rs\/",
         "instagram": "",
-        "maps_url": "https://goo.gl/maps/mpJFeVnAKbA3pVXv9",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "maps_url": "https:\/\/goo.gl\/maps\/mpJFeVnAKbA3pVXv9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "FREESHKA COFFEE Co.",
@@ -226,12 +254,13 @@
         "lng": 19.8370863,
         "description": "Kafa za poneti, ali može da se sedi i unutra (mali lokal, šank stolovi)",
         "link": "",
-        "instagram": "https://www.instagram.com/freeshkakafa/",
-        "maps_url": "https://goo.gl/maps/PFdDrw9dnbdbnnJ6A",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/freeshkakafa\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/PFdDrw9dnbdbnnJ6A",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Block 32",
@@ -239,12 +268,13 @@
         "lng": 19.8303,
         "description": "Working hours:\nTuesday - Saturday 08-19h\nSunday 09-15h\nMonday off\nPet friendly 🐾",
         "link": "",
-        "instagram": "https://www.instagram.com/coffeeculture32",
-        "maps_url": "https://goo.gl/maps/BdzhqNcV7bDHJC6U8",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/coffeeculture32",
+        "maps_url": "https:\/\/goo.gl\/maps\/BdzhqNcV7bDHJC6U8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Macchiato Fax",
@@ -252,12 +282,13 @@
         "lng": 19.849806,
         "description": "Ja sam Macchiato Fax. Nalazim se u ulici Stevana Musica 20 u Novom Sadu . Kako mi i samo ime kaze nalazim se u blizini fakulteta i imam odličnu kafu . Naravno pored kafe imamo i puno drugih napitaka , a naravno i odlicne hrane u ponudi.",
         "link": "",
-        "instagram": "https://www.instagram.com/macchiatofax/",
-        "maps_url": "https://goo.gl/maps/Z7eFs4x52LEv8WuH6",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/macchiatofax\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/Z7eFs4x52LEv8WuH6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Macchiato Liman",
@@ -265,25 +296,27 @@
         "lng": 19.8358342,
         "description": "Macchiato Liman, nezaobilazno mirno mesto za kafu, ručak i sastanak. Smešten u srcu Limana pored Dunava, sa pogledom na zelenilo vašeg omiljenog parka. Karakterističan je po svom prijatnom ambijentu i udobnom enterijeru. Ceo jedan sprat je revervisan za g",
         "link": "",
-        "instagram": "https://www.instagram.com/macchiato_liman/",
-        "maps_url": "https://goo.gl/maps/jLDw9Us1MPbc6yor9",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/macchiato_liman\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/jLDw9Us1MPbc6yor9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Zenit Books, Coffee, Bar, & Bookstore",
         "lat": 45.2570533,
         "lng": 19.840729,
         "description": "Расположенный на первом этаже одного из старейших многоэтажных домов в Нови-Саде (1931 г.), с его интерьером, бар стремится сохранить часть этой истории, а также облагородить пространство элементами промышленного дизайна, введением натуральных материалов ",
-        "link": "https://zenitbooks.com/",
+        "link": "https:\/\/zenitbooks.com\/",
         "instagram": "",
-        "maps_url": "https://goo.gl/maps/xk9spuW9uGgq2nuG9",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "maps_url": "https:\/\/goo.gl\/maps\/xk9spuW9uGgq2nuG9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Pizzeria Adrijana",
@@ -292,86 +325,120 @@
         "description": "Prednji deo lokala je nepušački",
         "link": "",
         "instagram": "",
-        "maps_url": "https://goo.gl/maps/H7V7VboVy23PX3cK6",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "maps_url": "https:\/\/goo.gl\/maps\/H7V7VboVy23PX3cK6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Gondola",
         "lat": 45.2537384,
         "lng": 19.8483648,
         "description": "Nepušački deo nije potpuno odvojen, ali je ventilacija dovoljno dobra da se dim ne os",
-        "link": "https://www.gondola-restoran.rs/",
+        "link": "https:\/\/www.gondola-restoran.rs\/",
         "instagram": "",
-        "maps_url": "https://www.gondola-restoran.rs/",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "maps_url": "https:\/\/www.gondola-restoran.rs\/",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "CoffeeRide",
         "lat": 45.2505635,
         "lng": 19.8332106,
         "description": "A great little cafe & Bicycle Workshop",
-        "link": "https://coffeeride.day/",
+        "link": "https:\/\/coffeeride.day\/",
         "instagram": "",
-        "maps_url": "https://maps.app.goo.gl/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "specialty"
-        ]
+        ],
+        "verified": false
     },
     {
         "name": "Urbano",
         "lat": 45.2487,
         "lng": 19.8329,
         "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
-        "link": "https://example.com",
-        "instagram": "https://instagram.com/urbano_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["desserts", "no_smoking"]
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/urbano_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "desserts",
+            "no_smoking"
+        ],
+        "verified": false
     },
     {
         "name": "Pendzer",
         "lat": 45.2608,
         "lng": 19.8198,
         "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
-        "link": "https://example.com",
-        "instagram": "https://instagram.com/pendzer_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["specialty", "pets_allowed"]
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/pendzer_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "specialty",
+            "pets_allowed"
+        ],
+        "verified": false
     },
     {
         "name": "Kafetea",
         "lat": 45.2616,
-        "lng": 19.8520,
+        "lng": 19.852,
         "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
-        "link": "https://example.com",
-        "instagram": "https://instagram.com/kafetea_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["specialty", "desserts", "no_smoking", "pets_allowed"]
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/kafetea_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "specialty",
+            "desserts",
+            "no_smoking",
+            "pets_allowed"
+        ],
+        "verified": false
     },
     {
         "name": "Bruno Bar",
         "lat": 45.2422,
         "lng": 19.8253,
         "description": "Современный кофейный бар с минималистичным интерьером.",
-        "link": "https://example.com",
-        "instagram": "https://instagram.com/block32_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["no_smoking", "pets_allowed", "bar", "beer"]
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/block32_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "bar",
+            "beer"
+        ],
+        "verified": false
     },
     {
         "name": "Teplica Wine bar",
         "lat": 45.2522,
-        "lng": 19.8410,
+        "lng": 19.841,
         "description": "Современный кофейный бар с минималистичным интерьером.",
-        "link": "https://example.com",
-        "instagram": "https://instagram.com/block32_coffee",
-        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
-        "attributes": ["no_smoking", "pets_allowed", "bar", "wine"]
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/block32_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "bar",
+            "wine"
+        ],
+        "verified": false
     }
 ]
