@@ -39,44 +39,18 @@
         "verified": false
     },
     {
-        "name": "Juice bar HeyDay",
-        "lat": 45.24945236,
-        "lng": 19.83820296,
-        "description": "Koncept Juice bar-a HeyDay ogleda se u čaši punoj 100% hladno cedjenog voća i povrća, u Vašoj potrebi da date sami sebi prednost u svakodnevnoj trci za uspehom.",
-        "link": "",
-        "instagram": "https:\/\/www.facebook.com\/juicebarheyday\/",
-        "maps_url": "https:\/\/goo.gl\/maps\/nLL1mtc4F8Qf5bie8",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
-        "attributes": [
-            "specialty"
-        ],
-        "verified": false
-    },
-    {
-        "name": "Panuša Palačinkarnica",
-        "lat": 45.25479774,
-        "lng": 19.83175227,
-        "description": "Kod nas će uvek uživati svi ljubitelji palačinki koje polako osvajaju srca, prijatelji koji su došli na kafu, parovi na prvom sastanku, porodice, društvo, komšije na šoljici razgovora, ljubitelji lepog i originalnog mesta koji ne liči na druge.",
-        "link": "",
-        "instagram": "https:\/\/www.instagram.com\/panusa.novisad\/",
-        "maps_url": "https:\/\/goo.gl\/maps\/9kZEErQkgtirN7wE6",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
-        "attributes": [
-            "specialty"
-        ],
-        "verified": false
-    },
-    {
         "name": "Sweet & Green",
         "lat": 45.25609233,
         "lng": 19.84676623,
         "description": "Salate i cedjeni sokovi",
         "link": "",
-        "instagram": "https:\/\/sweetandgreens.com\/",
+        "instagram": "https:\/\/www.instagram.com\/sweetandgreen.rs\/",
         "maps_url": "https:\/\/goo.gl\/maps\/Ffq17dbGzLRgUnvAA",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/sweetgreen.jpg",
         "attributes": [
-            "specialty"
+            "no_smoking",
+            "food",
+            "cafe"
         ],
         "verified": false
     },
@@ -88,9 +62,10 @@
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/vegeveganorganicfood",
         "maps_url": "https:\/\/goo.gl\/maps\/DSHs3XPzWqYeJ2Si8",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/vegevegan.jpg",
         "attributes": [
-            "specialty"
+            "no_smoking",
+            "food"
         ],
         "verified": false
     },
@@ -102,9 +77,10 @@
         "link": "",
         "instagram": "https:\/\/www.facebook.com\/organicfactory.novisad\/",
         "maps_url": "https:\/\/goo.gl\/maps\/U6s8M6K2w5jzdrYJ6",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/organicfactory.jpg",
         "attributes": [
-            "specialty"
+            "food",
+            "no_smoking"
         ],
         "verified": false
     },
