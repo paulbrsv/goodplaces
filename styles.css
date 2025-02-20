@@ -25,18 +25,24 @@ h1 {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    padding: 0px 4px;
 }
+
+
 
 .filters {
     display: flex;
     gap: 5px;
-    margin-top: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
 
 .filter {
     font-size: 14px;
     cursor: pointer;
     color: #333;
+    background-color: #F2F1F1;
     transition: background-color 0.3s, color 0.3s;
     padding: 8px 4px;
     border-radius: 9px;
@@ -46,6 +52,28 @@ h1 {
     background-color: #ADD8E6; /* Голубой фон */
     color: #333; /* Белый текст */
 }
+
+.filter-divider {
+    padding: 0 5px;
+    font-weight: bold;
+    color: #808080;
+}
+
+.filter-reset {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 9px;
+    background-color: #FFEFEF;
+    font-weight: bold;
+
+    transition: background-color 0.2s;
+}
+
+.filter-reset:hover {
+    background-color: #ffbbbb;
+}
+
 
 /*.filter:hover {
     background-color: #e0e0e0;   Легкий фон при наведении*/
@@ -83,7 +111,11 @@ h2, h3 {
 }
 
 .place-list {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+}
+
+.place-list h3 {
+    margin-top: 20px;
 }
 
 .place {
