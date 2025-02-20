@@ -58,5 +58,25 @@
         "instagram": "https://instagram.com/block32_coffee",
         "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
         "attributes": ["specialty", "desserts", "no_smoking", "pets_allowed"]
+    },
+    {
+        "name": "Bruno Bar",
+        "lat": 45.2422,
+        "lng": 19.8253,
+        "description": "Современный кофейный бар с минималистичным интерьером.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/block32_coffee",
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["no_smoking", "pets_allowed", "bar", "beer"]
+    },
+    {
+        "name": "Teplica Wine bar",
+        "lat": 45.2522,
+        "lng": 19.8410,
+        "description": "Современный кофейный бар с минималистичным интерьером.",
+        "link": "https://example.com",
+        "instagram": "https://instagram.com/block32_coffee",
+        "image": "https://paulbrsv.github.io/goodplaces/image/demo.jpg",
+        "attributes": ["no_smoking", "pets_allowed", "bar", "wine"]
     }
 ]
