@@ -107,7 +107,7 @@ gtag('config', 'G-TQDHF6DQ7Z');
                     <div class="popup-text">
                         <h3>${place.name}</h3>
                         <p>${place.description}</p>
-                        <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join(' | ')}</div>
+                        <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join(', ')}</div>
                         <div class="popup-links">
                             <a href="${place.link}" target="_blank">🌐 Сайт</a>
                             <a href="${place.instagram}" target="_blank">📸 Instagram</a>
@@ -136,7 +136,8 @@ gtag('config', 'G-TQDHF6DQ7Z');
                 <img src="${place.image}" alt="${place.name}">
                 <div class="place-info">
                     <h3>${place.name}</h3>
-                    <p>${place.description}</p>
+                    <p>${place.shirt_description}</p>
+                    <p>🚭 🐾</p>
                 </div>`;
             placeElement.onclick = () => {
                 map.setView([place.lat, place.lng], 16, { animate: true });

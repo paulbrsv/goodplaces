@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'name' => $_POST['name'],
                 'lat' => (float)$_POST['lat'],
                 'lng' => (float)$_POST['lng'],
+                'shirt_description' => $_POST['shirt_description'],
                 'description' => $_POST['description'],
                 'link' => $_POST['link'],
                 'instagram' => $_POST['instagram'],
@@ -24,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'name' => $_POST['name'],
                 'lat' => (float)$_POST['lat'],
                 'lng' => (float)$_POST['lng'],
+                'shirt_description' => $_POST['shirt_description'],
                 'description' => $_POST['description'],
                 'link' => $_POST['link'],
                 'instagram' => $_POST['instagram'],
@@ -50,7 +52,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Админка</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
-    .table-container { overflow-x: auto; }
+
+    .table-container { overflow-x: auto;
+      margin: 0; /* Убираем лишние отступы */
+padding: 0; /* Убираем внутренние отступы */
+}
+
+table {
+    width: 100%; /* Убедитесь, что таблица занимает всю доступную ширину */
+    table-layout: fixed; /* Используем фиксированную разметку для предотвращения горизонтального скроллинга */
+}
+
+th, td {
+    word-wrap: break-word; /* Разбиваем длинные слова в ячейках */
+    overflow-wrap: break-word; /* Для старых браузеров */
+}
+
+body {
+    padding-left: 0;
+    padding-right: 0; /* Убираем отступы по бокам */
+    margin-left: 0;
+    margin-right: 0;
+}
+
     .modal-body input, .modal-body textarea { width: 100%; margin-bottom: 10px; }
     .badge {
         cursor: pointer;
@@ -136,6 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <th>Название</th>
                     <th>Широта</th>
                     <th>Долгота</th>
+                    <th>Краткое описание</th>
                     <th>Описание</th>
                     <th>Ссылка</th>
                     <th>Instagram</th>
@@ -152,6 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <td><?= htmlspecialchars($place['name']) ?></td>
                         <td><?= $place['lat'] ?></td>
                         <td><?= $place['lng'] ?></td>
+                        <td><?= htmlspecialchars($place['shirt_description']) ?></td>
                         <td><?= htmlspecialchars($place['description']) ?></td>
                         <td><a href="<?= $place['link'] ?>" target="_blank">Ссылка</a></td>
                         <td><a href="<?= $place['instagram'] ?>" target="_blank">Instagram</a></td>
@@ -187,6 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="text" name="name" id="name" placeholder="Название" class="form-control">
                         <input type="text" name="lat" id="lat" placeholder="Широта" class="form-control">
                         <input type="text" name="lng" id="lng" placeholder="Долгота" class="form-control">
+                        <textarea name="shirt_description" id="shirt_description" placeholder="Краткое описание" class="form-control"></textarea>
                         <textarea name="description" id="description" placeholder="Описание" class="form-control"></textarea>
                         <input type="text" name="link" id="link" placeholder="Ссылка" class="form-control">
                         <input type="text" name="instagram" id="instagram" placeholder="Instagram" class="form-control">
@@ -237,6 +264,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             document.getElementById('name').value = place.name;
             document.getElementById('lat').value = place.lat;
             document.getElementById('lng').value = place.lng;
+            document.getElementById('shirt_description').value = place.shirt_description;
             document.getElementById('description').value = place.description;
             document.getElementById('link').value = place.link;
             document.getElementById('instagram').value = place.instagram;
