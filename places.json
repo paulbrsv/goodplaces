@@ -238,9 +238,9 @@
         "verified": false
     },
     {
-        "name": "FREESHKA COFFEE Co.",
-        "lat": 45.2469744,
-        "lng": 19.8370863,
+        "name": "FREESHKA",
+        "lat": 45.24698,
+        "lng": 19.83928,
         "shirt_description": "",
         "description": "Kafa za poneti, ali može da se sedi i unutra (mali lokal, šank stolovi)",
         "link": "",
@@ -503,8 +503,8 @@
     },
     {
         "name": "Kofilin",
-        "lat": 0,
-        "lng": 0,
+        "lat": 45.2482,
+        "lng": 19.841,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -518,8 +518,8 @@
     },
     {
         "name": "Coffee Bara 1",
-        "lat": 0,
-        "lng": 0,
+        "lat": 45.2638,
+        "lng": 19.8169,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -533,8 +533,8 @@
     },
     {
         "name": "Coffee Bara 2",
-        "lat": 0,
-        "lng": 0,
+        "lat": 45.2467,
+        "lng": 19.8337,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -548,8 +548,8 @@
     },
     {
         "name": "Tishler",
-        "lat": 0,
-        "lng": 0,
+        "lat": 45.247,
+        "lng": 19.8334,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -562,9 +562,9 @@
         "verified": false
     },
     {
-        "name": "Zrno",
-        "lat": 0,
-        "lng": 0,
+        "name": "Kafeterija Zrno",
+        "lat": 45.2405,
+        "lng": 19.8152,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -577,9 +577,9 @@
         "verified": false
     },
     {
-        "name": "Mlin 1",
-        "lat": 0,
-        "lng": 0,
+        "name": "MLIN coffee & tea shop",
+        "lat": 45.25004,
+        "lng": 19.8398,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -592,9 +592,9 @@
         "verified": false
     },
     {
-        "name": "Mlin 2",
-        "lat": 0,
-        "lng": 0,
+        "name": "MLIN coffee & tea shop",
+        "lat": 45.26179,
+        "lng": 19.83537,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -607,9 +607,9 @@
         "verified": false
     },
     {
-        "name": "Mlin 3",
-        "lat": 0,
-        "lng": 0,
+        "name": "MLIN Coffee & Tea Shop GARDEN",
+        "lat": 45.2498,
+        "lng": 19.8007,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -622,9 +622,9 @@
         "verified": false
     },
     {
-        "name": "Carolia",
-        "lat": 0,
-        "lng": 0,
+        "name": "Čarolija Kafe",
+        "lat": 45.24195,
+        "lng": 19.84725,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -637,9 +637,324 @@
         "verified": false
     },
     {
-        "name": "Seherezada",
-        "lat": 0,
-        "lng": 0,
+        "name": "Šeherezada",
+        "lat": 45.25676,
+        "lng": 19.8474,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "ROZBRAT | STREET-BISTRO",
+        "lat": 45.25848,
+        "lng": 19.8459,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Fika Coffee Shop",
+        "lat": 45.25839,
+        "lng": 19.846,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Green House Coffee",
+        "lat": 45.2627,
+        "lng": 19.8501,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Le Klok Bistro",
+        "lat": 45.25549,
+        "lng": 19.86197,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Raf Cafe",
+        "lat": 45.261,
+        "lng": 19.81028,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Petrus Caffe",
+        "lat": 45.2543,
+        "lng": 19.8464,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Korpa Deli Bistro",
+        "lat": 45.2532,
+        "lng": 19.8143,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Park Novi Restaurants",
+        "lat": 45.25869,
+        "lng": 19.80708,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "tiho i toplo",
+        "lat": 45.2569,
+        "lng": 19.837,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Drago mi je",
+        "lat": 45.2535,
+        "lng": 19.84044,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "MAYBE COFFEE?",
+        "lat": 45.2547,
+        "lng": 19.84,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kafeterija II",
+        "lat": 45.2545,
+        "lng": 19.8443,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kafeterija",
+        "lat": 45.24788,
+        "lng": 19.8482,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "ALBYSUPERSTORE",
+        "lat": 45.25014,
+        "lng": 19.85184,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "SOC",
+        "lat": 45.2543,
+        "lng": 19.8456,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Mala Radionica",
+        "lat": 45.25272,
+        "lng": 19.83461,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "FREESHKA 2",
+        "lat": 45.25943,
+        "lng": 19.8324,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "La Dolce Fiore",
+        "lat": 45.24826,
+        "lng": 19.8489,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Mandarin",
+        "lat": 45.24888,
+        "lng": 19.83378,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Nomad Cocktail Bar",
+        "lat": 45.25623,
+        "lng": 19.8498,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Hedonist Aperitif bar & Coffee",
+        "lat": 45.2567,
+        "lng": 19.8487,
         "shirt_description": "",
         "description": "",
         "link": "",

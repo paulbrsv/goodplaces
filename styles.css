@@ -41,8 +41,24 @@ h1 {
     color: #333;
     background-color: #F2F1F1;
     transition: background-color 0.3s, color 0.3s;
-    padding: 8px 4px;
+    padding: 4px 4px;
     border-radius: 9px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Запрещаем перенос на новую строку */
+}
+
+.filter .filter-count {
+    margin-left: 5px;      /* Расстояние между текстом и кружочком */
+    width: 25px;
+    height: 25px;
+    background-color: #FEFEFE; /* Цвет фона кружочка */
+    border-radius: 50%;   /* Круглая форма */
+    color: #333;          /* Цвет текста */
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;    /* Выравнивание текста по центру кружочка */
+    font-weight: bold;
 }
 
 .filter.active {
@@ -144,7 +160,7 @@ h2, h3 {
 
 .place img {
     width: 60px;
-    height: 60px;
+    height: 80px;
     object-fit: cover;
     border-radius: 8px;
     margin-right: 10px;
@@ -177,7 +193,6 @@ h2, h3 {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
 
 .leaflet-popup-content-wrapper {
     max-width: 500px !important;
@@ -224,12 +239,9 @@ h2, h3 {
 }
 
 .popup-attributes {
-
-
     gap: 8px;
     font-size: 13px;
     color: #555;
-
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

@@ -15,7 +15,12 @@ gtag('config', 'G-TQDHF6DQ7Z');
     <title>Карта кофеен</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
 </head>
 <body>
 
@@ -60,9 +65,12 @@ gtag('config', 'G-TQDHF6DQ7Z');
         attribution: '&copy; OpenStreetMap contributors & Carto'
     }).addTo(map);
 
-    var markers = [];
+    var markerCluster = L.markerClusterGroup();
+    map.addLayer(markerCluster);
+
     var placesData = [];
     let activeFilters = [];
+    let markers = {}; // Объект для хранения маркеров
 
     const attributeNames = {
         "specialty": "☕ Спешелти кофе",
@@ -92,13 +100,12 @@ gtag('config', 'G-TQDHF6DQ7Z');
     });
 
     function updateMap() {
+        markerCluster.clearLayers();
+
         const filteredPlaces = placesData.filter(place => {
             if (activeFilters.length === 0) return true;
             return activeFilters.every(filter => place.attributes.includes(filter));
         });
-
-        markers.forEach(marker => marker.remove());
-        markers = [];
 
         filteredPlaces.forEach(place => {
             const popupContent = `
@@ -115,11 +122,34 @@ gtag('config', 'G-TQDHF6DQ7Z');
                         </div>
                     </div>
                 </div>`;
-            const marker = L.marker([place.lat, place.lng]).addTo(map).bindPopup(popupContent);
-            marker.placeName = place.name;
-            markers.push(marker);
+
+            const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent);
+            markerCluster.addLayer(marker);
+            markers[place.name] = marker;
         });
+
+        if (!map.hasLayer(markerCluster)) {
+            map.addLayer(markerCluster);
+        }
+
         updateSidebar(filteredPlaces);
+        updateFilterCounts(filteredPlaces);
+    }
+
+    function updateFilterCounts(filteredPlaces) {
+        document.querySelectorAll('.filter').forEach(filter => {
+            const filterId = filter.dataset.filter;
+            const count = filteredPlaces.filter(place => place.attributes.includes(filterId)).length;
+
+            let countElement = filter.querySelector('.filter-count');
+            if (!countElement) {
+                countElement = document.createElement('div');
+                countElement.classList.add('filter-count');
+                filter.appendChild(countElement);
+            }
+
+            countElement.textContent = count;
+        });
     }
 
     function updateSidebar(filteredPlaces) {
@@ -139,12 +169,30 @@ gtag('config', 'G-TQDHF6DQ7Z');
                     <p>${place.shirt_description}</p>
                     <p>🚭 🐾</p>
                 </div>`;
+
             placeElement.onclick = () => {
-                map.setView([place.lat, place.lng], 16, { animate: true });
-                setTimeout(() => {
-                    markers.find(m => m.placeName === place.name).openPopup();
-                }, 300);
+                map.setView([place.lat, place.lng], 18, { animate: true });
+
+                map.removeLayer(markerCluster);
+                markers[place.name].addTo(map);
+                markers[place.name].openPopup();
+
+                // Возвращаем кластеризацию сразу
+                if (!map.hasLayer(markerCluster)) {
+                    map.addLayer(markerCluster);
+                }
+
+                // Убираем старый обработчик, если был, и добавляем новый
+                markers[place.name].off("popupclose");
+                markers[place.name].on("popupclose", () => {
+                    map.removeLayer(markers[place.name]);
+                    if (!map.hasLayer(markerCluster)) {
+                        map.addLayer(markerCluster);
+                    }
+                    updateMap();
+                });
             };
+
             if (bounds.contains([place.lat, place.lng])) {
                 visibleList.appendChild(placeElement);
             } else {
@@ -166,6 +214,8 @@ gtag('config', 'G-TQDHF6DQ7Z');
         return place.attributes.some(attr => activeFilters.includes(attr));
     })));
 </script>
+
+
 
 </body>
 </html>
