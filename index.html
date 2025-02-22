@@ -123,7 +123,11 @@ gtag('config', 'G-TQDHF6DQ7Z');
                     </div>
                 </div>`;
 
-            const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent);
+                const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent, {
+        autoPan: true,
+        autoPanPaddingTopLeft: L.point(0, 100),  // Отступ сверху
+        autoPanPaddingBottomRight: L.point(0, 50) // Отступ снизу
+    });
             markerCluster.addLayer(marker);
             markers[place.name] = marker;
         });
