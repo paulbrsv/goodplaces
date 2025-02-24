@@ -97,10 +97,11 @@ h1 {
 .filter-reset {
     font-size: 14px;
     cursor: pointer;
-    padding: 8px 10px;
+    padding: 5px 10px;
     border-radius: 9px;
     background-color: #FFEFEF;
     font-weight: bold;
+    align-items: center;
     transition: background-color 0.2s;
 
 }

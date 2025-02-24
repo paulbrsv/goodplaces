@@ -237,8 +237,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         <textarea name="attributes" id="attributes" placeholder="Атрибуты (через запятую)" class="form-control"></textarea>
 
                         <div id="attributes-suggestions" class="mt-2">
-                            <span class="badge badge-light clickable" onclick="addAttribute('pet_friendly')">pet_friendly</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('no_smoking')">no_smoking</span>
+                            <span class="badge badge-light clickable" onclick="addAttribute('pet_friendly')">pet_friendly</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('bar')">bar</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('beer')">beer</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('wine')">wine</span>
