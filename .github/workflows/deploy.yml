@@ -1,0 +1,30 @@
+name: 🚀 Deploy to IONOS via FTP
+
+on:
+  push:
+    branches:
+      - main  # Деплой запускается при пуше в main
+
+jobs:
+  ftp-deploy:
+    name: 📂 Upload to FTP
+    runs-on: ubuntu-latest  # Запуск на сервере GitHub
+
+    steps:
+      - name: 📥 Клонируем репозиторий
+        uses: actions/checkout@v3
+
+      - name: 🔄 Загружаем файлы на FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: "./"  # Локальная папка (корень репо)
+          server-dir: "/"  # Папка на сервере (замени на свою)
+          exclude: |
+            **/.git*
+            **/.github*
+            **/node_modules/*
+            **/README.md
+            **/.env
