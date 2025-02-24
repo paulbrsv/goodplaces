@@ -19,7 +19,7 @@ jobs:
         with:
           host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          password: "QFkp7FjP4V3#cX2"
           port: 22
           local: "./"  # Локальная папка для загрузки
           remote: "/"  # Папка на сервере
