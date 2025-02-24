@@ -1,4 +1,4 @@
-name: 🚀 Deploy to IONOS via FTP
+name: 🚀 Deploy to IONOS via SFTP
 
 on:
   push:
@@ -6,25 +6,20 @@ on:
       - main  # Деплой при пуше в main
 
 jobs:
-  ftp-deploy:
-    name: 📂 Upload to FTP
-    runs-on: ubuntu-latest  # Запуск на сервере GitHub
+  sftp-deploy:
+    name: 📂 Upload to SFTP
+    runs-on: ubuntu-latest
 
     steps:
       - name: 📥 Клонируем репозиторий
         uses: actions/checkout@v3
 
-      - name: 🔄 Загружаем файлы на FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4  # Исправленная версия!
+      - name: 🔄 Загружаем файлы на SFTP
+        uses: appleboy/ssh-action@v0.1.3
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "./"  # Что загружаем
-          server-dir: "/"  # Куда загружаем (замени на свой путь)
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/*
-            **/README.md
-            **/.env
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22  # Порт для SFTP
+          source: "./"  # Локальная папка
+          target: "/"  # Папка на сервере
