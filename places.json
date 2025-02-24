@@ -10,8 +10,8 @@
         "maps_url": "https:\/\/goo.gl\/maps\/cCWtgfoQ8YfxmLwS7",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/biciklana.jpg",
         "attributes": [
-            "pet_friendly",
             "no_smoking",
+            "pet_friendly",
             "coffee_shop",
             "desserts",
             "snacks",
@@ -30,8 +30,8 @@
         "maps_url": "https:\/\/goo.gl\/maps\/XWRaLduEZV8YgXcw5",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/lebol.jpg",
         "attributes": [
-            "pet_friendly",
             "no_smoking",
+            "pet_friendly",
             "wine",
             "coffee_shop",
             "desserts",
@@ -993,6 +993,21 @@
         "attributes": [
             "",
             "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Seal  tea",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
         ],
         "verified": false
     }
