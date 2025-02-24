@@ -27,22 +27,56 @@ gtag('config', 'G-TQDHF6DQ7Z');
 <header>
     <h1>DOBRO MESTO</h1>
     <div class="filters">
-        <span class="filter" data-filter="no_smoking">🚭 No smoking</span>
-        <span class="filter" data-filter="pets_allowed">🐾 Pet friendly</span>
-        <span class="filter-divider">|</span>
-        <span class="filter" data-filter="specialty">☕ Спешелти кофе</span>
-        <span class="filter" data-filter="desserts">🍰 Десерты</span>
-        <span class="filter" data-filter="bar">🍸 Бар</span>
-        <span class="filter" data-filter="beer">🍻 Пиво</span>
-        <span class="filter" data-filter="wine">🍷 Вино</span>
-        <span class="filter" data-filter="terrase">🏖 Терраса</span>
-        <span class="filter-reset">🔄 Сбросить</span>
-        <div class="language-switcher">
-            <button onclick="switchLanguage('rs')">RS</button>
-            <button onclick="switchLanguage('en')">EN</button>
-            <button onclick="switchLanguage('ru')">RU</button>
-        </div>
+    <div class="filters-left">
+        <span class="filter" data-filter="no_smoking">
+            <img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="filter-icon">
+          No smoking
+        </span>
+        <span class="filter" data-filter="pets_allowed">
+          <img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="filter-icon">
+        Pet friendly
+      </span>
+        <span class="filter" data-filter="smoke">
+          <img src="https://paulbrsv.github.io/goodplaces/image/smoke.svg" alt="Non smoking area" class="filter-icon">
+        Non-smoking area
+       </span>
+       <span class="filter" data-filter="terrace">
+         <img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="filter-icon">
+       Terrase
+      </span>
+
     </div>
+    <span class="filter-divider"></span>
+    <div class="filters-right">
+        <span class="filter" data-filter="coffee_shop">
+          <img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Coffee" class="filter-icon">
+        Coffee
+       </span>
+        <span class="filter" data-filter="specialty">
+          <img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="filter-icon">
+        Specialty coffee
+       </span>
+        <span class="filter" data-filter="desserts">
+          <img src="https://paulbrsv.github.io/goodplaces/image/cake.svg" alt="Desserts" class="filter-icon">
+        Desserts
+       </span>
+        <span class="filter" data-filter="beer">
+          <img src="https://paulbrsv.github.io/goodplaces/image/beer.svg" alt="Beer" class="filter-icon">
+        Beer
+       </span>
+        <span class="filter" data-filter="wine">
+          <img src="https://paulbrsv.github.io/goodplaces/image/wine.svg" alt="Wine" class="filter-icon">
+        Wine
+       </span>
+    </div>
+    <span class="filter-reset">🔄 Сбросить</span>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('rs')">RS</button>
+        <button onclick="switchLanguage('en')">EN</button>
+        <button onclick="switchLanguage('ru')">RU</button>
+    </div>
+</div>
+
 
 </header>
 
@@ -74,10 +108,17 @@ gtag('config', 'G-TQDHF6DQ7Z');
     let markers = {}; // Объект для хранения маркеров
 
     const attributeNames = {
-        "specialty": "☕ Спешелти кофе",
-        "desserts": "🍰 Десерты",
-        "no_smoking": "🚭 Не курят",
-        "pets_allowed": "🐾 Можно с животными"
+        "specialty": '<img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="atr-icon">',
+        "desserts": '<img src="https://paulbrsv.github.io/goodplaces/image/cake.svg" alt="Desserts" class="atr-icon">',
+        "no_smoking": '<img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="atr-icon">',
+        "pets_allowed": '<img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="atr-icon">',
+        "wine": '<img src="https://paulbrsv.github.io/goodplaces/image/wine.svg" alt="Wine" class="atr-icon">',
+        "beer": '<img src="https://paulbrsv.github.io/goodplaces/image/beer.svg" alt="Beer" class="atr-icon">',
+        "pet_friendly": '<img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="atr-icon">',
+        "coffee_shop": '<img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Cafe" class="atr-icon">',
+        "snacks": '<img src="https://paulbrsv.github.io/goodplaces/image/sandwich.svg" alt="Snacks" class="atr-icon">',
+        "food": '<img src="https://paulbrsv.github.io/goodplaces/image/food.svg" alt="Snacks" class="atr-icon">',
+        "terrace": '<img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="atr-icon">'
     };
 
     document.querySelectorAll('.filter').forEach(filter => {
@@ -110,19 +151,26 @@ gtag('config', 'G-TQDHF6DQ7Z');
 
         filteredPlaces.forEach(place => {
             const popupContent = `
-                <div class="popup-content">
-                    <img src="${place.image}" alt="${place.name}">
-                    <div class="popup-text">
-                        <h3>${place.name}</h3>
-                        <p>${place.description}</p>
-                        <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join(', ')}</div>
-                        <div class="popup-links">
-                            <a href="${place.link}" target="_blank">🌐 Сайт</a>
-                            <a href="${place.instagram}" target="_blank">📸 Instagram</a>
-                            <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">📍 Карта</a>
-                        </div>
-                    </div>
-                </div>`;
+
+            <div class="popup-content">
+                   <img src="${place.image}" alt="${place.name}">
+                   <div class="popup-text">
+                       <h3>${place.name}</h3>
+                       <p>${place.description}</p>
+                       <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
+                       <div class="popup-links">
+                       <a href="${place.instagram}" target="_blank">
+                          <img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon">
+                       </a>
+                       <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">
+                        <img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon">
+                       </a>
+                       </div>
+                   </div>
+               </div>
+
+
+`;
 
                 const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent, {
         autoPan: true,
@@ -172,7 +220,7 @@ gtag('config', 'G-TQDHF6DQ7Z');
                 <div class="place-info">
                     <h3>${place.name}</h3>
                     <p>${place.shirt_description}</p>
-                    <p>🚭 🐾</p>
+                    <p>${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</p>
                 </div>`;
 
             placeElement.onclick = () => {

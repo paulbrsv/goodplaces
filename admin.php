@@ -239,7 +239,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         <div id="attributes-suggestions" class="mt-2">
                             <span class="badge badge-light clickable" onclick="addAttribute('pet_friendly')">pet_friendly</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('no_smoking')">no_smoking</span>
-                            <span class="badge badge-light clickable" onclick="addAttribute('cafe')">cafe</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('bar')">bar</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('beer')">beer</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('wine')">wine</span>
@@ -250,6 +249,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                             <span class="badge badge-light clickable" onclick="addAttribute('desserts')">desserts</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('food')">food</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('snacks')">snacks</span>
+                            <span class="badge badge-light clickable" onclick="addAttribute('terrace')">terrace</span>
                         </div>
 
                         <div class="form-check">

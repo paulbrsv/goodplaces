@@ -1,21 +1,21 @@
 [
     {
-        "name": "Loft Biciklana",
+        "name": "Biciklana 23",
         "lat": 45.24016169,
         "lng": 19.84743287,
-        "shirt_description": "Это краткое описание. Тест для того, чтобы посмотреть как влеза",
-        "description": "🐩Pet friendly",
+        "shirt_description": "Кафе и велосервис с полностью некурящим залом.",
+        "description": "Кафе и велосервис с полностью некурящим залом, в меню могут быть дессерты и сендвичи. В тёплое время года есть велосипеды напрокат.",
         "link": "",
-        "instagram": "https:\/\/www.facebook.com\/biciklana.ns\/",
+        "instagram": "https:\/\/www.instagram.com\/biciklana23\/",
         "maps_url": "https:\/\/goo.gl\/maps\/cCWtgfoQ8YfxmLwS7",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/biciklana.jpg",
         "attributes": [
             "pet_friendly",
             "no_smoking",
-            "cafe",
             "coffee_shop",
             "desserts",
-            "snacks"
+            "snacks",
+            "terrace"
         ],
         "verified": false
     },
@@ -23,8 +23,8 @@
         "name": "Le Bol NS",
         "lat": 45.25599974,
         "lng": 19.84919648,
-        "shirt_description": "Вечерний лес окутан туманом, в нем царит тишина и покой везде",
-        "description": "Pet Friendly 🐾",
+        "shirt_description": "Breakfast all day & Smoke free & Coworking",
+        "description": "Большое меню: горячее, завтраки и дессерты, есть вино, закуски и, конечно, кофе. \r\n<br>Небольшая и уютная терраса",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/lebolns\/",
         "maps_url": "https:\/\/goo.gl\/maps\/XWRaLduEZV8YgXcw5",
@@ -32,11 +32,11 @@
         "attributes": [
             "pet_friendly",
             "no_smoking",
-            "cafe",
             "wine",
             "coffee_shop",
             "desserts",
-            "food"
+            "food",
+            "terrace"
         ],
         "verified": false
     },
@@ -94,7 +94,7 @@
         "lat": 45.24948867,
         "lng": 19.83951697,
         "shirt_description": "Цветы раскрываются под лучами солнца, радуя глаз яркими краскам",
-        "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači?\r\n\r\n1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća\r\n2. Peciva koja sami kreiramo i pečemo.\r\n3. Namazi koje pravimo na licu mesta, po domaćim receptima.\r\n4. Obilne porcije (još nije z",
+        "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači? 1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća 2. Peciva koja sami kreiramo i pečemo. 3. Namazi koje pravimo na licu mesta, po domaćim ",
         "link": "https:\/\/ananda.rs\/",
         "instagram": "https:\/\/www.instagram.com\/ananda_vegan_restaurant\/",
         "maps_url": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
@@ -311,7 +311,7 @@
         "lat": 45.2570533,
         "lng": 19.840729,
         "shirt_description": "",
-        "description": "Расположенный на первом этаже одного из старейших многоэтажных домов в Нови-Саде (1931 г.), с его интерьером, бар стремится сохранить часть этой истории, а также облагородить пространство элементами промышленного дизайна, введением натуральных материалов ",
+        "description": "Расположенный на первом этаже одного из старейших многоэтажных домов в Нови-Саде (1931 г.), с его интерьером, бар стремится сохранить.",
         "link": "https:\/\/zenitbooks.com\/",
         "instagram": "",
         "maps_url": "https:\/\/goo.gl\/maps\/xk9spuW9uGgq2nuG9",
