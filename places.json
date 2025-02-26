@@ -193,7 +193,7 @@
         "verified": false
     },
     {
-        "name": "Šećernema",
+        "name": "Šećernema Liman",
         "lat": 45.24135059,
         "lng": 19.84760767,
         "shirt_description": "",
@@ -1060,6 +1060,36 @@
         "link": "",
         "instagram": "",
         "maps_url": "https:\/\/maps.app.goo.gl\/RmHnTc2iXsNHxmDB9",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Tramontana",
+        "lat": 45.25785,
+        "lng": 19.8465,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/53xQ25qHrLKCikib8",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Napoli Centrale",
+        "lat": 45.25688,
+        "lng": 19.84995,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/uWPtGTqP4i2ohztT6",
         "image": "",
         "attributes": [
             ""

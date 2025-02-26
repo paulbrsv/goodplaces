@@ -95,7 +95,7 @@ function updateMap() {
             <a href="${place.instagram}" target="_blank">
               <img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon">
             </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">
+            <a href="${place.maps_url}" target="_blank">
               <img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon">
             </a>
           </div>
@@ -105,10 +105,10 @@ function updateMap() {
 
     const marker = L.marker([place.lat, place.lng], {
       icon: L.divIcon({
-        className: 'default-marker', // Класс для стандартной метки
+        className: 'default-marker',
         html: '<div style="background-color: #3388ff; width: 10px; height: 10px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #3388ff;"></div>',
-        iconSize: [16, 16], // Размер точки
-        iconAnchor: [8, 8] // Центр точки
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
       })
     });
 
@@ -119,7 +119,7 @@ function updateMap() {
         autoPanPaddingBottomRight: L.point(0, 50)
       });
       marker.on('popupopen', () => highlightMarker(place.name));
-      marker.on('popupclose', () => resetHighlight()); // Сбрасываем подсветку, но не меняем масштаб
+      marker.on('popupclose', () => resetHighlight());
     } else {
       marker.on('click', () => {
         showMobilePlaceCard(place);
@@ -158,7 +158,19 @@ function updateSidebar(filteredPlaces) {
   outsideList.innerHTML = "";
 
   const bounds = map.getBounds();
-  filteredPlaces.forEach(place => {
+  const mapCenter = map.getCenter();
+
+  const sortedPlaces = filteredPlaces
+    .map(place => {
+      const placeLatLng = L.latLng(place.lat, place.lng);
+      const distance = mapCenter.distanceTo(placeLatLng);
+      return { ...place, distance };
+    })
+    .sort((a, b) => a.distance - b.distance);
+
+  let tempMarker = null;
+
+  sortedPlaces.forEach(place => {
     const placeElement = document.createElement("div");
     placeElement.className = "place";
     placeElement.innerHTML = `
@@ -171,20 +183,74 @@ function updateSidebar(filteredPlaces) {
     `;
 
     placeElement.onclick = () => {
-      map.setView([place.lat, place.lng], 18, { animate: true });
       if (window.innerWidth <= 768) {
+        // Мобильная версия
+        map.setView([place.lat, place.lng], 18, { animate: true });
         showMobilePlaceCard(place);
-        closeSidebar(); // Закрываем сайдбар
-        highlightMarker(place.name); // Подсвечиваем метку
+        closeSidebar();
+        highlightMarker(place.name);
       } else {
-        map.removeLayer(markerCluster);
-        markers[place.name].addTo(map).openPopup();
+        // Десктопная версия
+        if (tempMarker) {
+          if (tempMarker.isPopupOpen()) {
+            tempMarker.closePopup();
+          }
+          map.removeLayer(tempMarker);
+          tempMarker = null;
+        }
 
-        markers[place.name].off("popupclose");
-        markers[place.name].on("popupclose", () => {
-          map.removeLayer(markers[place.name]);
+        if (!map.hasLayer(markerCluster)) {
           map.addLayer(markerCluster);
-          resetHighlight(); // Сбрасываем подсветку, но не меняем масштаб
+        }
+
+        const popupContent = `
+          <div class="popup-content">
+            <img src="${place.image}" alt="${place.name}">
+            <div class="popup-text">
+              <div class="popup-text-content">
+                <h3>${place.name}</h3>
+                <p>${place.description}</p>
+                <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
+              </div>
+              <div class="popup-links">
+                <a href="${place.instagram}" target="_blank">
+                  <img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon">
+                </a>
+                <a href="${place.maps_url}" target="_blank">
+                  <img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Создаём временный маркер с подсвеченной иконкой
+        tempMarker = L.marker([place.lat, place.lng], {
+          icon: L.divIcon({
+            className: 'highlighted-marker',
+            html: '<img src="https://paulbrsv.github.io/goodplaces/image/mark.svg" style="width: 48px; height: 48px;">',
+            iconSize: [48, 48],
+            iconAnchor: [24, 12] // Центр иконки
+          })
+        });
+
+        tempMarker.bindPopup(popupContent, {
+          autoPan: true,
+          autoPanPaddingTopLeft: L.point(0, 100),
+          autoPanPaddingBottomRight: L.point(0, 50)
+        });
+
+        tempMarker.addTo(map).openPopup();
+        map.setView([place.lat, place.lng], 18, { animate: true });
+
+        // При открытии попапа подсвечиваем оригинальный маркер в кластере
+        highlightMarker(place.name);
+
+        // Обработчик закрытия попапа
+        tempMarker.on('popupclose', () => {
+          map.removeLayer(tempMarker);
+          tempMarker = null;
+          resetHighlight(); // Сбрасываем подсветку оригинального маркера
         });
       }
     };
@@ -217,7 +283,7 @@ function showMobilePlaceCard(place) {
       </div>
       <div class="popup-links">
         <a href="${place.instagram}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon"></a>
-        <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon"></a>
+        <a href="${place.maps_url}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon"></a>
       </div>
     </div>
   `;
@@ -225,55 +291,50 @@ function showMobilePlaceCard(place) {
   card.classList.add('active');
 }
 
-// Функция для закрытия сайдбара
 function closeSidebar() {
   const sidebar = document.getElementById('sidebar');
   const closeButton = document.querySelector('.mobile-sidebar-close');
   const toggleButton = document.querySelector('.mobile-list-toggle');
 
   sidebar.style.transform = 'translateX(-100%)';
-  closeButton.style.display = 'none'; // Скрываем кнопку закрытия
+  closeButton.style.display = 'none';
   if (window.innerWidth <= 768) {
-    toggleButton.style.display = 'block'; // Показываем toggle-кнопку в мобильной версии
+    toggleButton.style.display = 'block';
   }
-  resetHighlight(); // Сбрасываем подсветку при закрытии сайдбара
+  resetHighlight();
 }
 
-// Функция для подсветки метки
 function highlightMarker(placeName) {
   if (highlightedMarker) {
-    resetHighlight(); // Сбрасываем предыдущую подсветку
+    resetHighlight();
   }
   if (markers[placeName]) {
     const marker = markers[placeName];
     const highlightedIcon = L.divIcon({
-      className: 'highlighted-marker', // Класс для подсвеченной метки
-      html: '<div style="background-color: #00ff00; width: 10px; height: 10px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #00ff00;"></div>',
-      iconSize: [16, 16], // Сохраняем размер, как у стандартной метки
-      iconAnchor: [8, 8] // Центр точки
+      className: 'highlighted-marker',
+      html: '<img src="https://paulbrsv.github.io/goodplaces/image/mark.svg" style="width: 48px; height: 48px;">',
+      iconSize: [48, 48],
+      iconAnchor: [24, 12] // Центр иконки
     });
     marker.setIcon(highlightedIcon);
     highlightedMarker = marker;
-    map.setView(marker.getLatLng(), map.getZoom(), { animate: true }); // Сохраняем текущий масштаб
+    map.setView(marker.getLatLng(), map.getZoom(), { animate: true });
   }
 }
 
-// Функция для сброса подсветки
 function resetHighlight() {
   if (highlightedMarker) {
     const defaultIcon = L.divIcon({
       className: 'default-marker',
       html: '<div style="background-color: #3388ff; width: 10px; height: 10px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #3388ff;"></div>',
-      iconSize: [16, 16], // Сохраняем размер
-      iconAnchor: [8, 8] // Центр точки
+      iconSize: [16, 16],
+      iconAnchor: [8, 8]
     });
     highlightedMarker.setIcon(defaultIcon);
     highlightedMarker = null;
   }
-  // Не изменяем масштаб и центровку при сбросе (оставляем текущие)
 }
 
-// Обработчик открытия/закрытия сайдбара
 document.querySelector('.mobile-list-toggle').addEventListener('click', () => {
   const sidebar = document.getElementById('sidebar');
   const closeButton = document.querySelector('.mobile-sidebar-close');
@@ -282,40 +343,38 @@ document.querySelector('.mobile-list-toggle').addEventListener('click', () => {
   if (isHidden) {
     sidebar.style.transform = 'translateX(0)';
     sidebar.classList.remove('hidden-mobile');
+    // Добавляем сброс прокрутки
+    sidebar.scrollTop = 0; // Сбрасываем прокрутку в начало
     if (window.innerWidth <= 768) {
-      closeButton.style.display = 'flex'; // Показываем кнопку в мобильной версии
-      document.querySelector('.mobile-list-toggle').style.display = 'none'; // Скрываем toggle-кнопку, пока сайдбар открыт
+      closeButton.style.display = 'flex';
+      document.querySelector('.mobile-list-toggle').style.display = 'none';
     }
   } else {
-    closeSidebar(); // Используем общую функцию закрытия
+    closeSidebar();
   }
 });
 
-// Скрываем .mobile-list-toggle в десктопе при загрузке и при изменении размера окна
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.mobile-list-toggle');
   const updateToggleVisibility = () => {
     if (window.innerWidth > 768) {
-      toggleButton.style.display = 'none'; // Скрываем в десктопе
+      toggleButton.style.display = 'none';
     } else {
-      toggleButton.style.display = 'block'; // Показываем в мобильной версии
+      toggleButton.style.display = 'block';
     }
   };
 
-  // Вызываем при загрузке
   updateToggleVisibility();
 
-  // Обновляем при изменении размера окна
   window.addEventListener('resize', updateToggleVisibility);
 
-  // Делегирование события для кнопки закрытия попапа
   document.getElementById('mobile-place-card').addEventListener('click', (e) => {
     if (e.target.classList.contains('close-card')) {
       const card = document.getElementById('mobile-place-card');
       card.classList.remove('active');
       setTimeout(() => {
         card.classList.add('hidden');
-        resetHighlight(); // Сбрасываем подсветку при закрытии попапа в мобильной версии, но не меняем масштаб
+        resetHighlight();
       }, 300);
     }
   });
@@ -372,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Ошибка загрузки данных:', error));
 
-  map.on('moveend', () => {
+    map.on('moveend', () => {
     updateSidebar(placesData.filter(place => {
       if (activeFilters.length === 0) return true;
       return place.attributes.some(attr => activeFilters.includes(attr));
@@ -380,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Обработчик клика для новой кнопки закрытия
 document.querySelector('.mobile-sidebar-close').addEventListener('click', () => {
-  closeSidebar(); // Используем общую функцию закрытия
+  closeSidebar();
 });
