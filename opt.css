@@ -556,6 +556,7 @@ h2, h3 {
   .mobile-list-toggle img {
     max-width: 20px;
     max-height: 20px;
+    vertical-align: middle;
   }
 
   @media (max-width: 768px) {
