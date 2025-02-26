@@ -421,7 +421,7 @@ h2, h3 {
     position: fixed;
     top: 20px; /* Совпадает с позицией toggle кнопки */
     right: 20px;
-    background: white;
+    background: #FFB6C1;
     padding: 5px 10px;
     border-radius: 9px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
