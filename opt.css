@@ -619,12 +619,26 @@ h2, h3 {
   }
 
   .extra-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение групп */
+  gap: 10px; /* Отступ между группами и разделителем */
 }
 
+.extra-filters-top,
+.extra-filters-bottom {
+  display: flex;
+  flex-wrap: wrap; /* Перенос элементов внутри групп */
+  gap: 5px; /* Отступ между фильтрами внутри групп */
+}
+
+.filter-divider-horizontal {
+  width: 100%; /* Полная ширина контейнера */
+  height: 2px; /* Толщина линии, как у вертикального разделителя */
+  background-color: #ccc; /* Цвет, как у .filter-divider */
+  margin: 5px 0; /* Отступы сверху и снизу */
+}
+
+/* Удаляем уточнение .extra-filters .filter, чтобы стили применялись глобально */
 .hidden {
   display: none;
 }
