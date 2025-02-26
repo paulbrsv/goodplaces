@@ -33,8 +33,11 @@ h1 {
   gap: 5px;
   align-items: center;
   flex-wrap: wrap;
-  align-items: flex-start;
   margin-top: 5px;
+}
+
+.filters-mobile {
+  display: none;
 }
 
 .filters-left {
@@ -42,7 +45,7 @@ h1 {
   gap: 5px;
   align-items: center;
   flex-wrap: wrap;
-  width: 293px;
+  width: 267px;
   justify-content: space-between;
 }
 
@@ -51,11 +54,11 @@ h1 {
   gap: 5px;
   align-items: center;
   flex-wrap: wrap;
-  width: 490px;
+  width: 420px;
 }
 
 .filter {
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   color: #333;
   background-color: #F2F1F1;
@@ -65,19 +68,19 @@ h1 {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  position: relative; /* Для тултипов */
+  position: relative;
 }
 
 .filter .filter-count {
   margin-left: 5px;
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   background-color: #FEFEFE;
   border-radius: 50%;
   color: #333;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
-  line-height: 25px;
+  line-height: 23px;
   font-weight: bold;
 }
 
@@ -126,6 +129,7 @@ h1 {
   flex: 1;
   height: 100%;
   margin-left: 320px;
+  margin-top: 115px;
   position: relative;
   z-index: 0;
 }
@@ -189,7 +193,6 @@ h2, h3 {
   margin: 3px 0 5px;
   font-size: 13px;
   color: #555;
-  margin-right: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: flex;
@@ -305,12 +308,10 @@ h2, h3 {
   max-width: 18px;
   max-height: 18px;
   margin-right: 0px;
-  border-radius: 0 !important; /* Убираем скругление для атрибутов */
+  border-radius: 0 !important;
 }
 
-/* Стили для тултипов */
-.filter-icon-wrapper,
-.attribute-icon-wrapper {
+.filter-icon-wrapper {
   display: inline-block;
   position: relative;
 }
@@ -327,6 +328,9 @@ h2, h3 {
   white-space: nowrap;
   pointer-events: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .custom-tooltip::after {
@@ -338,4 +342,152 @@ h2, h3 {
   border-width: 5px;
   border-style: solid;
   border-color: #333 transparent transparent transparent;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+  }
+
+  .filters-left, .filters-right, .filter-divider {
+    display: none;
+  }
+
+  .filters-mobile {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 5px;
+  }
+
+  .filter {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .filter-icon {
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  .more-filters-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #f2f1f1;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+
+  #map {
+    margin-left: 0;
+    margin-top: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #sidebar.hidden-mobile {
+    display: none;
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1500;
+    background: #f8f8f8;
+  }
+
+  .mobile-place-card {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    max-height: 50vh;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+  }
+
+  .mobile-place-card.active {
+    transform: translateY(0);
+  }
+
+  .mobile-place-card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-place-card-content img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .close-card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .mobile-list-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 90%;
+  }
+
+  .close-modal {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .extra-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.hidden {
+  display: none;
 }
