@@ -405,7 +405,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tooltip.style.left = `${leftPos}px`;
     tooltip.style.visibility = 'visible';
+
+    // Автозакрытие через 2 секунды
+  setTimeout(() => {
+    tooltip.style.visibility = 'hidden';
+  }, 3000);
   }
+
+
 
   function hideTooltip(element) {
     const tooltip = element.querySelector('.custom-tooltip');

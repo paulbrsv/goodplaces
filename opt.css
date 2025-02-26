@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0; /* Добавлено для исключения лишних отступов */
   font-family: Arial, sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -134,9 +135,9 @@ h1 {
 
 #map {
   flex: 1;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px); /* Фиксированная высота, без лишнего пространства */
   margin-left: 320px;
-  margin-top: 115px;
+  margin-top: 115px; /* Исправлено с 115px на 100px, соответствует высоте header */
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -336,6 +337,16 @@ h2, h3 {
   white-space: nowrap;
   pointer-events: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 1; /* Полная видимость по умолчанию */
+  transition: opacity 0.3s ease; /* Плавное исчезновение */
+}
+
+.custom-tooltip.visible {
+  visibility: visible; /* Моментальное появление */
+}
+
+.custom-tooltip:not(.visible) {
+  opacity: 0; /* Плавное исчезновение */
 }
 
 .custom-tooltip::after {
@@ -448,12 +459,6 @@ h2, h3 {
     max-height: 20px;
   }
 
-  @media (min-width: 769px) {
-    .mobile-sidebar-close {
-      display: none !important;
-    }
-  }
-
   .place-list {
     padding: 10px;
   }
@@ -471,10 +476,12 @@ h2, h3 {
     transition: transform 0.3s ease;
     transform: translateY(100%);
     z-index: 1001;
+    display: none; /* Скрыто по умолчанию */
   }
 
   .mobile-place-card.active {
     transform: translateY(0);
+    display: block; /* Показываем только когда активна */
   }
 
   .mobile-place-card-header {
@@ -568,57 +575,42 @@ h2, h3 {
     max-height: 20px;
     vertical-align: middle;
   }
+}
 
-  @media (max-width: 768px) {
-    .mobile-list-toggle {
-      display: none;
-    }
-  }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  display: none; /* Скрыто по умолчанию */
+}
 
-  @media (min-width: 769px) {
-    .mobile-list-toggle {
-      display: none !important;
-    }
+.modal:not(.hidden) {
+  display: flex; /* Показываем только когда не скрыто */
+}
 
-    #map {
-      margin-left: 320px;
-      margin-top: 100px;
-      height: calc(100vh - 100px) !important;
-      position: relative;
-      z-index: 0;
-      overflow: hidden;
-    }
-  }
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 90%;
+}
 
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-  }
+.close-modal {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
 
-  .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-height: 80vh;
-    overflow-y: auto;
-    width: 90%;
-  }
-
-  .close-modal {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-  }
-
-  .extra-filters {
+.extra-filters {
   display: flex;
   flex-direction: column; /* Вертикальное расположение групп */
   gap: 10px; /* Отступ между группами и разделителем */
@@ -638,7 +630,29 @@ h2, h3 {
   margin: 5px 0; /* Отступы сверху и снизу */
 }
 
-/* Удаляем уточнение .extra-filters .filter, чтобы стили применялись глобально */
 .hidden {
   display: none;
+}
+
+/* Десктопные стили */
+@media (min-width: 769px) {
+  .mobile-sidebar-close,
+  .mobile-list-toggle,
+  .mobile-place-card,
+  .modal {
+    display: none !important; /* Полностью убираем мобильные элементы на десктопе */
+  }
+
+  #map {
+    margin-left: 320px;
+    margin-top: 115px;
+    height: calc(100vh - 100px);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  #sidebar {
+    height: calc(100vh - 100px); /* Фиксируем высоту сайдбара */
+  }
 }
