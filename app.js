@@ -156,7 +156,7 @@ function updateSidebar(filteredPlaces) {
       map.setView([place.lat, place.lng], 18, { animate: true });
       if (window.innerWidth <= 768) {
         showMobilePlaceCard(place);
-        document.getElementById('sidebar').classList.add('hidden');
+        document.getElementById('sidebar').style.transform = 'translateX(-100%)';
       } else {
         map.removeLayer(markerCluster);
         markers[place.name].addTo(map);
@@ -186,12 +186,16 @@ function showMobilePlaceCard(place) {
   const content = card.querySelector('.mobile-place-card-content');
   content.innerHTML = `
     <img src="${place.image}" alt="${place.name}">
-    <h3>${place.name}</h3>
-    <p>${place.description}</p>
-    <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
-    <div class="popup-links">
-      <a href="${place.instagram}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon"></a>
-      <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon"></a>
+    <div class="popup-text">
+      <div class="popup-text-content">
+        <h3>${place.name}</h3>
+        <p>${place.description}</p>
+        <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
+      </div>
+      <div class="popup-links">
+        <a href="${place.instagram}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon"></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon"></a>
+      </div>
     </div>
   `;
   card.classList.remove('hidden');
@@ -206,8 +210,13 @@ document.querySelector('.close-card').addEventListener('click', () => {
 
 document.querySelector('.mobile-list-toggle').addEventListener('click', () => {
   const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('hidden');
-  sidebar.classList.toggle('hidden-mobile');
+  const isHidden = sidebar.style.transform === 'translateX(-100%)' || sidebar.classList.contains('hidden-mobile');
+  if (isHidden) {
+    sidebar.style.transform = 'translateX(0)';
+    sidebar.classList.remove('hidden-mobile');
+  } else {
+    sidebar.style.transform = 'translateX(-100%)';
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -225,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const windowWidth = window.innerWidth;
 
     tooltip.style.top = `-${tooltip.offsetHeight + 5}px`;
+
     let leftPos = (element.offsetWidth - tooltipWidth) / 2;
     const elementLeft = rect.left;
 

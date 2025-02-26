@@ -33,6 +33,7 @@ h1 {
   gap: 5px;
   align-items: center;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin-top: 5px;
 }
 
@@ -123,6 +124,7 @@ h1 {
   top: 100px;
   left: 0;
   box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
 
 #map {
@@ -328,9 +330,6 @@ h2, h3 {
   white-space: nowrap;
   pointer-events: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .custom-tooltip::after {
@@ -348,34 +347,42 @@ h2, h3 {
 @media (max-width: 768px) {
   header {
     height: auto;
-    padding: 10px;
+    padding: 8px 10px;
   }
 
-  .filters-left, .filters-right, .filter-divider {
+  .filters-left, .filters-right, .filter-divider, .desktop-reset {
     display: none;
   }
 
   .filters-mobile {
     display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 5px;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
   }
 
-  .filter {
-    font-size: 14px;
-    padding: 6px 8px;
+  .filter-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    width: auto;
+  }
+
+  .filter, .more-filters-btn, .filter-reset {
+    font-size: 12px;
+    padding: 4px 6px;
+    white-space: nowrap;
   }
 
   .filter-icon {
-    max-width: 24px;
-    max-height: 24px;
+    max-width: 18px;
+    max-height: 18px;
+    margin-right: 3px;
   }
 
   .more-filters-btn {
     display: inline-flex;
     align-items: center;
-    padding: 6px 10px;
     background-color: #f2f1f1;
     border-radius: 9px;
     cursor: pointer;
@@ -389,7 +396,7 @@ h2, h3 {
   }
 
   #sidebar.hidden-mobile {
-    display: none;
+    transform: translateX(-100%);
   }
 
   #sidebar {
@@ -400,6 +407,7 @@ h2, h3 {
     height: 100%;
     z-index: 1500;
     background: #f8f8f8;
+    transform: translateX(0);
   }
 
   .mobile-place-card {
@@ -414,32 +422,84 @@ h2, h3 {
     overflow-y: auto;
     transition: transform 0.3s ease;
     transform: translateY(100%);
+    z-index: 1001; /* Чуть выше карты, но ниже модального окна */
   }
 
   .mobile-place-card.active {
     transform: translateY(0);
   }
 
-  .mobile-place-card-content {
+  .mobile-place-card-header {
+    position: relative;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mobile-place-card-content img {
-    width: 80px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    text-align: right;
   }
 
   .close-card {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     font-size: 20px;
     cursor: pointer;
+  }
+
+  .mobile-place-card-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 15px; /* Уменьшенные отступы для мобильного */
+    min-height: 120px; /* Чуть меньше, чем десктопный минимум */
+  }
+
+  .mobile-place-card-content img {
+    width: 100px; /* Уменьшено с 120px для мобильного */
+    height: 120px; /* Уменьшено с 150px */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .mobile-place-card-content .popup-text {
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px; /* Соответствует высоте изображения */
+  }
+
+  .mobile-place-card-content .popup-text-content {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .mobile-place-card-content .popup-text h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+  }
+
+  .mobile-place-card-content .popup-text p {
+    margin: 5px 0;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .mobile-place-card-content .popup-attributes {
+    gap: 3px;
+    font-size: 13px;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .mobile-place-card-content .popup-links {
+    display: flex;
+    gap: 0px;
+    margin-top: auto;
+    align-items: flex-end;
   }
 
   .mobile-list-toggle {
@@ -451,6 +511,7 @@ h2, h3 {
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
+    cursor: pointer;
   }
 
   .modal {

@@ -24,34 +24,41 @@
     <h1>DOBRO MESTO</h1>
     <div class="filters">
       <div class="filters-mobile">
-        <span class="filter" data-filter="no_smoking">
-          <span class="filter-icon-wrapper">
-            <img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="filter-icon">
+        <div class="filter-row">
+          <span class="filter" data-filter="no_smoking">
+            <span class="filter-icon-wrapper">
+              <img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="filter-icon">
+            </span>
+            No smoking
           </span>
-          No smoking
-        </span>
-        <span class="filter" data-filter="pets_allowed">
-          <span class="filter-icon-wrapper">
-            <img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="filter-icon">
+          <span class="filter" data-filter="pets_allowed">
+            <span class="filter-icon-wrapper">
+              <img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="filter-icon">
+            </span>
+            Pet friendly
           </span>
-          Pet friendly
-        </span>
-        <span class="filter" data-filter="coffee_shop">
-          <span class="filter-icon-wrapper">
-            <img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Coffee" class="filter-icon">
+          <span class="more-filters-btn">
+            <img src="https://paulbrsv.github.io/goodplaces/image/more.svg" alt="More filters" class="filter-icon">
+            Ещё
           </span>
-          Coffee
-        </span>
-        <span class="filter" data-filter="specialty">
-          <span class="filter-icon-wrapper">
-            <img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="filter-icon">
+        </div>
+        <div class="filter-row">
+          <span class="filter" data-filter="coffee_shop">
+            <span class="filter-icon-wrapper">
+              <img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Coffee" class="filter-icon">
+            </span>
+            Coffee
           </span>
-          Specialty
-        </span>
-        <span class="more-filters-btn">
-          <img src="https://paulbrsv.github.io/goodplaces/image/more.svg" alt="More filters" class="filter-icon">
-          Ещё
-        </span>
+          <span class="filter" data-filter="specialty">
+            <span class="filter-icon-wrapper">
+              <img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="filter-icon">
+            </span>
+            Specialty
+          </span>
+          <span class="filter-reset">
+            <img src="https://paulbrsv.github.io/goodplaces/image/reset.svg" alt="Reset" class="filter-icon">
+          </span>
+        </div>
       </div>
       <div class="filters-left">
         <span class="filter" data-filter="no_smoking">
@@ -124,7 +131,7 @@
           Wine
         </span>
       </div>
-      <span class="filter-reset">
+      <span class="filter-reset desktop-reset">
         <img src="https://paulbrsv.github.io/goodplaces/image/reset.svg" alt="Reset" class="filter-icon">
       </span>
     </div>
@@ -143,12 +150,10 @@
 
   <div id="map"></div>
 
-  <!-- Кнопка списка мест -->
   <div class="mobile-list-toggle">
     <img src="https://paulbrsv.github.io/goodplaces/image/list.svg" alt="List" class="icon">
   </div>
 
-  <!-- Выдвижная панель для карточки места -->
   <div id="mobile-place-card" class="mobile-place-card hidden">
     <div class="mobile-place-card-header">
       <span class="close-card">✕</span>
@@ -156,7 +161,6 @@
     <div class="mobile-place-card-content"></div>
   </div>
 
-  <!-- Модальное окно для дополнительных фильтров -->
   <div id="more-filters-modal" class="modal hidden">
     <div class="modal-content">
       <span class="close-modal">✕</span>
