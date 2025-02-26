@@ -337,17 +337,9 @@ h2, h3 {
   white-space: nowrap;
   pointer-events: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  opacity: 1; /* Полная видимость по умолчанию */
-  transition: opacity 0.3s ease; /* Плавное исчезновение */
+
 }
 
-.custom-tooltip.visible {
-  visibility: visible; /* Моментальное появление */
-}
-
-.custom-tooltip:not(.visible) {
-  opacity: 0; /* Плавное исчезновение */
-}
 
 .custom-tooltip::after {
   content: '';
