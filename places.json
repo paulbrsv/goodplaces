@@ -173,7 +173,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/ccJgtABKyLaFTCY27",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -189,7 +188,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/j2fUkvcEVqASgYWR8",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -205,7 +203,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/pnEZ6goHqChTmXFy5",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -237,7 +234,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/mpJFeVnAKbA3pVXv9",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -253,7 +249,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/PFdDrw9dnbdbnnJ6A",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -285,7 +280,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/Z7eFs4x52LEv8WuH6",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -301,7 +295,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/jLDw9Us1MPbc6yor9",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -317,7 +310,6 @@
         "maps_url": "https:\/\/goo.gl\/maps\/xk9spuW9uGgq2nuG9",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -333,7 +325,7 @@
         "maps_url": "https:\/\/goo.gl\/maps\/H7V7VboVy23PX3cK6",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty"
+            ""
         ],
         "verified": false
     },
@@ -348,7 +340,7 @@
         "maps_url": "https:\/\/www.gondola-restoran.rs\/",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty"
+            ""
         ],
         "verified": false
     },
@@ -363,7 +355,6 @@
         "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
-            "specialty",
             "no_smoking"
         ],
         "verified": false
@@ -380,7 +371,8 @@
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
         "attributes": [
             "desserts",
-            "no_smoking"
+            "no_smoking",
+            "specialty"
         ],
         "verified": false
     },
@@ -509,7 +501,8 @@
             "cafe",
             "desserts",
             "food",
-            "coffee_shop"
+            "coffee_shop",
+            "specialty"
         ],
         "verified": false
     },
@@ -897,7 +890,7 @@
         "maps_url": "",
         "image": "",
         "attributes": [
-            ""
+            "specialty"
         ],
         "verified": false
     },
@@ -912,7 +905,8 @@
         "maps_url": "",
         "image": "",
         "attributes": [
-            ""
+            "",
+            "specialty"
         ],
         "verified": false
     },
@@ -997,14 +991,75 @@
         "verified": false
     },
     {
-        "name": "Seal  tea",
-        "lat": 0,
-        "lng": 0,
+        "name": "Seal&Tea",
+        "lat": 45.25799,
+        "lng": 19.83827,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/41RJeJLpi2Q3Zsd86",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Green House Coffee 2",
+        "lat": 45.244645,
+        "lng": 19.846743,
         "shirt_description": "",
         "description": "",
         "link": "",
         "instagram": "",
         "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "FILIPENKO COFFEE BAR",
+        "lat": 45.25684,
+        "lng": 19.8434,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/XwMjWReUCUbUwbHT6",
+        "image": "",
+        "attributes": [
+            "",
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Gorski smeško",
+        "lat": 45.18408,
+        "lng": 19.82271,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/Co9w4ZBCpTtpfN8v9",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Coffee House Tulip",
+        "lat": 45.27746,
+        "lng": 19.56731,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/RmHnTc2iXsNHxmDB9",
         "image": "",
         "attributes": [
             ""

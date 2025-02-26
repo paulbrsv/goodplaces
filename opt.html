@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQDHF6DQ7Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TQDHF6DQ7Z');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карта кофеен</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="opt.css">
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+</head>
+<body>
+  <header>
+    <h1>DOBRO MESTO</h1>
+    <div class="filters">
+      <div class="filters-left">
+        <span class="filter" data-filter="no_smoking">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="filter-icon">
+          </span>
+          No smoking
+        </span>
+        <span class="filter" data-filter="pets_allowed">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="filter-icon">
+          </span>
+          Pet friendly
+        </span>
+        <span class="filter" data-filter="smoke">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/smoke.svg" alt="Non smoking area" class="filter-icon">
+          </span>
+          Non-smoking area
+        </span>
+        <span class="filter" data-filter="terrace">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="filter-icon">
+          </span>
+          Terrace
+        </span>
+      </div>
+      <span class="filter-divider"></span>
+      <div class="filters-right">
+        <span class="filter" data-filter="coffee_shop">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Coffee" class="filter-icon">
+          </span>
+          Coffee
+        </span>
+        <span class="filter" data-filter="specialty">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="filter-icon">
+          </span>
+          Specialty coffee
+        </span>
+        <span class="filter" data-filter="food">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/food.svg" alt="Food" class="filter-icon">
+          </span>
+          Menu
+        </span>
+        <span class="filter" data-filter="snacks">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/sandwich.svg" alt="Snacks" class="filter-icon">
+          </span>
+          Snacks
+        </span>
+        <span class="filter" data-filter="desserts">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/cake.svg" alt="Desserts" class="filter-icon">
+          </span>
+          Desserts
+        </span>
+        <span class="filter" data-filter="beer">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/beer.svg" alt="Beer" class="filter-icon">
+          </span>
+          Beer
+        </span>
+        <span class="filter" data-filter="wine">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/wine.svg" alt="Wine" class="filter-icon">
+          </span>
+          Wine
+        </span>
+      </div>
+      <span class="filter-reset">
+        <img src="https://paulbrsv.github.io/goodplaces/image/reset.svg" alt="Reset" class="filter-icon">
+      </span>
+    </div>
+  </header>
+
+  <div id="sidebar">
+    <div class="place-list">
+      <h3>В этом районе</h3>
+      <div id="visible-places"></div>
+    </div>
+    <div class="place-list">
+      <h3>📍 Ещё рядом</h3>
+      <div id="outside-places"></div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script>
+    var map = L.map('map').setView([45.25, 19.85], 14);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap contributors & Carto'
+    }).addTo(map);
+
+    var markerCluster = L.markerClusterGroup();
+    map.addLayer(markerCluster);
+
+    var placesData = [];
+    let activeFilters = [];
+    let markers = {};
+
+    const attributeNames = {
+      "specialty": '<img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="atr-icon">',
+      "desserts": '<img src="https://paulbrsv.github.io/goodplaces/image/cake.svg" alt="Desserts" class="atr-icon">',
+      "no_smoking": '<img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="atr-icon">',
+      "pets_allowed": '<img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="atr-icon">',
+      "wine": '<img src="https://paulbrsv.github.io/goodplaces/image/wine.svg" alt="Wine" class="atr-icon">',
+      "beer": '<img src="https://paulbrsv.github.io/goodplaces/image/beer.svg" alt="Beer" class="atr-icon">',
+      "pet_friendly": '<img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="atr-icon">',
+      "coffee_shop": '<img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Cafe" class="atr-icon">',
+      "snacks": '<img src="https://paulbrsv.github.io/goodplaces/image/sandwich.svg" alt="Snacks" class="atr-icon">',
+      "food": '<img src="https://paulbrsv.github.io/goodplaces/image/food.svg" alt="Snacks" class="atr-icon">',
+      "terrace": '<img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="atr-icon">'
+    };
+
+    const filterTooltips = {
+      "no_smoking": "Место, где курение полностью запрещено",
+      "pets_allowed": "Разрешено приводить домашних животных",
+      "smoke": "Есть отдельная зона для некурящих",
+      "terrace": "Открытая терраса для отдыха на свежем воздухе",
+      "coffee_shop": "Обычная кофейня с базовым выбором напитков",
+      "specialty": "Кофейня с уникальными сортами кофе и авторскими напитками",
+      "food": "Полноценное меню с горячими блюдами",
+      "snacks": "Лёгкие закуски к напиткам",
+      "desserts": "Широкий выбор сладостей и выпечки",
+      "beer": "Предлагают пиво в ассортименте",
+      "wine": "Есть выбор вин"
+    };
+
+    const attributeTooltips = {
+      "no_smoking": "Курение запрещено во всех зонах",
+      "pets_allowed": "Можно с питомцами",
+      "smoke": "Отдельная зона без дыма",
+      "terrace": "Уютная терраса на улице",
+      "coffee_shop": "Классическая кофейня",
+      "specialty": "Особый кофе от бариста",
+      "food": "Горячие блюда в меню",
+      "snacks": "Быстрые перекусы",
+      "desserts": "Сладости на любой вкус",
+      "beer": "Пивной ассортимент",
+      "wine": "Винная карта",
+      "pet_friendly": "Дружелюбно к питомцам"
+    };
+
+    document.querySelectorAll('.filter').forEach(filter => {
+      filter.addEventListener('click', () => {
+        const filterId = filter.dataset.filter;
+        if (!filterId) return; // Пропускаем filter-reset
+        if (activeFilters.includes(filterId)) {
+          activeFilters = activeFilters.filter(f => f !== filterId);
+          filter.classList.remove('active');
+        } else {
+          activeFilters.push(filterId);
+          filter.classList.add('active');
+        }
+        updateMap();
+      });
+    });
+
+    document.querySelector('.filter-reset').addEventListener('click', () => {
+      activeFilters = [];
+      document.querySelectorAll('.filter').forEach(filter => filter.classList.remove('active'));
+      updateMap();
+    });
+
+    function updateMap() {
+      markerCluster.clearLayers();
+      const filteredPlaces = placesData.filter(place => {
+        if (activeFilters.length === 0) return true;
+        return activeFilters.every(filter => place.attributes.includes(filter));
+      });
+
+      filteredPlaces.forEach(place => {
+        const popupContent = `
+          <div class="popup-content">
+            <img src="${place.image}" alt="${place.name}">
+            <div class="popup-text">
+              <div class="popup-text-content">
+                <h3>${place.name}</h3>
+                <p>${place.description}</p>
+                <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
+              </div>
+              <div class="popup-links">
+                <a href="${place.instagram}" target="_blank">
+                  <img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon">
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">
+                  <img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent, {
+          autoPan: true,
+          autoPanPaddingTopLeft: L.point(0, 100),
+          autoPanPaddingBottomRight: L.point(0, 50)
+        });
+        markerCluster.addLayer(marker);
+        markers[place.name] = marker;
+      });
+
+      if (!map.hasLayer(markerCluster)) {
+        map.addLayer(markerCluster);
+      }
+
+      updateSidebar(filteredPlaces);
+      updateFilterCounts(filteredPlaces); // Обновляем счётчики
+    }
+
+    function updateFilterCounts(filteredPlaces) {
+      document.querySelectorAll('.filter').forEach(filter => {
+        const filterId = filter.dataset.filter;
+        if (!filterId) return; // Пропускаем filter-reset
+        const count = filteredPlaces.filter(place => place.attributes.includes(filterId)).length;
+        let countElement = filter.querySelector('.filter-count');
+        if (!countElement) {
+          countElement = document.createElement('div');
+          countElement.classList.add('filter-count');
+          filter.appendChild(countElement);
+        }
+        countElement.textContent = count;
+      });
+    }
+
+    function updateSidebar(filteredPlaces) {
+      const visibleList = document.getElementById("visible-places");
+      const outsideList = document.getElementById("outside-places");
+      visibleList.innerHTML = "";
+      outsideList.innerHTML = "";
+
+      const bounds = map.getBounds();
+      filteredPlaces.forEach(place => {
+        const placeElement = document.createElement("div");
+        placeElement.className = "place";
+        placeElement.innerHTML = `
+          <img src="${place.image}" alt="${place.name}">
+          <div class="place-info">
+            <h3>${place.name}</h3>
+            <p>${place.shirt_description}</p>
+            <p>${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</p>
+          </div>
+        `;
+        placeElement.onclick = () => {
+          map.setView([place.lat, place.lng], 18, { animate: true });
+          map.removeLayer(markerCluster);
+          markers[place.name].addTo(map);
+          markers[place.name].openPopup();
+          if (!map.hasLayer(markerCluster)) {
+            map.addLayer(markerCluster);
+          }
+          markers[place.name].off("popupclose");
+          markers[place.name].on("popupclose", () => {
+            map.removeLayer(markers[place.name]);
+            if (!map.hasLayer(markerCluster)) {
+              map.addLayer(markerCluster);
+            }
+            updateMap();
+          });
+        };
+
+        if (bounds.contains([place.lat, place.lng])) {
+          visibleList.appendChild(placeElement);
+        } else {
+          outsideList.appendChild(placeElement);
+        }
+      });
+    }
+
+    // Тултипы на чистом JS
+    document.addEventListener('DOMContentLoaded', () => {
+      function showTooltip(element, text) {
+        let tooltip = element.querySelector('.custom-tooltip');
+        if (!tooltip) {
+          tooltip = document.createElement('div');
+          tooltip.className = 'custom-tooltip';
+          tooltip.textContent = text;
+          element.appendChild(tooltip);
+        }
+        const rect = element.getBoundingClientRect();
+        tooltip.style.top = `-${tooltip.offsetHeight + 5}px`;
+        tooltip.style.left = `${(element.offsetWidth - tooltip.offsetWidth) / 2}px`;
+        tooltip.style.visibility = 'visible';
+      }
+
+      function hideTooltip(element) {
+        const tooltip = element.querySelector('.custom-tooltip');
+        if (tooltip) {
+          tooltip.style.visibility = 'hidden';
+        }
+      }
+
+      // Тултипы для фильтров
+      const filters = document.querySelectorAll('.filter');
+      filters.forEach(filter => {
+        const filterId = filter.dataset.filter;
+        if (!filterId) return; // Пропускаем filter-reset
+        const tooltipText = filterTooltips[filterId] || "Описание отсутствует";
+        filter.addEventListener('mouseenter', () => showTooltip(filter, tooltipText));
+        filter.addEventListener('mouseleave', () => hideTooltip(filter));
+      });
+
+      // Тултипы для атрибутов
+      function updateTooltips() {
+        const attributeIcons = document.querySelectorAll('.atr-icon');
+        attributeIcons.forEach(icon => {
+          if (!icon.parentElement.classList.contains('attribute-icon-wrapper')) {
+            const attributeName = Object.keys(attributeNames).find(key =>
+              attributeNames[key].includes(icon.src)
+            );
+            if (attributeName) {
+              const tooltipText = attributeTooltips[attributeName] || attributeName.replace('_', ' ');
+              const tooltipWrapper = document.createElement('span');
+              tooltipWrapper.className = 'attribute-icon-wrapper';
+              icon.parentNode.insertBefore(tooltipWrapper, icon);
+              tooltipWrapper.appendChild(icon);
+              tooltipWrapper.addEventListener('mouseenter', () => showTooltip(tooltipWrapper, tooltipText));
+              tooltipWrapper.addEventListener('mouseleave', () => hideTooltip(tooltipWrapper));
+            }
+          }
+        });
+      }
+
+      fetch('places.json')
+        .then(response => response.json())
+        .then(data => {
+          placesData = data;
+          updateMap();
+          updateTooltips();
+        })
+        .catch(error => console.error('Ошибка загрузки данных:', error));
+
+      // Обновляем тултипы после каждого обновления карты
+      map.on('moveend', () => {
+        updateSidebar(placesData.filter(place => {
+          if (activeFilters.length === 0) return true;
+          return place.attributes.some(attr => activeFilters.includes(attr));
+        }));
+        updateTooltips();
+      });
+
+      map.on('popupopen', () => {
+        setTimeout(updateTooltips, 100); // Обновляем тултипы после открытия попапа
+      });
+
+      // Переопределяем updateMap для синхронизации
+      const originalUpdateMap = updateMap;
+      updateMap = function() {
+        originalUpdateMap.apply(this, arguments);
+        setTimeout(updateTooltips, 100); // Обновляем тултипы после рендера
+      };
+    });
+  </script>
+</body>
+</html>

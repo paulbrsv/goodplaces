@@ -27,64 +27,81 @@ gtag('config', 'G-TQDHF6DQ7Z');
 <header>
     <h1>DOBRO MESTO</h1>
     <div class="filters">
-    <div class="filters-left">
+      <div class="filters-left">
         <span class="filter" data-filter="no_smoking">
+          <span class="filter-icon-wrapper">
             <img src="https://paulbrsv.github.io/goodplaces/image/nosmoking.svg" alt="No smoking" class="filter-icon">
+          </span>
           No smoking
         </span>
         <span class="filter" data-filter="pets_allowed">
-          <img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="filter-icon">
-        Pet friendly
-      </span>
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/dog.svg" alt="Pet friendly" class="filter-icon">
+          </span>
+          Pet friendly
+        </span>
         <span class="filter" data-filter="smoke">
-          <img src="https://paulbrsv.github.io/goodplaces/image/smoke.svg" alt="Non smoking area" class="filter-icon">
-        Non-smoking area
-       </span>
-       <span class="filter" data-filter="terrace">
-         <img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="filter-icon">
-       Terrase
-      </span>
-
-    </div>
-    <span class="filter-divider"></span>
-    <div class="filters-right">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/smoke.svg" alt="Non smoking area" class="filter-icon">
+          </span>
+          Non-smoking area
+        </span>
+        <span class="filter" data-filter="terrace">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="filter-icon">
+          </span>
+          Terrace
+        </span>
+      </div>
+      <span class="filter-divider"></span>
+      <div class="filters-right">
         <span class="filter" data-filter="coffee_shop">
-          <img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Coffee" class="filter-icon">
-        Coffee
-       </span>
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/coffee.svg" alt="Coffee" class="filter-icon">
+          </span>
+          Coffee
+        </span>
         <span class="filter" data-filter="specialty">
-          <img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="filter-icon">
-        Specialty coffee
-       </span>
-       <span class="filter" data-filter="food">
-         <img src="https://paulbrsv.github.io/goodplaces/image/food.svg" alt="Food" class="filter-icon">
-        Menu
-      </span>
-      <span class="filter" data-filter="snacks">
-        <img src="https://paulbrsv.github.io/goodplaces/image/sandwich.svg" alt="Snacks" class="filter-icon">
-       Snacks
-     </span>
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="filter-icon">
+          </span>
+          Specialty coffee
+        </span>
+        <span class="filter" data-filter="food">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/food.svg" alt="Food" class="filter-icon">
+          </span>
+          Menu
+        </span>
+        <span class="filter" data-filter="snacks">
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/sandwich.svg" alt="Snacks" class="filter-icon">
+          </span>
+          Snacks
+        </span>
         <span class="filter" data-filter="desserts">
-          <img src="https://paulbrsv.github.io/goodplaces/image/cake.svg" alt="Desserts" class="filter-icon">
-        Desserts
-       </span>
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/cake.svg" alt="Desserts" class="filter-icon">
+          </span>
+          Desserts
+        </span>
         <span class="filter" data-filter="beer">
-          <img src="https://paulbrsv.github.io/goodplaces/image/beer.svg" alt="Beer" class="filter-icon">
-        Beer
-       </span>
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/beer.svg" alt="Beer" class="filter-icon">
+          </span>
+          Beer
+        </span>
         <span class="filter" data-filter="wine">
-          <img src="https://paulbrsv.github.io/goodplaces/image/wine.svg" alt="Wine" class="filter-icon">
-        Wine
-       </span>
-
+          <span class="filter-icon-wrapper">
+            <img src="https://paulbrsv.github.io/goodplaces/image/wine.svg" alt="Wine" class="filter-icon">
+          </span>
+          Wine
+        </span>
+      </div>
+      <span class="filter-reset">
+        <img src="https://paulbrsv.github.io/goodplaces/image/reset.svg" alt="Reset" class="filter-icon">
+      </span>
     </div>
-    <span class="filter-reset"><img src="https://paulbrsv.github.io/goodplaces/image/reset.svg" alt="Reset" class="filter-icon"></span>
-    <div class="language-switcher">
-        <button onclick="switchLanguage('rs')">RS</button>
-        <button onclick="switchLanguage('en')">EN</button>
-        <button onclick="switchLanguage('ru')">RU</button>
-    </div>
-</div>
 
 
 </header>
@@ -130,6 +147,20 @@ gtag('config', 'G-TQDHF6DQ7Z');
         "terrace": '<img src="https://paulbrsv.github.io/goodplaces/image/terrece.svg" alt="Terrace" class="atr-icon">'
     };
 
+    const filterTooltips = {
+      "no_smoking": "Место, где курение полностью запрещено",
+      "pets_allowed": "Разрешено приводить домашних животных",
+      "smoke": "Есть отдельная зона для некурящих",
+      "terrace": "Открытая терраса для отдыха на свежем воздухе",
+      "coffee_shop": "Обычная кофейня с базовым выбором напитков",
+      "specialty": "Кофейня с уникальными сортами кофе и авторскими напитками",
+      "food": "Полноценное меню с горячими блюдами",
+      "snacks": "Лёгкие закуски к напиткам",
+      "desserts": "Широкий выбор сладостей и выпечки",
+      "beer": "Предлагают пиво в ассортименте",
+      "wine": "Есть выбор вин"
+    };
+
     document.querySelectorAll('.filter').forEach(filter => {
         filter.addEventListener('click', () => {
             const filterId = filter.dataset.filter;
@@ -159,26 +190,25 @@ gtag('config', 'G-TQDHF6DQ7Z');
         });
 
         filteredPlaces.forEach(place => {
-            const popupContent = `
-
-            <div class="popup-content">
-                   <img src="${place.image}" alt="${place.name}">
-                   <div class="popup-text">
-                       <h3>${place.name}</h3>
-                       <p>${place.description}</p>
-                       <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
-                       <div class="popup-links">
-                       <a href="${place.instagram}" target="_blank">
-                          <img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon">
-                       </a>
-                       <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">
-                        <img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon">
-                       </a>
-                       </div>
-                   </div>
-               </div>
-
-
+          const popupContent = `
+  <div class="popup-content">
+      <img src="${place.image}" alt="${place.name}">
+      <div class="popup-text">
+          <div class="popup-text-content">
+              <h3>${place.name}</h3>
+              <p>${place.description}</p>
+              <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
+          </div>
+          <div class="popup-links">
+              <a href="${place.instagram}" target="_blank">
+                  <img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon">
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank">
+                  <img src="https://paulbrsv.github.io/goodplaces/image/google.svg" alt="Google Maps" class="icon">
+              </a>
+          </div>
+      </div>
+  </div>
 `;
 
                 const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent, {
@@ -263,18 +293,83 @@ gtag('config', 'G-TQDHF6DQ7Z');
         });
     }
 
-    fetch('places.json')
-        .then(response => response.json())
-        .then(data => {
-            placesData = data;
-            updateMap();
-        })
-        .catch(error => console.error('Ошибка загрузки данных:', error));
+        // Тултипы на чистом JS
+        document.addEventListener('DOMContentLoaded', () => {
+          function showTooltip(element, text) {
+  let tooltip = element.querySelector('.custom-tooltip');
+  if (!tooltip) {
+    tooltip = document.createElement('div');
+    tooltip.className = 'custom-tooltip';
+    tooltip.textContent = text;
+    element.appendChild(tooltip);
+  }
 
-    map.on('moveend', () => updateSidebar(placesData.filter(place => {
-        if (activeFilters.length === 0) return true;
-        return place.attributes.some(attr => activeFilters.includes(attr));
-    })));
+  const rect = element.getBoundingClientRect();
+  const tooltipWidth = tooltip.offsetWidth;
+  const windowWidth = window.innerWidth;
+
+  // Позиционирование по вертикали
+  tooltip.style.top = `-${tooltip.offsetHeight + 5}px`;
+
+  // Позиционирование по горизонтали с учетом границ экрана
+  let leftPos = (element.offsetWidth - tooltipWidth) / 2;
+  const elementLeft = rect.left; // Позиция элемента относительно окна
+
+  // Если тултип выходит за левую границу
+  if (elementLeft + leftPos < 0) {
+    leftPos = -elementLeft + 5; // Отступ 5px от края
+  }
+  // Если тултип выходит за правую границу
+  else if (elementLeft + leftPos + tooltipWidth > windowWidth) {
+    leftPos = windowWidth - elementLeft - tooltipWidth - 5; // Отступ 5px от правого края
+  }
+
+  tooltip.style.left = `${leftPos}px`;
+  tooltip.style.visibility = 'visible';
+}
+
+          function hideTooltip(element) {
+            const tooltip = element.querySelector('.custom-tooltip');
+            if (tooltip) {
+              tooltip.style.visibility = 'hidden';
+            }
+          }
+
+          // Тултипы для фильтров
+          const filters = document.querySelectorAll('.filter');
+          filters.forEach(filter => {
+            const filterId = filter.dataset.filter;
+            if (!filterId) return; // Пропускаем filter-reset
+            const tooltipText = filterTooltips[filterId] || "Описание отсутствует";
+            filter.addEventListener('mouseenter', () => showTooltip(filter, tooltipText));
+            filter.addEventListener('mouseleave', () => hideTooltip(filter));
+          });
+
+
+
+          fetch('places.json')
+            .then(response => response.json())
+            .then(data => {
+              placesData = data;
+              updateMap();
+            })
+            .catch(error => console.error('Ошибка загрузки данных:', error));
+
+          // Обновляем тултипы после каждого обновления карты
+          map.on('moveend', () => {
+            updateSidebar(placesData.filter(place => {
+              if (activeFilters.length === 0) return true;
+              return place.attributes.some(attr => activeFilters.includes(attr));
+            }));
+            updateTooltips();
+          });
+
+          map.on('popupopen', () => {
+            setTimeout(updateTooltips, 100); // Обновляем тултипы после открытия попапа
+          });
+
+
+        });
 </script>
 
 
