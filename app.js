@@ -185,7 +185,7 @@ function updateSidebar(filteredPlaces) {
     placeElement.onclick = () => {
       if (window.innerWidth <= 768) {
         // Мобильная версия
-        map.setView([place.lat, place.lng], 18, { animate: true });
+        map.setView([place.lat, place.lng], 17, { animate: true });
         showMobilePlaceCard(place);
         closeSidebar();
         highlightMarker(place.name);
@@ -241,7 +241,7 @@ function updateSidebar(filteredPlaces) {
         });
 
         tempMarker.addTo(map).openPopup();
-        map.setView([place.lat, place.lng], 18, { animate: true });
+        map.setView([place.lat, place.lng], 17, { animate: true });
 
         // При открытии попапа подсвечиваем оригинальный маркер в кластере
         highlightMarker(place.name);
