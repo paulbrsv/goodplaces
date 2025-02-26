@@ -9,6 +9,7 @@ map.addLayer(markerCluster);
 var placesData = [];
 let activeFilters = [];
 let markers = {};
+let highlightedMarker = null; // Переменная для отслеживания подсвеченной метки
 
 const attributeNames = {
   "specialty": '<img src="https://paulbrsv.github.io/goodplaces/image/coffee-pot.svg" alt="Specialty coffee" class="atr-icon">',
@@ -38,6 +39,7 @@ const filterTooltips = {
   "wine": "Есть выбор вин"
 };
 
+// Восстанавливаем обработчики для фильтров и кнопки сброса
 document.querySelectorAll('.filter').forEach(filter => {
   filter.addEventListener('click', () => {
     const filterId = filter.dataset.filter;
@@ -48,14 +50,19 @@ document.querySelectorAll('.filter').forEach(filter => {
       activeFilters.push(filterId);
       filter.classList.add('active');
     }
+    resetHighlight(); // Сбрасываем подсветку при изменении фильтров
     updateMap();
   });
 });
 
-document.querySelector('.filter-reset').addEventListener('click', () => {
-  activeFilters = [];
-  document.querySelectorAll('.filter').forEach(filter => filter.classList.remove('active'));
-  updateMap();
+document.querySelectorAll('.filter-reset').forEach(resetButton => {
+  resetButton.addEventListener('click', () => {
+    activeFilters = [];
+    document.querySelectorAll('.filter').forEach(filter => filter.classList.remove('active'));
+    resetHighlight(); // Сбрасываем подсветку при сбросе фильтров
+    map.setView([45.25, 19.85], 14); // Возвращаем исходный масштаб и центровку
+    updateMap();
+  });
 });
 
 document.querySelector('.more-filters-btn').addEventListener('click', () => {
@@ -96,23 +103,34 @@ function updateMap() {
       </div>
     `;
 
-    const marker = L.marker([place.lat, place.lng]);
+    const marker = L.marker([place.lat, place.lng], {
+      icon: L.divIcon({
+        className: 'default-marker', // Класс для стандартной метки
+        html: '<div style="background-color: #3388ff; width: 10px; height: 10px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #3388ff;"></div>',
+        iconSize: [16, 16], // Размер точки
+        iconAnchor: [8, 8] // Центр точки
+      })
+    });
+
     if (window.innerWidth > 768) {
       marker.bindPopup(popupContent, {
         autoPan: true,
         autoPanPaddingTopLeft: L.point(0, 100),
         autoPanPaddingBottomRight: L.point(0, 50)
       });
+      marker.on('popupopen', () => highlightMarker(place.name));
+      marker.on('popupclose', () => resetHighlight()); // Сбрасываем подсветку, но не меняем масштаб
     } else {
-      marker.on('click', () => showMobilePlaceCard(place));
+      marker.on('click', () => {
+        showMobilePlaceCard(place);
+        highlightMarker(place.name);
+      });
     }
     markerCluster.addLayer(marker);
     markers[place.name] = marker;
   });
 
-  if (!map.hasLayer(markerCluster)) {
-    map.addLayer(markerCluster);
-  }
+  map.addLayer(markerCluster);
 
   updateSidebar(filteredPlaces);
   updateFilterCounts(filteredPlaces);
@@ -156,19 +174,17 @@ function updateSidebar(filteredPlaces) {
       map.setView([place.lat, place.lng], 18, { animate: true });
       if (window.innerWidth <= 768) {
         showMobilePlaceCard(place);
-        document.getElementById('sidebar').style.transform = 'translateX(-100%)';
+        closeSidebar(); // Закрываем сайдбар
+        highlightMarker(place.name); // Подсвечиваем метку
       } else {
         map.removeLayer(markerCluster);
-        markers[place.name].addTo(map);
-        markers[place.name].openPopup();
+        markers[place.name].addTo(map).openPopup();
 
         markers[place.name].off("popupclose");
         markers[place.name].on("popupclose", () => {
           map.removeLayer(markers[place.name]);
-          if (!map.hasLayer(markerCluster)) {
-            map.addLayer(markerCluster);
-          }
-          updateMap();
+          map.addLayer(markerCluster);
+          resetHighlight(); // Сбрасываем подсветку, но не меняем масштаб
         });
       }
     };
@@ -183,14 +199,21 @@ function updateSidebar(filteredPlaces) {
 
 function showMobilePlaceCard(place) {
   const card = document.getElementById('mobile-place-card');
+  const header = card.querySelector('.mobile-place-card-header');
   const content = card.querySelector('.mobile-place-card-content');
+
+  const attributesHtml = place.attributes.map(attr => attributeNames[attr] || attr).join('');
+  header.innerHTML = `
+    <div class="mobile-place-card-attributes">${attributesHtml}</div>
+    <span class="close-card">✕</span>
+  `;
+
   content.innerHTML = `
     <img src="${place.image}" alt="${place.name}">
     <div class="popup-text">
       <div class="popup-text-content">
         <h3>${place.name}</h3>
         <p>${place.description}</p>
-        <div class="popup-attributes">${place.attributes.map(attr => attributeNames[attr] || attr).join('')}</div>
       </div>
       <div class="popup-links">
         <a href="${place.instagram}" target="_blank"><img src="https://paulbrsv.github.io/goodplaces/image/instagram.svg" alt="Instagram" class="icon"></a>
@@ -202,24 +225,101 @@ function showMobilePlaceCard(place) {
   card.classList.add('active');
 }
 
-document.querySelector('.close-card').addEventListener('click', () => {
-  const card = document.getElementById('mobile-place-card');
-  card.classList.remove('active');
-  setTimeout(() => card.classList.add('hidden'), 300);
-});
+// Функция для закрытия сайдбара
+function closeSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const closeButton = document.querySelector('.mobile-sidebar-close');
+  const toggleButton = document.querySelector('.mobile-list-toggle');
 
+  sidebar.style.transform = 'translateX(-100%)';
+  closeButton.style.display = 'none'; // Скрываем кнопку закрытия
+  if (window.innerWidth <= 768) {
+    toggleButton.style.display = 'block'; // Показываем toggle-кнопку в мобильной версии
+  }
+  resetHighlight(); // Сбрасываем подсветку при закрытии сайдбара
+}
+
+// Функция для подсветки метки
+function highlightMarker(placeName) {
+  if (highlightedMarker) {
+    resetHighlight(); // Сбрасываем предыдущую подсветку
+  }
+  if (markers[placeName]) {
+    const marker = markers[placeName];
+    const highlightedIcon = L.divIcon({
+      className: 'highlighted-marker', // Класс для подсвеченной метки
+      html: '<div style="background-color: #00ff00; width: 10px; height: 10px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #00ff00;"></div>',
+      iconSize: [16, 16], // Сохраняем размер, как у стандартной метки
+      iconAnchor: [8, 8] // Центр точки
+    });
+    marker.setIcon(highlightedIcon);
+    highlightedMarker = marker;
+    map.setView(marker.getLatLng(), map.getZoom(), { animate: true }); // Сохраняем текущий масштаб
+  }
+}
+
+// Функция для сброса подсветки
+function resetHighlight() {
+  if (highlightedMarker) {
+    const defaultIcon = L.divIcon({
+      className: 'default-marker',
+      html: '<div style="background-color: #3388ff; width: 10px; height: 10px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #3388ff;"></div>',
+      iconSize: [16, 16], // Сохраняем размер
+      iconAnchor: [8, 8] // Центр точки
+    });
+    highlightedMarker.setIcon(defaultIcon);
+    highlightedMarker = null;
+  }
+  // Не изменяем масштаб и центровку при сбросе (оставляем текущие)
+}
+
+// Обработчик открытия/закрытия сайдбара
 document.querySelector('.mobile-list-toggle').addEventListener('click', () => {
   const sidebar = document.getElementById('sidebar');
+  const closeButton = document.querySelector('.mobile-sidebar-close');
   const isHidden = sidebar.style.transform === 'translateX(-100%)' || sidebar.classList.contains('hidden-mobile');
+
   if (isHidden) {
     sidebar.style.transform = 'translateX(0)';
     sidebar.classList.remove('hidden-mobile');
+    if (window.innerWidth <= 768) {
+      closeButton.style.display = 'flex'; // Показываем кнопку в мобильной версии
+      document.querySelector('.mobile-list-toggle').style.display = 'none'; // Скрываем toggle-кнопку, пока сайдбар открыт
+    }
   } else {
-    sidebar.style.transform = 'translateX(-100%)';
+    closeSidebar(); // Используем общую функцию закрытия
   }
 });
 
+// Скрываем .mobile-list-toggle в десктопе при загрузке и при изменении размера окна
 document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.mobile-list-toggle');
+  const updateToggleVisibility = () => {
+    if (window.innerWidth > 768) {
+      toggleButton.style.display = 'none'; // Скрываем в десктопе
+    } else {
+      toggleButton.style.display = 'block'; // Показываем в мобильной версии
+    }
+  };
+
+  // Вызываем при загрузке
+  updateToggleVisibility();
+
+  // Обновляем при изменении размера окна
+  window.addEventListener('resize', updateToggleVisibility);
+
+  // Делегирование события для кнопки закрытия попапа
+  document.getElementById('mobile-place-card').addEventListener('click', (e) => {
+    if (e.target.classList.contains('close-card')) {
+      const card = document.getElementById('mobile-place-card');
+      card.classList.remove('active');
+      setTimeout(() => {
+        card.classList.add('hidden');
+        resetHighlight(); // Сбрасываем подсветку при закрытии попапа в мобильной версии, но не меняем масштаб
+      }, 300);
+    }
+  });
+
   function showTooltip(element, text) {
     let tooltip = element.querySelector('.custom-tooltip');
     if (!tooltip) {
@@ -278,4 +378,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return place.attributes.some(attr => activeFilters.includes(attr));
     }));
   });
+});
+
+// Обработчик клика для новой кнопки закрытия
+document.querySelector('.mobile-sidebar-close').addEventListener('click', () => {
+  closeSidebar(); // Используем общую функцию закрытия
 });

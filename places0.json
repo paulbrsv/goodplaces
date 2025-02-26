@@ -1,0 +1,1069 @@
+[
+    {
+        "name": "Biciklana 23",
+        "lat": 45.24016169,
+        "lng": 19.84743287,
+        "shirt_description": "Кафе и велосервис с полностью некурящим залом.",
+        "description": "Кафе и велосервис с полностью некурящим залом, в меню могут быть дессерты и сендвичи. В тёплое время года есть велосипеды напрокат.",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/biciklana23\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/cCWtgfoQ8YfxmLwS7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/biciklana.jpg",
+        "attributes": [
+            "no_smoking",
+            "pet_friendly",
+            "coffee_shop",
+            "desserts",
+            "snacks",
+            "terrace"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Le Bol NS",
+        "lat": 45.25599974,
+        "lng": 19.84919648,
+        "shirt_description": "Breakfast all day & Smoke free & Coworking",
+        "description": "Большое меню: горячее, завтраки и дессерты, есть вино, закуски и, конечно, кофе. \r\n<br>Небольшая и уютная терраса",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/lebolns\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/XWRaLduEZV8YgXcw5",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/lebol.jpg",
+        "attributes": [
+            "no_smoking",
+            "pet_friendly",
+            "wine",
+            "coffee_shop",
+            "desserts",
+            "food",
+            "terrace"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Sweet & Green",
+        "lat": 45.25609233,
+        "lng": 19.84676623,
+        "shirt_description": "Река тихо течет, отражая в своих водах облака и зелёные берега",
+        "description": "Salate i cedjeni sokovi",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/sweetandgreen.rs\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/Ffq17dbGzLRgUnvAA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/sweetgreen.jpg",
+        "attributes": [
+            "no_smoking",
+            "food",
+            "cafe"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Vege Vegan - Restoran zdrave hrane",
+        "lat": 45.25405343,
+        "lng": 19.8397541,
+        "shirt_description": "Ветер нежно колышет ветви деревьев, воздух наполнен свежестью",
+        "description": "🍽 Ketering zdrave hrane, najukusniji burgeri , kolači i torte ...",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/vegeveganorganicfood",
+        "maps_url": "https:\/\/goo.gl\/maps\/DSHs3XPzWqYeJ2Si8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/vegevegan.jpg",
+        "attributes": [
+            "no_smoking",
+            "food"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Organic factory",
+        "lat": 45.24006898,
+        "lng": 19.83740056,
+        "shirt_description": "Закат окрашивает небо в розовые и оранжевые цвета, день уходит",
+        "description": "Porodična manufaktura, osnovana 1989. godine, postaje organska manufakturna fabrika zdrave hrane",
+        "link": "",
+        "instagram": "https:\/\/www.facebook.com\/organicfactory.novisad\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/U6s8M6K2w5jzdrYJ6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/organicfactory.jpg",
+        "attributes": [
+            "food",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "ANANDA VEGAN RESTAURANT",
+        "lat": 45.24948867,
+        "lng": 19.83951697,
+        "shirt_description": "Цветы раскрываются под лучами солнца, радуя глаз яркими краскам",
+        "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači? 1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća 2. Peciva koja sami kreiramo i pečemo. 3. Namazi koje pravimo na licu mesta, po domaćim ",
+        "link": "https:\/\/ananda.rs\/",
+        "instagram": "https:\/\/www.instagram.com\/ananda_vegan_restaurant\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/ananda.jpg",
+        "attributes": [
+            "no_smoking",
+            "cafe",
+            "food"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Bulevar Books",
+        "lat": 45.25333086,
+        "lng": 19.84536255,
+        "shirt_description": "",
+        "description": "Отличный книжный магазин и небольшая кофейня",
+        "link": "https:\/\/bulevarbooks.com\/",
+        "instagram": "https:\/\/www.instagram.com\/bulevarbooks\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/nU2SUP9ScpwjAyzk7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/bulevar.jpg",
+        "attributes": [
+            "coffee_shop",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Gabby Caffe & Bar",
+        "lat": 45.2568215,
+        "lng": 19.84845344,
+        "shirt_description": "",
+        "description": "Mesto unikatnih kafa, koktela i poslastica.",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/cafe_gabby\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/X9KGHUybdjUT7PAKA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/gabby.jpg",
+        "attributes": [
+            "food",
+            "cafe",
+            "no_smoking",
+            "bar",
+            "beer",
+            "wine"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Crni Ovan",
+        "lat": 45.25619865,
+        "lng": 19.84828467,
+        "shirt_description": "",
+        "description": "Spot for doggos, coffee, booze&brews, activism & solidarity. 100% smoke free.100% pet friendly, no place for racism, sexism, homophobia",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/crniovan\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/jMF1AGERLYxAh9Lt6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/crniovan.jpg",
+        "attributes": [
+            "cafe",
+            "bar",
+            "beer",
+            "coffee_shop",
+            "pet_friendly",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Fresh food caffe 021",
+        "lat": 45.25482795,
+        "lng": 19.83122664,
+        "shirt_description": "",
+        "description": "Unesite sve što je važno u jednom obroku, uz naše obrok salate. Pogodne su i za vegane, ai za one koji to nisu, a ono što im je zajedničko je svežina i poseban ukus!",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/freshfoodcaffe021\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/ccJgtABKyLaFTCY27",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Šećernema",
+        "lat": 45.24923323,
+        "lng": 19.83931447,
+        "shirt_description": "",
+        "description": "Izaberite vašu kombinaciju 🎀\r\nNaš ceo asortiman je postan, bez dodatog šećera, vegan i 100% prirodan 💖",
+        "link": "",
+        "instagram": "https:\/\/www.facebook.com\/secernema\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/j2fUkvcEVqASgYWR8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Šećernema",
+        "lat": 45.24135059,
+        "lng": 19.84760767,
+        "shirt_description": "",
+        "description": "Izaberite vašu kombinaciju 🎀\r\nNaš ceo asortiman je postan, bez dodatog šećera, vegan i 100% prirodan 💖",
+        "link": "",
+        "instagram": "https:\/\/www.facebook.com\/secernema\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/pnEZ6goHqChTmXFy5",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Izlet",
+        "lat": 45.25620685,
+        "lng": 19.85169916,
+        "shirt_description": "",
+        "description": "Кофейня и продажа кофе",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/_izlet",
+        "maps_url": "https:\/\/goo.gl\/maps\/tTq27yBpApmx4cDr9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "specialty",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Toster Bar",
+        "lat": 45.2562211,
+        "lng": 19.84431976,
+        "shirt_description": "",
+        "description": "Бургеры из 100% говядины и крафтовое пиво",
+        "link": "https:\/\/tosterbar.rs\/",
+        "instagram": "",
+        "maps_url": "https:\/\/goo.gl\/maps\/mpJFeVnAKbA3pVXv9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "FREESHKA",
+        "lat": 45.24698,
+        "lng": 19.83928,
+        "shirt_description": "",
+        "description": "Kafa za poneti, ali može da se sedi i unutra (mali lokal, šank stolovi)",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/freeshkakafa\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/PFdDrw9dnbdbnnJ6A",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Block 32",
+        "lat": 45.2605,
+        "lng": 19.8303,
+        "shirt_description": "",
+        "description": "Working hours:\r\nTuesday - Saturday 08-19h\r\nSunday 09-15h\r\nMonday off\r\nPet friendly 🐾",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/coffeeculture32",
+        "maps_url": "https:\/\/goo.gl\/maps\/BdzhqNcV7bDHJC6U8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "specialty",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Macchiato Fax",
+        "lat": 45.2491578,
+        "lng": 19.849806,
+        "shirt_description": "",
+        "description": "Ja sam Macchiato Fax. Nalazim se u ulici Stevana Musica 20 u Novom Sadu . Kako mi i samo ime kaze nalazim se u blizini fakulteta i imam odličnu kafu . Naravno pored kafe imamo i puno drugih napitaka , a naravno i odlicne hrane u ponudi.",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/macchiatofax\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/Z7eFs4x52LEv8WuH6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Macchiato Liman",
+        "lat": 45.2396702,
+        "lng": 19.8358342,
+        "shirt_description": "",
+        "description": "Macchiato Liman, nezaobilazno mirno mesto za kafu, ručak i sastanak. Smešten u srcu Limana pored Dunava, sa pogledom na zelenilo vašeg omiljenog parka. Karakterističan je po svom prijatnom ambijentu i udobnom enterijeru. Ceo jedan sprat je revervisan za g",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/macchiato_liman\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/jLDw9Us1MPbc6yor9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Zenit Books, Coffee, Bar, & Bookstore",
+        "lat": 45.2570533,
+        "lng": 19.840729,
+        "shirt_description": "",
+        "description": "Расположенный на первом этаже одного из старейших многоэтажных домов в Нови-Саде (1931 г.), с его интерьером, бар стремится сохранить.",
+        "link": "https:\/\/zenitbooks.com\/",
+        "instagram": "",
+        "maps_url": "https:\/\/goo.gl\/maps\/xk9spuW9uGgq2nuG9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Pizzeria Adrijana",
+        "lat": 45.2558334,
+        "lng": 19.8442075,
+        "shirt_description": "",
+        "description": "Prednji deo lokala je nepušački",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/goo.gl\/maps\/H7V7VboVy23PX3cK6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Gondola",
+        "lat": 45.2537384,
+        "lng": 19.8483648,
+        "shirt_description": "",
+        "description": "Nepušački deo nije potpuno odvojen, ali je ventilacija dovoljno dobra da se dim ne os",
+        "link": "https:\/\/www.gondola-restoran.rs\/",
+        "instagram": "",
+        "maps_url": "https:\/\/www.gondola-restoran.rs\/",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "CoffeeRide",
+        "lat": 45.2505635,
+        "lng": 19.8332106,
+        "shirt_description": "",
+        "description": "A great little cafe & Bicycle Workshop",
+        "link": "https:\/\/coffeeride.day\/",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Urbano",
+        "lat": 45.2487,
+        "lng": 19.8329,
+        "shirt_description": "",
+        "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/urbano_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "desserts",
+            "no_smoking",
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Pendzer",
+        "lat": 45.2608,
+        "lng": 19.8198,
+        "shirt_description": "",
+        "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/pendzer_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "specialty",
+            "pets_allowed",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kafetea",
+        "lat": 45.2616,
+        "lng": 19.852,
+        "shirt_description": "",
+        "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/kafetea_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "specialty",
+            "desserts",
+            "no_smoking",
+            "pets_allowed"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Bruno Bar",
+        "lat": 45.2422,
+        "lng": 19.8253,
+        "shirt_description": "",
+        "description": "Современный кофейный бар с минималистичным интерьером.",
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/block32_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "bar",
+            "beer"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Teplica Wine bar",
+        "lat": 45.2522,
+        "lng": 19.841,
+        "shirt_description": "",
+        "description": "Современный кофейный бар с минималистичным интерьером.",
+        "link": "https:\/\/example.com",
+        "instagram": "https:\/\/instagram.com\/block32_coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "bar",
+            "wine"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Martin kafa",
+        "lat": 45.25696,
+        "lng": 19.85002,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/martinkafa\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/nmmNdAPa7Zv3snmq6",
+        "image": "",
+        "attributes": [
+            "no_smoking",
+            "pet_friendly",
+            "coffee_shop",
+            "desserts",
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Martin Kafa",
+        "lat": 45.25175,
+        "lng": 19.84205,
+        "shirt_description": "Железничка",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "no_smoking",
+            "coffee_shop",
+            "specialty",
+            "desserts",
+            "pet_friendly"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Izlet 2",
+        "lat": 45.25682,
+        "lng": 19.84666,
+        "shirt_description": "Второй излёт",
+        "description": "",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/_izlet\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/xU5wFZDJ1aL8KfPo7",
+        "image": "",
+        "attributes": [
+            "pet_friendly",
+            "no_smoking",
+            "cafe",
+            "desserts",
+            "food",
+            "coffee_shop",
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kofilin",
+        "lat": 45.2482,
+        "lng": 19.841,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Coffee Bara 1",
+        "lat": 45.2638,
+        "lng": 19.8169,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Coffee Bara 2",
+        "lat": 45.2467,
+        "lng": 19.8337,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Tishler",
+        "lat": 45.247,
+        "lng": 19.8334,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kafeterija Zrno",
+        "lat": 45.2405,
+        "lng": 19.8152,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "MLIN coffee & tea shop",
+        "lat": 45.25004,
+        "lng": 19.8398,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "MLIN coffee & tea shop",
+        "lat": 45.26179,
+        "lng": 19.83537,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "MLIN Coffee & Tea Shop GARDEN",
+        "lat": 45.2498,
+        "lng": 19.8007,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Čarolija Kafe",
+        "lat": 45.24195,
+        "lng": 19.84725,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Šeherezada",
+        "lat": 45.25676,
+        "lng": 19.8474,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "ROZBRAT | STREET-BISTRO",
+        "lat": 45.25848,
+        "lng": 19.8459,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Fika Coffee Shop",
+        "lat": 45.25839,
+        "lng": 19.846,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Green House Coffee",
+        "lat": 45.2627,
+        "lng": 19.8501,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Le Klok Bistro",
+        "lat": 45.25549,
+        "lng": 19.86197,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Raf Cafe",
+        "lat": 45.261,
+        "lng": 19.81028,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Petrus Caffe",
+        "lat": 45.2543,
+        "lng": 19.8464,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Korpa Deli Bistro",
+        "lat": 45.2532,
+        "lng": 19.8143,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Park Novi Restaurants",
+        "lat": 45.25869,
+        "lng": 19.80708,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "tiho i toplo",
+        "lat": 45.2569,
+        "lng": 19.837,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Drago mi je",
+        "lat": 45.2535,
+        "lng": 19.84044,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "MAYBE COFFEE?",
+        "lat": 45.2547,
+        "lng": 19.84,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kafeterija II",
+        "lat": 45.2545,
+        "lng": 19.8443,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Kafeterija",
+        "lat": 45.24788,
+        "lng": 19.8482,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "ALBYSUPERSTORE",
+        "lat": 45.25014,
+        "lng": 19.85184,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "SOC",
+        "lat": 45.2543,
+        "lng": 19.8456,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Mala Radionica",
+        "lat": 45.25272,
+        "lng": 19.83461,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "FREESHKA 2",
+        "lat": 45.25943,
+        "lng": 19.8324,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "La Dolce Fiore",
+        "lat": 45.24826,
+        "lng": 19.8489,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Mandarin",
+        "lat": 45.24888,
+        "lng": 19.83378,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Nomad Cocktail Bar",
+        "lat": 45.25623,
+        "lng": 19.8498,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Hedonist Aperitif bar & Coffee",
+        "lat": 45.2567,
+        "lng": 19.8487,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            "",
+            "no_smoking"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Seal&Tea",
+        "lat": 45.25799,
+        "lng": 19.83827,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/41RJeJLpi2Q3Zsd86",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Green House Coffee 2",
+        "lat": 45.244645,
+        "lng": 19.846743,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "FILIPENKO COFFEE BAR",
+        "lat": 45.25684,
+        "lng": 19.8434,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/XwMjWReUCUbUwbHT6",
+        "image": "",
+        "attributes": [
+            "",
+            "specialty"
+        ],
+        "verified": false
+    },
+    {
+        "name": "Gorski smeško",
+        "lat": 45.18408,
+        "lng": 19.82271,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/Co9w4ZBCpTtpfN8v9",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Coffee House Tulip",
+        "lat": 45.27746,
+        "lng": 19.56731,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/RmHnTc2iXsNHxmDB9",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    }
+]
