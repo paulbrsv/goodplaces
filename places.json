@@ -236,7 +236,6 @@
             "no_smoking",
             "pets_allowed",
             "coffee_shop",
-            "specialty",
             "desserts",
             "snacks",
             "terrace"
@@ -277,17 +276,20 @@
         "name": "Block 32",
         "lat": 45.2605,
         "lng": 19.8303,
-        "shirt_description": "",
-        "description": "Working hours:\r\nTuesday - Saturday 08-19h\r\nSunday 09-15h\r\nMonday off\r\nPet friendly 🐾",
+        "shirt_description": "The coffee shop is now open on Mondays as well. Delicious classic and alternative coffee.",
+        "description": "The coffee shop is now open on Mondays as well. Delicious classic and alternative coffee.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/coffeeculture32",
         "maps_url": "https:\/\/goo.gl\/maps\/BdzhqNcV7bDHJC6U8",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/block32.jpg",
         "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
             "specialty",
-            "no_smoking"
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Macchiato Fax",
