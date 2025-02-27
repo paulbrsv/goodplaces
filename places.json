@@ -15,9 +15,10 @@
             "coffee_shop",
             "desserts",
             "snacks",
-            "terrace"
+            "terrace",
+            "bar"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Le Bol NS",
@@ -32,20 +33,20 @@
         "attributes": [
             "no_smoking",
             "pet_friendly",
-            "wine",
             "coffee_shop",
             "desserts",
             "food",
-            "terrace"
+            "terrace",
+            "bar"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Sweet & Green",
         "lat": 45.25609233,
         "lng": 19.84676623,
-        "shirt_description": "Река тихо течет, отражая в своих водах облака и зелёные берега",
-        "description": "Salate i cedjeni sokovi",
+        "shirt_description": "Healthy salads, porridge, soups and desserts. There are vegetarian options on the menu.",
+        "description": "Healthy salads, porridge, soups and desserts. There are vegetarian options on the menu.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/sweetandgreen.rs\/",
         "maps_url": "https:\/\/goo.gl\/maps\/Ffq17dbGzLRgUnvAA",
@@ -53,41 +54,47 @@
         "attributes": [
             "no_smoking",
             "food",
-            "cafe"
+            "cafe",
+            "vegan"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Vege Vegan - Restoran zdrave hrane",
         "lat": 45.25405343,
         "lng": 19.8397541,
-        "shirt_description": "Ветер нежно колышет ветви деревьев, воздух наполнен свежестью",
-        "description": "🍽 Ketering zdrave hrane, najukusniji burgeri , kolači i torte ...",
+        "shirt_description": "Vegetarian menu and desserts. A small courtyard with several tables.",
+        "description": "Vegetarian menu and desserts. A small courtyard with several tables.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/vegeveganorganicfood",
         "maps_url": "https:\/\/goo.gl\/maps\/DSHs3XPzWqYeJ2Si8",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/vegevegan.jpg",
         "attributes": [
             "no_smoking",
-            "food"
+            "food",
+            "vegan",
+            "terrace",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Organic factory",
         "lat": 45.24006898,
         "lng": 19.83740056,
-        "shirt_description": "Закат окрашивает небо в розовые и оранжевые цвета, день уходит",
-        "description": "Porodična manufaktura, osnovana 1989. godine, postaje organska manufakturna fabrika zdrave hrane",
+        "shirt_description": "A small restaurant with a varied menu, breakfasts and pastries. Please note the opening hours (open until 14:00)",
+        "description": "A small restaurant with a varied menu, breakfasts and pastries. Please note the opening hours (open until 14:00)",
         "link": "",
         "instagram": "https:\/\/www.facebook.com\/organicfactory.novisad\/",
         "maps_url": "https:\/\/goo.gl\/maps\/U6s8M6K2w5jzdrYJ6",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/organicfactory.jpg",
         "attributes": [
+            "no_smoking",
             "food",
-            "no_smoking"
+            "pet_friendly",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "ANANDA VEGAN RESTAURANT",

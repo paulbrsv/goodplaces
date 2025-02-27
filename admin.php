@@ -150,36 +150,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             margin-top: 0px;
             display: flex;
             gap: 5px;
-            justify-content: flex;
+            justify-content: flex-start;
             width: 100%;
         }
 
         .place-details-bottom a {
-    display: inline-block;
-    min-height: 0px;
-    line-height: 0px;
-}
+            display: inline-block;
+            min-height: 0px;
+            line-height: 0px;
+        }
 
-#searchInput {
-    position: sticky;
-    top: 20px; /* Расстояние от верхней части экрана */
-    z-index: 10; /* Чтобы поле поиска находилось поверх других элементов */
-    background-color: #fff; /* Чтобы поле не терялось на фоне */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Немного тени для выделения */
-    padding: 10px; /* Параметры для удобства */
-    border-radius: 5px;
-}
+        .sticky-top {
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+            background-color: #fff;
+            padding: 0px 0;
+        }
 
+        #verifiedFilter {
+            max-width: 200px;
+        }
     </style>
 </head>
 <body class="container mt-4">
     <h2>Список мест</h2>
-    <button class="btn btn-success" onclick="openModal()">Добавить место</button>
-    <input type="text" id="searchInput" class="form-control mt-3" placeholder="Поиск..." onkeyup="filterPlaces()">
+    <button class="btn btn-success mb-3" onclick="openModal()">Добавить место</button>
 
-    <div class="place-container mt-3" id="placesContainer">
+    <div class="sticky-top">
+        <input type="text" id="searchInput" class="form-control mb-3"
+               placeholder="Поиск..." onkeyup="filterPlaces()">
+
+    </div>
+
+    <div class="mb-3">
+        <select id="verifiedFilter" class="form-select" onchange="filterPlaces()">
+            <option value="all">Все места</option>
+            <option value="verified">Только проверенные</option>
+            <option value="unverified">Только непроверенные</option>
+        </select>
+    </div>
+
+    <div class="place-container" id="placesContainer">
         <?php foreach ($places as $index => $place): ?>
-            <div class="place-item">
+            <div class="place-item" data-verified="<?= $place['verified'] ? 'true' : 'false' ?>">
                 <div class="place-image-container">
                     <img src="<?= $place['image'] ?>" alt="<?= htmlspecialchars($place['name']) ?>" class="place-image">
                 </div>
@@ -208,7 +222,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     <div><a href="<?= $place['link'] ?>" target="_blank">Ссылка</a></div>
                     <div><a href="<?= $place['instagram'] ?>" target="_blank">Инстаграм</a></div>
                     <div><a href="<?= $place['maps_url'] ?>" target="_blank">Карта</a></div>
-
                 </div>
             </div>
         <?php endforeach; ?>
@@ -266,56 +279,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-    function filterPlaces() {
-      const searchValue = document.getElementById('searchInput').value.toLowerCase().trim();
-      const places = document.querySelectorAll('.place-item');
+        // Кэшируем часто используемые элементы
+        const placesContainer = document.getElementById('placesContainer');
+        const placeModal = new bootstrap.Modal(document.getElementById('placeModal'));
+        const placeForm = document.getElementById('placeForm');
+        const searchInput = document.getElementById('searchInput');
+        const verifiedFilter = document.getElementById('verifiedFilter');
 
-      places.forEach(place => {
-          const textElements = place.querySelectorAll('h5, p, .badge'); // ищем только в нужных местах
-          const latLng = place.querySelector('.place-details-bottom'); // ищем блок с широтой и долготой
-          let match = false;
+        function filterPlaces() {
+            const searchValue = searchInput.value.toLowerCase().trim();
+            const verifiedValue = verifiedFilter.value;
+            const places = placesContainer.querySelectorAll('.place-item');
 
-          textElements.forEach(el => {
-              if (el.textContent.toLowerCase().includes(searchValue)) {
-                  match = true;
-              }
-          });
+            places.forEach(place => {
+                // Поиск по тексту
+                const textElements = place.querySelectorAll('h5, p, .badge');
+                const latLng = place.querySelector('.place-details-bottom');
+                let textMatch = false;
 
-          // Добавляем проверку для широты и долготы
-          if (latLng && (latLng.textContent.toLowerCase().includes(searchValue))) {
-              match = true;
-          }
+                textElements.forEach(el => {
+                    if (el.textContent.toLowerCase().includes(searchValue)) {
+                        textMatch = true;
+                    }
+                });
 
-          place.style.display = match ? '' : 'none';
-      });
-  }
+                if (latLng && latLng.textContent.toLowerCase().includes(searchValue)) {
+                    textMatch = true;
+                }
 
+                // Фильтр верификации через data-атрибут
+                const isVerified = place.dataset.verified === 'true';
+                let verifiedMatch = true;
 
+                if (verifiedValue === 'verified') {
+                    verifiedMatch = isVerified;
+                } else if (verifiedValue === 'unverified') {
+                    verifiedMatch = !isVerified;
+                }
+
+                place.style.display = (textMatch && verifiedMatch) ? '' : 'none';
+            });
+        }
 
         function openModal() {
+            placeForm.reset();
             document.getElementById('action').value = 'add';
-            document.getElementById('placeForm').reset();
-            new bootstrap.Modal(document.getElementById('placeModal')).show();
+            placeModal.show();
         }
 
         function editPlace(index) {
+            const place = <?= json_encode($places) ?>[index];
+            const fields = ['name', 'lat', 'lng', 'shirt_description', 'description',
+                           'link', 'instagram', 'maps_url', 'image', 'attributes'];
+
+            fields.forEach(field => {
+                document.getElementById(field).value = field === 'attributes'
+                    ? place[field].join(',')
+                    : place[field];
+            });
+
             document.getElementById('action').value = 'edit';
             document.getElementById('index').value = index;
-            const place = <?= json_encode($places) ?>[index];
-
-            document.getElementById('name').value = place.name;
-            document.getElementById('lat').value = place.lat;
-            document.getElementById('lng').value = place.lng;
-            document.getElementById('shirt_description').value = place.shirt_description;
-            document.getElementById('description').value = place.description;
-            document.getElementById('link').value = place.link;
-            document.getElementById('instagram').value = place.instagram;
-            document.getElementById('maps_url').value = place.maps_url;
-            document.getElementById('image').value = place.image;
-            document.getElementById('attributes').value = place.attributes.join(',');
             document.getElementById('verified').checked = place.verified;
-
-            new bootstrap.Modal(document.getElementById('placeModal')).show();
+            placeModal.show();
         }
 
         function addAttribute(attribute) {
@@ -326,35 +352,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             document.getElementById('attributes').value = attributes.join(',');
         }
 
-        document.getElementById('placeForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+        async function sendRequest(formData) {
+            try {
+                const response = await fetch('', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                if (data.status === 'success') {
+                    location.reload();
+                }
+                return data;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
 
-            const formData = new FormData(this);
-            fetch('', {
-                method: 'POST',
-                body: formData
-            }).then(response => response.json())
-              .then(data => {
-                  if (data.status === 'success') {
-                      location.reload();
-                  }
-              });
+        placeForm.addEventListener('submit', event => {
+            event.preventDefault();
+            sendRequest(new FormData(placeForm));
         });
 
         function deletePlace(index) {
             const formData = new FormData();
             formData.append('action', 'delete');
             formData.append('index', index);
-
-            fetch('', {
-                method: 'POST',
-                body: formData
-            }).then(response => response.json())
-              .then(data => {
-                  if (data.status === 'success') {
-                      location.reload();
-                  }
-              });
+            sendRequest(formData);
         }
     </script>
 </body>
