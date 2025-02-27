@@ -191,31 +191,36 @@
         "name": "Šećernema",
         "lat": 45.24923323,
         "lng": 19.83931447,
-        "shirt_description": "",
-        "description": "Izaberite vašu kombinaciju 🎀\r\nNaš ceo asortiman je postan, bez dodatog šećera, vegan i 100% prirodan 💖",
+        "shirt_description": "Vegan and lean sweets\r\nwithout added sugar, gluten and lactose",
+        "description": "Vegan and lean sweets\r\nwithout added sugar, gluten and lactose",
         "link": "",
-        "instagram": "https:\/\/www.facebook.com\/secernema\/",
+        "instagram": "https:\/\/www.instagram.com\/secernema\/",
         "maps_url": "https:\/\/goo.gl\/maps\/j2fUkvcEVqASgYWR8",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/secernema.jpg",
         "attributes": [
-            "no_smoking"
+            "no_smoking",
+            "coffee_shop",
+            "desserts",
+            "vegan",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Šećernema Liman",
         "lat": 45.24135059,
         "lng": 19.84760767,
-        "shirt_description": "",
-        "description": "Izaberite vašu kombinaciju 🎀\r\nNaš ceo asortiman je postan, bez dodatog šećera, vegan i 100% prirodan 💖",
+        "shirt_description": "Vegan and lean sweets\r\nwithout added sugar, gluten and lactose",
+        "description": "Vegan and lean sweets\r\nwithout added sugar, gluten and lactose",
         "link": "",
-        "instagram": "https:\/\/www.facebook.com\/secernema\/",
-        "maps_url": "https:\/\/goo.gl\/maps\/pnEZ6goHqChTmXFy5",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "instagram": "https:\/\/www.instagram.com\/secernema\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/b5WSeH2Tuwb3bdni6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/secernema.jpg",
         "attributes": [
-            "no_smoking"
+            "desserts",
+            "vegan"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Izlet",
@@ -1097,6 +1102,21 @@
         "link": "",
         "instagram": "",
         "maps_url": "https:\/\/maps.app.goo.gl\/uWPtGTqP4i2ohztT6",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "философ",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
         "image": "",
         "attributes": [
             ""
