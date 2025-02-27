@@ -226,17 +226,22 @@
         "name": "Izlet",
         "lat": 45.25620685,
         "lng": 19.85169916,
-        "shirt_description": "",
-        "description": "Кофейня и продажа кофе",
+        "shirt_description": "Coffee and delicious pastries. The cafe is small, but you can take a table and sit in the park.",
+        "description": "Coffee and delicious pastries. The cafe is small, but you can take a table and sit in the park.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/_izlet",
         "maps_url": "https:\/\/goo.gl\/maps\/tTq27yBpApmx4cDr9",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/izlet.png",
         "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
             "specialty",
-            "no_smoking"
+            "desserts",
+            "snacks",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Toster Bar",
