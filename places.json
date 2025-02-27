@@ -11,7 +11,7 @@
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/biciklana.jpg",
         "attributes": [
             "no_smoking",
-            "pet_friendly",
+            "pets_allowed",
             "coffee_shop",
             "desserts",
             "snacks",
@@ -32,7 +32,7 @@
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/lebol.jpg",
         "attributes": [
             "no_smoking",
-            "pet_friendly",
+            "pets_allowed",
             "coffee_shop",
             "desserts",
             "food",
@@ -91,7 +91,7 @@
         "attributes": [
             "no_smoking",
             "food",
-            "pet_friendly",
+            "pets_allowed",
             "desserts"
         ],
         "verified": true
@@ -100,89 +100,92 @@
         "name": "ANANDA VEGAN RESTAURANT",
         "lat": 45.24948867,
         "lng": 19.83951697,
-        "shirt_description": "Цветы раскрываются под лучами солнца, радуя глаз яркими краскам",
-        "description": "Svakog dana, u Anandi, pravimo sve ono što volimo. Šta to znači? 1. Jela od kvalitetnog kuvanog, prženog i svežeg povrća 2. Peciva koja sami kreiramo i pečemo. 3. Namazi koje pravimo na licu mesta, po domaćim ",
+        "shirt_description": "Vegetarian restaurant in the city center. Full menu: breakfasts, main courses, desserts and drinks.",
+        "description": "Vegetarian restaurant in the city center. Full menu: breakfasts, main courses, desserts and drinks.",
         "link": "https:\/\/ananda.rs\/",
         "instagram": "https:\/\/www.instagram.com\/ananda_vegan_restaurant\/",
         "maps_url": "https:\/\/goo.gl\/maps\/xfHhYgozHhqJBpwRA",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/ananda.jpg",
         "attributes": [
             "no_smoking",
+            "pets_allowed",
             "cafe",
-            "food"
+            "food",
+            "vegan",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Bulevar Books",
         "lat": 45.25333086,
         "lng": 19.84536255,
-        "shirt_description": "",
-        "description": "Отличный книжный магазин и небольшая кофейня",
+        "shirt_description": "It's a bookstore (I recommend it), they host music events, but you can also stop by for coffee.",
+        "description": "It's a bookstore (I recommend it), they host music events, but you can also stop by for coffee.",
         "link": "https:\/\/bulevarbooks.com\/",
         "instagram": "https:\/\/www.instagram.com\/bulevarbooks\/",
         "maps_url": "https:\/\/goo.gl\/maps\/nU2SUP9ScpwjAyzk7",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/bulevar.jpg",
         "attributes": [
-            "coffee_shop",
-            "no_smoking"
+            "no_smoking",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Gabby Caffe & Bar",
         "lat": 45.2568215,
         "lng": 19.84845344,
-        "shirt_description": "",
-        "description": "Mesto unikatnih kafa, koktela i poslastica.",
+        "shirt_description": "Cafe-bar in the city center. The menu includes breakfasts, drinks, desserts and main dishes.",
+        "description": "Cafe-bar in the city center. The menu includes breakfasts, drinks, desserts and main dishes.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/cafe_gabby\/",
         "maps_url": "https:\/\/goo.gl\/maps\/X9KGHUybdjUT7PAKA",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/gabby.jpg",
         "attributes": [
-            "food",
-            "cafe",
             "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
             "bar",
-            "beer",
-            "wine"
+            "desserts",
+            "food",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Crni Ovan",
         "lat": 45.25619865,
         "lng": 19.84828467,
-        "shirt_description": "",
-        "description": "Spot for doggos, coffee, booze&brews, activism & solidarity. 100% smoke free.100% pet friendly, no place for racism, sexism, homophobia",
+        "shirt_description": "A very pet-friendly bar hidden in a courtyard in the city center.",
+        "description": "🐕‍🦺 Spot for doggos, coffee, booze&brews, activism & solidarity. 100% smokefree. 100% pet friendly🐾🐾 ♥️no place for racism, sexism, homophobia",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/crniovan\/",
         "maps_url": "https:\/\/goo.gl\/maps\/jMF1AGERLYxAh9Lt6",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/crniovan.jpg",
         "attributes": [
-            "cafe",
+            "no_smoking",
+            "pets_allowed",
             "bar",
-            "beer",
-            "coffee_shop",
-            "pet_friendly",
-            "no_smoking"
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Fresh food caffe 021",
         "lat": 45.25482795,
         "lng": 19.83122664,
-        "shirt_description": "",
-        "description": "Unesite sve što je važno u jednom obroku, uz naše obrok salate. Pogodne su i za vegane, ai za one koji to nisu, a ono što im je zajedničko je svežina i poseban ukus!",
+        "shirt_description": "A small, cozy health food cafe. Porridges, sandwiches, desserts, and main dishes. ",
+        "description": "A small, cozy health food cafe. Porridges, sandwiches, desserts, and main dishes. \r\nA few tables inside and outside. You can get takeout",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/freshfoodcaffe021\/",
         "maps_url": "https:\/\/goo.gl\/maps\/ccJgtABKyLaFTCY27",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/freshfood.jpg",
         "attributes": [
-            "no_smoking"
+            "no_smoking",
+            "food"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Šećernema",
@@ -466,7 +469,6 @@
         "image": "",
         "attributes": [
             "no_smoking",
-            "pet_friendly",
             "coffee_shop",
             "desserts",
             "specialty"
@@ -487,8 +489,7 @@
             "no_smoking",
             "coffee_shop",
             "specialty",
-            "desserts",
-            "pet_friendly"
+            "desserts"
         ],
         "verified": false
     },
@@ -503,7 +504,6 @@
         "maps_url": "https:\/\/maps.app.goo.gl\/xU5wFZDJ1aL8KfPo7",
         "image": "",
         "attributes": [
-            "pet_friendly",
             "no_smoking",
             "cafe",
             "desserts",
