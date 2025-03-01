@@ -1129,5 +1129,80 @@
             ""
         ],
         "verified": false
+    },
+    {
+        "name": "радио кафе",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "тераса во внутреннем дворике",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "времеплов",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "тераса",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "вельвет",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "тераса",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "лофт у позориште",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "большая тераса\\внутренник дворик",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "Jasmin A Maslina",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
     }
 ]
