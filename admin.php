@@ -251,6 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
                         <div id="attributes-suggestions" class="mt-2">
                             <span class="badge badge-light clickable" onclick="addAttribute('no_smoking')">no_smoking</span>
+                            <span class="badge badge-light clickable" onclick="addAttribute('smoke')">smoke</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('pets_allowed')">pets_allowed</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('bar')">bar</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('beer')">beer</span>

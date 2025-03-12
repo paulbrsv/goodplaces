@@ -298,14 +298,17 @@
         "name": "Macchiato Fax",
         "lat": 45.2491578,
         "lng": 19.849806,
-        "shirt_description": "",
-        "description": "Ja sam Macchiato Fax. Nalazim se u ulici Stevana Musica 20 u Novom Sadu . Kako mi i samo ime kaze nalazim se u blizini fakulteta i imam odličnu kafu . Naravno pored kafe imamo i puno drugih napitaka , a naravno i odlicne hrane u ponudi.",
+        "shirt_description": "Restaurant with an extensive menu and terrace. There is a small non-smoking area (but cigarette smoke may still be present)",
+        "description": "Restaurant with an extensive menu and terrace. There is a small non-smoking area (but cigarette smoke may still be present)",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/macchiatofax\/",
         "maps_url": "https:\/\/goo.gl\/maps\/Z7eFs4x52LEv8WuH6",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/fax.jpg",
         "attributes": [
-            "no_smoking"
+            "smoke",
+            "terrace",
+            "food",
+            "coffee_shop"
         ],
         "verified": false
     },
