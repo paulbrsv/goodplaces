@@ -898,17 +898,19 @@
         "name": "ALBYSUPERSTORE",
         "lat": 45.25014,
         "lng": 19.85184,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "T-shirts, socks, desserts and coffee. There is a small terrace and porridge for breakfast.",
+        "description": "T-shirts, socks, desserts and coffee. There is a small terrace and porridge for breakfast.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/albysuperstore.rs",
+        "maps_url": "https:\/\/maps.app.goo.gl\/AeinU44YWgfWsifr8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/alby.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "desserts",
+            "terrace",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "SOC",
@@ -919,7 +921,7 @@
         "link": "",
         "instagram": "",
         "maps_url": "",
-        "image": "",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/soc.png",
         "attributes": [
             "specialty"
         ],
