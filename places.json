@@ -315,16 +315,20 @@
         "name": "Zenit Books, Coffee, Bar, & Bookstore",
         "lat": 45.2570533,
         "lng": 19.840729,
-        "shirt_description": "",
-        "description": "Расположенный на первом этаже одного из старейших многоэтажных домов в Нови-Саде (1931 г.), с его интерьером, бар стремится сохранить.",
+        "shirt_description": "A bookstore and café bar. The division between smoking and non-smoking areas is very loose, so cigarette smoke may be present",
+        "description": "A bookstore and café bar. The division between smoking and non-smoking areas is very loose, so cigarette smoke may be present. There are events and music, coffee, snacks and alcohol.",
         "link": "https:\/\/zenitbooks.com\/",
         "instagram": "",
         "maps_url": "https:\/\/goo.gl\/maps\/xk9spuW9uGgq2nuG9",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/zenit.webp",
         "attributes": [
-            "no_smoking"
+            "smoke",
+            "pets_allowed",
+            "coffee_shop",
+            "bar",
+            "snacks"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Pizzeria Adrijana",
