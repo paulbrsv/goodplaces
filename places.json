@@ -307,25 +307,9 @@
         "attributes": [
             "smoke",
             "terrace",
-            "food",
-            "coffee_shop"
+            "food"
         ],
-        "verified": false
-    },
-    {
-        "name": "Macchiato Liman",
-        "lat": 45.2396702,
-        "lng": 19.8358342,
-        "shirt_description": "",
-        "description": "Macchiato Liman, nezaobilazno mirno mesto za kafu, ručak i sastanak. Smešten u srcu Limana pored Dunava, sa pogledom na zelenilo vašeg omiljenog parka. Karakterističan je po svom prijatnom ambijentu i udobnom enterijeru. Ceo jedan sprat je revervisan za g",
-        "link": "",
-        "instagram": "https:\/\/www.instagram.com\/macchiato_liman\/",
-        "maps_url": "https:\/\/goo.gl\/maps\/jLDw9Us1MPbc6yor9",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
-        "attributes": [
-            "no_smoking"
-        ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Zenit Books, Coffee, Bar, & Bookstore",
