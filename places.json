@@ -364,16 +364,19 @@
         "name": "CoffeeRide",
         "lat": 45.2505635,
         "lng": 19.8332106,
-        "shirt_description": "",
-        "description": "A great little cafe & Bicycle Workshop",
+        "shirt_description": "A little cafe & bicycle workshop",
+        "description": "A little cafe & bicycle workshop",
         "link": "https:\/\/coffeeride.day\/",
-        "instagram": "",
+        "instagram": "https:\/\/www.instagram.com\/CoffeeRide.ns",
         "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/cofferide.jpg",
         "attributes": [
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Urbano",
