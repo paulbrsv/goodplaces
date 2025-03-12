@@ -453,78 +453,78 @@
         "verified": false
     },
     {
-        "name": "Teplica Wine bar",
+        "name": "TEPLICA Wine bar",
         "lat": 45.2522,
         "lng": 19.841,
-        "shirt_description": "",
-        "description": "Современный кофейный бар с минималистичным интерьером.",
-        "link": "https:\/\/example.com",
-        "instagram": "https:\/\/instagram.com\/block32_coffee",
-        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "shirt_description": "Cozy corner of sips and stories. Wine shop and small wine bar. ",
+        "description": "Cozy corner of sips and stories. Wine shop and small wine bar. ",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/teplica.rs\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/cekHQ4FHxuGxsfwC7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/teplica.jpg",
         "attributes": [
             "no_smoking",
             "pets_allowed",
             "bar",
-            "wine"
+            "wine",
+            "snacks"
         ],
-        "verified": false
+        "verified": true
     },
     {
-        "name": "Martin kafa",
+        "name": "Martin kafa Dunavska",
         "lat": 45.25696,
         "lng": 19.85002,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A coffee shop in a quiet passage, with a few tables outside, offering a choice of coffee, tea, and smoothies.",
+        "description": "A coffee shop in a quiet passage, with a few tables outside, offering a choice of coffee, tea, and smoothies.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/martinkafa\/",
         "maps_url": "https:\/\/maps.app.goo.gl\/nmmNdAPa7Zv3snmq6",
-        "image": "",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/martin1.jpg",
         "attributes": [
             "no_smoking",
+            "pets_allowed",
             "coffee_shop",
-            "desserts",
-            "specialty"
-        ],
-        "verified": false
-    },
-    {
-        "name": "Martin Kafa",
-        "lat": 45.25175,
-        "lng": 19.84205,
-        "shirt_description": "Железничка",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            "no_smoking",
-            "coffee_shop",
-            "specialty",
             "desserts"
         ],
-        "verified": false
+        "verified": true
+    },
+    {
+        "name": "Martin Kafa Železnička",
+        "lat": 45.25175,
+        "lng": 19.84205,
+        "shirt_description": "A coffee shop in a quiet passage, with a few tables outside, offering a choice of coffee, tea, and smoothies.",
+        "description": "A coffee shop in a quiet passage, with a few tables outside, offering a choice of coffee, tea, and smoothies.",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/martinkafa\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/tNQfAYjoGeaG6hA18",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/martin1.jpg",
+        "attributes": [
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
+        ],
+        "verified": true
     },
     {
         "name": "Izlet 2",
         "lat": 45.25682,
         "lng": 19.84666,
-        "shirt_description": "Второй излёт",
-        "description": "",
+        "shirt_description": "New Izlet. Delicious pastries, sandwiches and coffee. The cafe is small and without a signboard. ",
+        "description": "New Izlet. Delicious pastries, sandwiches and coffee. The cafe is small and without a signboard. ",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/_izlet\/",
-        "maps_url": "https:\/\/maps.app.goo.gl\/xU5wFZDJ1aL8KfPo7",
-        "image": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/w4sXGZvY5YRrJ9z46",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/izlet.png",
         "attributes": [
             "no_smoking",
-            "cafe",
-            "desserts",
-            "food",
+            "pets_allowed",
             "coffee_shop",
-            "specialty"
+            "desserts",
+            "snacks"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Kofilin",
