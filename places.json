@@ -3,8 +3,8 @@
         "name": "Biciklana 23",
         "lat": 45.24016169,
         "lng": 19.84743287,
-        "shirt_description": "Кафе и велосервис с полностью некурящим залом.",
-        "description": "Кафе и велосервис с полностью некурящим залом, в меню могут быть дессерты и сендвичи. В тёплое время года есть велосипеды напрокат.",
+        "shirt_description": "Completely non-smoking cafe and bicycle service",
+        "description": "Completely non-smoking cafe and bicycle service, the menu can include desserts and sandwiches. Bicycles can be rented during the warmer months.",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/biciklana23\/",
         "maps_url": "https:\/\/goo.gl\/maps\/cCWtgfoQ8YfxmLwS7",
@@ -246,16 +246,18 @@
         "name": "Toster Bar",
         "lat": 45.2562211,
         "lng": 19.84431976,
-        "shirt_description": "",
-        "description": "Бургеры из 100% говядины и крафтовое пиво",
+        "shirt_description": "Burgers from original recipes",
+        "description": "Homemade sauces made from original recipes, locally sourced meat, additive-free bread, and a bean salad together make a perfect combination that leaves no one indifferent.",
         "link": "https:\/\/tosterbar.rs\/",
-        "instagram": "",
+        "instagram": "https:\/\/www.instagram.com\/tosterbar\/",
         "maps_url": "https:\/\/goo.gl\/maps\/mpJFeVnAKbA3pVXv9",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/toster.jpg",
         "attributes": [
-            "no_smoking"
+            "no_smoking",
+            "food",
+            "bar"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "FREESHKA",
@@ -1192,6 +1194,21 @@
     },
     {
         "name": "Jasmin A Maslina",
+        "lat": 0,
+        "lng": 0,
+        "shirt_description": "",
+        "description": "",
+        "link": "",
+        "instagram": "",
+        "maps_url": "",
+        "image": "",
+        "attributes": [
+            ""
+        ],
+        "verified": false
+    },
+    {
+        "name": "plant power",
         "lat": 0,
         "lng": 0,
         "shirt_description": "",
