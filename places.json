@@ -260,19 +260,20 @@
         "verified": true
     },
     {
-        "name": "FREESHKA",
+        "name": "FREESHKA COFFEE",
         "lat": 45.24698,
         "lng": 19.83928,
-        "shirt_description": "",
-        "description": "Kafa za poneti, ali može da se sedi i unutra (mali lokal, šank stolovi)",
+        "shirt_description": "A small coffee shop with a small terrace and its own coffee roasting",
+        "description": "A small coffee shop with a small terrace and its own coffee roasting",
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/freeshkakafa\/",
         "maps_url": "https:\/\/goo.gl\/maps\/PFdDrw9dnbdbnnJ6A",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/freeshka.jpg",
         "attributes": [
-            "no_smoking"
+            "no_smoking",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Block 32",
@@ -932,20 +933,20 @@
         "verified": false
     },
     {
-        "name": "FREESHKA 2",
+        "name": "FREESHKA COFFEE 2",
         "lat": 45.25943,
         "lng": 19.8324,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A small coffee shop with a small terrace and its own coffee roasting",
+        "description": "A small coffee shop with a small terrace and its own coffee roasting",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/freeshkakafa\/",
+        "maps_url": "https:\/\/goo.gl\/maps\/PFdDrw9dnbdbnnJ6A",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/freeshka.jpg",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "La Dolce Fiore",
