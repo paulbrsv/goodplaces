@@ -379,38 +379,42 @@
         "verified": true
     },
     {
-        "name": "Urbano",
+        "name": "Urbano Kafa & Voće",
         "lat": 45.2487,
         "lng": 19.8329,
-        "shirt_description": "",
-        "description": "Лофт-пространство с качественным кофе и стильной атмосферой.",
-        "link": "https:\/\/example.com",
+        "shirt_description": "Coffee shop on Braće Ribnikar Street, coffee, tea and fresh juices.",
+        "description": "Coffee shop on Braće Ribnikar Street, coffee, tea and fresh juices.",
+        "link": "",
         "instagram": "https:\/\/instagram.com\/urbano_coffee",
-        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "maps_url": "https:\/\/maps.app.goo.gl\/dmLACj19WzFCnq3J7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/urbano.jpg",
         "attributes": [
-            "desserts",
             "no_smoking",
-            "specialty"
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
-        "name": "Pendzer",
+        "name": "Pendžer",
         "lat": 45.2608,
         "lng": 19.8198,
-        "shirt_description": "",
-        "description": "Место, где можно насладиться спешелти кофе и уютной музыкой.",
-        "link": "https:\/\/example.com",
+        "shirt_description": "A cozy and charming coffee shop with a great selection of alternative coffee. Tea, hot chocolate, croissants, and oreshki with sweetened condensed milk.",
+        "description": "A cozy and charming coffee shop with a great selection of alternative coffee. Tea, hot chocolate, croissants, and oreshki with sweetened condensed milk.",
+        "link": "",
         "instagram": "https:\/\/instagram.com\/pendzer_coffee",
-        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "maps_url": "https:\/\/maps.app.goo.gl\/1BrGKzswxXEgimK8A",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/pendzer.jpg",
         "attributes": [
-            "specialty",
+            "no_smoking",
             "pets_allowed",
-            "no_smoking"
+            "coffee_shop",
+            "specialty",
+            "desserts",
+            "beans_sale"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Kafetea",
