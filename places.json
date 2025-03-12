@@ -685,33 +685,36 @@
         "name": "ROZBRAT | STREET-BISTRO",
         "lat": 45.25848,
         "lng": 19.8459,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Full-day breakfasts and delicious burgers",
+        "description": "Full-day breakfasts and delicious burgers",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/rozbrat\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/yFRuZP4eG8PxFGLs9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/rozbrat.jpg",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "bar",
+            "snacks"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Fika Coffee Shop",
         "lat": 45.25839,
         "lng": 19.846,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A small and cozy coffee shop in the city center, offering coffee, tea and pastries.",
+        "description": "A small and cozy coffee shop in the city center, offering coffee, tea and pastries.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/fikacoffee.rs\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/zMdk6NaKKB4YyNj77",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/fika.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Green House Coffee",
