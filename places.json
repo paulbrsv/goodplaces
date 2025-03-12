@@ -831,33 +831,38 @@
         "name": "Drago mi je",
         "lat": 45.2535,
         "lng": 19.84044,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Cozy café in the heart of Novi Sad\r\nGreat coffee • Tea • Desserts in front of the Synagogue",
+        "description": "Cozy café in the heart of Novi Sad\r\nGreat coffee • Tea • Desserts in front of the Synagogue",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/dragomije.coffee",
+        "maps_url": "https:\/\/maps.app.goo.gl\/UuyWaz78vCfUre4a6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/drago.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts",
+            "snacks"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "MAYBE COFFEE?",
         "lat": 45.2547,
         "lng": 19.84,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A cute little coffee shop with desserts",
+        "description": "A cute little coffee shop with desserts",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/maybe_coffee.rs",
+        "maps_url": "https:\/\/maps.app.goo.gl\/omLC395XcpGCkXR4A",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/maybe.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Kafeterija II",
