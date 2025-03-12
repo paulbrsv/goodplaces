@@ -420,19 +420,19 @@
         "name": "Kafetea",
         "lat": 45.2616,
         "lng": 19.852,
-        "shirt_description": "",
-        "description": "Кофейня с уникальной чайной картой и домашней выпечкой.",
-        "link": "https:\/\/example.com",
+        "shirt_description": "A cozy coffee shop with delicious coffee, offering specialty coffee beans.",
+        "description": "A cozy coffee shop with delicious coffee, offering specialty coffee beans.",
+        "link": "",
         "instagram": "https:\/\/instagram.com\/kafetea_coffee",
-        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "maps_url": "https:\/\/maps.app.goo.gl\/kNhFBFpAPjoPmntm7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/kafetea.png",
         "attributes": [
-            "specialty",
-            "desserts",
             "no_smoking",
-            "pets_allowed"
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Bruno Bar",
