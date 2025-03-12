@@ -812,17 +812,20 @@
         "name": "tiho i toplo",
         "lat": 45.2569,
         "lng": 19.837,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A coffee shop with several tables inside and outside. They offer desserts, classic coffee and alternative",
+        "description": "A coffee shop with several tables inside and outside. They offer desserts, classic coffee and alternative",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/tihotoplo\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/BEC1Dc4TnqxpUkV1A",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/tiho.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "specialty",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Drago mi je",
