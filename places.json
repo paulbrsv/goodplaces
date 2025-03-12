@@ -916,32 +916,37 @@
         "name": "SOC",
         "lat": 45.2543,
         "lng": 19.8456,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Outdoor coffee shop and also wine & cocktail bar. They only work during the warmer months. Check the cafe's instagram before visiting ",
+        "description": "Outdoor coffee shop and also wine & cocktail bar. They only work during the warmer months. Check the cafe's instagram before visiting ",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
+        "instagram": "https:\/\/www.instagram.com\/placetosoc\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/gCvt4bgDrYCF1KKV6",
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/soc.png",
         "attributes": [
-            "specialty"
+            "coffee_shop",
+            "terrace",
+            "pets_allowed",
+            "bar"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Mala Radionica",
         "lat": 45.25272,
         "lng": 19.83461,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A specialty coffee shop with a diverse selection of its own roasted beans",
+        "description": "A specialty coffee shop with a diverse selection of its own roasted beans",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/malaradionicakafens",
+        "maps_url": "https:\/\/maps.app.goo.gl\/ggnp96Km4Z7AEXgi8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/radionica.png",
         "attributes": [
-            "",
-            "specialty"
+            "pets_allowed",
+            "coffee_shop",
+            "specialty",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "FREESHKA COFFEE 2",
