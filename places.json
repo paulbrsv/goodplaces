@@ -33,7 +33,7 @@
         "attributes": [
             "no_smoking",
             "pets_allowed",
-            "coffee_shop",
+            "cafe",
             "desserts",
             "food",
             "terrace",
@@ -74,7 +74,7 @@
             "food",
             "vegan",
             "terrace",
-            "coffee_shop"
+            "cafe"
         ],
         "verified": true
     },
@@ -145,7 +145,7 @@
         "attributes": [
             "no_smoking",
             "pets_allowed",
-            "coffee_shop",
+            "cafe",
             "bar",
             "desserts",
             "food",
@@ -167,7 +167,7 @@
             "no_smoking",
             "pets_allowed",
             "bar",
-            "coffee_shop"
+            "cafe"
         ],
         "verified": true
     },
@@ -730,7 +730,7 @@
         "attributes": [
             "smoke",
             "bar",
-            "coffee_shop",
+            "cafe",
             "desserts",
             "food",
             "breakfast",
@@ -923,7 +923,7 @@
         "attributes": [
             "no_smoking",
             "pets_allowed",
-            "coffee_shop",
+            "cafe",
             "food",
             "breakfast"
         ],
@@ -998,7 +998,7 @@
             "no_smoking",
             "pets_allowed",
             "desserts",
-            "coffee_shop"
+            "cafe"
         ],
         "verified": true
     },
@@ -1090,7 +1090,7 @@
         "attributes": [
             "pets_allowed",
             "bar",
-            "coffee_shop",
+            "cafe",
             "terrace"
         ],
         "verified": true
@@ -1108,7 +1108,7 @@
         "attributes": [
             "pets_allowed",
             "bar",
-            "coffee_shop",
+            "cafe",
             "desserts",
             "food",
             "breakfast",
@@ -1128,7 +1128,7 @@
         "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/velvet.png",
         "attributes": [
             "bar",
-            "coffee_shop",
+            "cafe",
             "food",
             "terrace",
             "breakfast"
