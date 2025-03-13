@@ -640,20 +640,23 @@
         "verified": false
     },
     {
-        "name": "Šeherezada",
+        "name": "Šeherezada 021",
         "lat": 45.25676,
         "lng": 19.8474,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Desserts, ice cream and coffee. There is a terrace in summer.",
+        "description": "Desserts, ice cream and coffee. There is a terrace in summer.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/seherezada.ns23\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/8p3wHBBZEG6v2FVK6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/seherezada.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "coffee_shop",
+            "ice_cream",
+            "desserts",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "ROZBRAT | STREET-BISTRO",
