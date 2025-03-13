@@ -1122,19 +1122,23 @@
         "verified": false
     },
     {
-        "name": "лофт у позориште",
-        "lat": 0,
-        "lng": 0,
-        "shirt_description": "большая тераса\\внутренник дворик",
-        "description": "",
+        "name": "Loft Bašta",
+        "lat": 45.2563,
+        "lng": 19.84315,
+        "shirt_description": "Probably the largest garden in the city. There is a varied menu, coffee and alcohol to choose from.",
+        "description": "Probably the largest garden in the city. There is a varied menu, coffee and alcohol to choose from.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/loft_coffee_food_bar\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/FqrwXJwe6AcXH4oB6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/loftgarden.png",
         "attributes": [
-            ""
+            "pets_allowed",
+            "bar",
+            "coffee_shop",
+            "food",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Jasmin A Maslina",
