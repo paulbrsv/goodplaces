@@ -579,49 +579,23 @@
         "verified": false
     },
     {
-        "name": "MLIN coffee & tea shop",
-        "lat": 45.25004,
-        "lng": 19.8398,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
-    },
-    {
-        "name": "MLIN coffee & tea shop",
-        "lat": 45.26179,
-        "lng": 19.83537,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
-    },
-    {
-        "name": "MLIN Coffee & Tea Shop GARDEN",
+        "name": "MLIN Coffee GARDEN",
         "lat": 45.2498,
         "lng": 19.8007,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A coffee shop with it's own roasted beans and a terrace, hidden in the backstreets.",
+        "description": "A coffee shop with it's own roasted beans and a terrace, hidden in the backstreets.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/mlin_coffeeandteashop\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/u1UamMj3QNX9yFJR6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/mlin.jpg",
         "attributes": [
-            ""
+            "pets_allowed",
+            "bar",
+            "coffee_shop",
+            "beans_sale",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Čarolija Kafe",
