@@ -953,17 +953,19 @@
         "name": "Hedonist Aperitif bar & Coffee",
         "lat": 45.2567,
         "lng": 19.8487,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Coffee shop and cocktail bar, there are desserts. The bar hosts various events",
+        "description": "Coffee shop and cocktail bar, there are desserts. The bar hosts various events",
         "link": "",
         "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "maps_url": "https:\/\/maps.app.goo.gl\/etJWtzTMcTGto72G6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/hedonist.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "bar",
+            "pets_allowed",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Seal&Tea",
