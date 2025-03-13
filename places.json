@@ -1062,34 +1062,22 @@
         "verified": false
     },
     {
-        "name": "Napoli Centrale",
-        "lat": 45.25688,
-        "lng": 19.84995,
-        "shirt_description": "",
-        "description": "",
+        "name": "Radio Cafe",
+        "lat": 45.25772,
+        "lng": 19.843136,
+        "shirt_description": "The cafe itself has an authentic patio with a pond, as well as various events.",
+        "description": "The cafe itself has an authentic patio with a pond, as well as various events.",
         "link": "",
-        "instagram": "",
-        "maps_url": "https:\/\/maps.app.goo.gl\/uWPtGTqP4i2ohztT6",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/radiocafens\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/RJvWudKZ7zV8mg1w6",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/radio.png",
         "attributes": [
-            ""
+            "pets_allowed",
+            "bar",
+            "coffee_shop",
+            "terrace"
         ],
-        "verified": false
-    },
-    {
-        "name": "радио кафе",
-        "lat": 0,
-        "lng": 0,
-        "shirt_description": "тераса во внутреннем дворике",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Vremeplov",
