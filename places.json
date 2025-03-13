@@ -553,11 +553,12 @@
         "link": "",
         "instagram": "https:\/\/www.instagram.com\/tischler_store\/",
         "maps_url": "https:\/\/maps.app.goo.gl\/Lg2A4sGCbzJWDgkG7",
-        "image": "",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/tischler.png",
         "attributes": [
             "no_smoking",
             "pets_allowed",
             "coffee_shop",
+            "desserts",
             "terrace"
         ],
         "verified": true
