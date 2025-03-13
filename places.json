@@ -942,17 +942,20 @@
         "name": "La Dolce Fiore",
         "lat": 45.24826,
         "lng": 19.8489,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "An updated cafe with an extensive menu. European cuisine and events every weekend",
+        "description": "An updated cafe with an extensive menu. European cuisine and events every weekend",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/ladolcefiore_cafe",
+        "maps_url": "https:\/\/maps.app.goo.gl\/GT1ra6fM3uwBsSSH8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/ladorce.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "food",
+            "breakfast"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Mandarin",
