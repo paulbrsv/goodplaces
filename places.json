@@ -966,16 +966,19 @@
         "name": "Seal&Tea",
         "lat": 45.25799,
         "lng": 19.83827,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Teahouse and culture centre in Novi Sad",
+        "description": "Teahouse and culture centre in Novi Sad",
         "link": "",
-        "instagram": "",
-        "maps_url": "https:\/\/maps.app.goo.gl\/41RJeJLpi2Q3Zsd86",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/sealkia_tea\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/BtfmjobufnQA6kUM7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/sealtea.png",
         "attributes": [
-            ""
+            "no_smoking",
+            "pets_allowed",
+            "desserts",
+            "coffee_shop"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Green House Liman",
