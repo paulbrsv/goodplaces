@@ -1045,16 +1045,19 @@
         "name": "Coffee House Tulip",
         "lat": 45.27746,
         "lng": 19.56731,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Small coffee shop and accommodation in Global, near B.Petrovich and Novi Sad\r\nWorking hours: Friday-Saturday-Sunday 15h-21h",
+        "description": "Small coffee shop and accommodation in Global, near B.Petrovich and Novi Sad\r\nWorking hours: Friday-Saturday-Sunday 15h-21h",
         "link": "",
-        "instagram": "",
-        "maps_url": "https:\/\/maps.app.goo.gl\/RmHnTc2iXsNHxmDB9",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/coffeehousetulip\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/tdZFsBFzC9SpsP5P9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/tulip.png",
         "attributes": [
-            ""
+            "no_smoking",
+            "pets_allowed",
+            "terrace",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Tramontana pizza & wine bar",
