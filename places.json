@@ -408,19 +408,20 @@
         "name": "Bruno Bar",
         "lat": 45.2422,
         "lng": 19.8253,
-        "shirt_description": "",
-        "description": "Современный кофейный бар с минималистичным интерьером.",
-        "link": "https:\/\/example.com",
-        "instagram": "https:\/\/instagram.com\/block32_coffee",
-        "maps_url": "https:\/\/maps.app.goo.gl\/8RX4Sr7XJ8sQdZ2A7",
-        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/demo.jpg",
+        "shirt_description": "Craft Beer, Cocktails, Liquors",
+        "description": "Craft Beer, Cocktails, Liquors",
+        "link": "",
+        "instagram": "https:\/\/www.instagram.com\/brunobar.rs\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/cKjmyUCiW44XKJK37",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/bruno.png",
         "attributes": [
             "no_smoking",
             "pets_allowed",
             "bar",
-            "beer"
+            "beer",
+            "snacks"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "TEPLICA Wine bar",
@@ -544,20 +545,22 @@
         "verified": false
     },
     {
-        "name": "Tishler",
+        "name": "Tischler ",
         "lat": 45.247,
         "lng": 19.8334,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A small coffee shop with a couple of tables and a small terrace. Pastries can be served with coffee.",
+        "description": "A small coffee shop with a couple of tables and a small terrace. Pastries can be served with coffee.  A large assortment of tobacco is available (there is no smoking inside)",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
+        "instagram": "https:\/\/www.instagram.com\/tischler_store\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/Lg2A4sGCbzJWDgkG7",
         "image": "",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Kafeterija Zrno",
