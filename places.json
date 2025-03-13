@@ -1148,7 +1148,7 @@
         "attributes": [
             "pets_allowed",
             "bar",
-            "coffee_shop",
+            "cafe",
             "food",
             "terrace"
         ],
@@ -1183,7 +1183,7 @@
         "attributes": [
             "no_smoking",
             "pets_allowed",
-            "coffee_shop",
+            "cafe",
             "food",
             "breakfast",
             "vegan"
