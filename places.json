@@ -730,17 +730,20 @@
         "name": "Raf Cafe",
         "lat": 45.261,
         "lng": 19.81028,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A cozy cafe with breakfasts and desserts",
+        "description": "A cozy cafe with breakfasts and desserts",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/raf_cafe_\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/fbka8x9bkm87XbqZA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/raf.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "food",
+            "breakfast"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Petrus Caffe",
