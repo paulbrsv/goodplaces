@@ -1023,19 +1023,22 @@
         "verified": false
     },
     {
-        "name": "Green House Coffee 2",
+        "name": "Green House Liman",
         "lat": 45.244645,
         "lng": 19.846743,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Signature drinks and a cozy atmosphere",
+        "description": "Signature drinks and a cozy atmosphere",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/grnhs.serbia\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/L81fkC77jSFvXLdQ9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/green2.png",
         "attributes": [
-            ""
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "FILIPENKO COFFEE BAR",

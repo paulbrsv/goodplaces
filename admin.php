@@ -262,6 +262,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                             <span class="badge badge-light clickable" onclick="addAttribute('beans_sale')">beans_sale</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('desserts')">desserts</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('food')">food</span>
+                            <span class="badge badge-light clickable" onclick="addAttribute('breakfast')">breakfast</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('snacks')">snacks</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('terrace')">terrace</span>
                             <span class="badge badge-light clickable" onclick="addAttribute('vegan')">vegan</span>
