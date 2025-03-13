@@ -850,31 +850,47 @@
         "name": "Kafeterija II",
         "lat": 45.2545,
         "lng": 19.8443,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Full-day breakfasts, a good selection of coffee. The division between smoking and non-smoking areas is very loose, so cigarette smoke may be present. ",
+        "description": "Full-day breakfasts, a good selection of coffee, including alternative, sale of coffee beans.\r\nThe division between smoking and non-smoking areas is very loose, so cigarette smoke may be present. ",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/kafeterijabg\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/6WV5LERaDgSCKGLGA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/kafeteria.jpeg",
         "attributes": [
-            ""
+            "smoke",
+            "pets_allowed",
+            "coffee_shop",
+            "specialty",
+            "beans_sale",
+            "desserts",
+            "food",
+            "breakfast",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Kafeterija",
         "lat": 45.24788,
         "lng": 19.8482,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Full-day breakfasts, a good selection of coffee. The division between smoking and non-smoking areas is very loose, so cigarette smoke may be present. ",
+        "description": "Full-day breakfasts, a good selection of coffee, including alternative, sale of coffee beans.\r\nThe division between smoking and non-smoking areas is very loose, so cigarette smoke may be present. \r\n",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/kafeterijabg\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/6WV5LERaDgSCKGLGA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/kafeteria.jpeg",
         "attributes": [
-            ""
+            "smoke",
+            "pets_allowed",
+            "coffee_shop",
+            "specialty",
+            "beans_sale",
+            "desserts",
+            "food",
+            "breakfast",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "ALBYSUPERSTORE",
