@@ -934,17 +934,20 @@
         "name": "Nomad Cocktail Bar",
         "lat": 45.25623,
         "lng": 19.8498,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A cocktail bar in the heart of the city. There is a terrace in summer.",
+        "description": "A cocktail bar in the heart of the city. There is a terrace in summer.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/nomadthebar",
+        "maps_url": "https:\/\/maps.app.goo.gl\/AfuMCkMj6FwoUkQt5",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/nomad.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "bar",
+            "snacks",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Hedonist Aperitif bar & Coffee",
