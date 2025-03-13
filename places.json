@@ -1092,19 +1092,25 @@
         "verified": false
     },
     {
-        "name": "времеплов",
-        "lat": 0,
-        "lng": 0,
-        "shirt_description": "тераса",
-        "description": "",
+        "name": "Vremeplov",
+        "lat": 45.24623,
+        "lng": 19.83966,
+        "shirt_description": "Breakfast, brunch, lunch, dinner, pastry, artisan gelato, garden",
+        "description": "Breakfast, brunch, lunch, dinner, pastry, artisan gelato, garden",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/bistro.vremeplov\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/Ly98H9dBEEFWT2mLA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/vremeplov.jpg",
         "attributes": [
-            ""
+            "pets_allowed",
+            "bar",
+            "coffee_shop",
+            "desserts",
+            "food",
+            "breakfast",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Velvet NS",
