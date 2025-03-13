@@ -517,36 +517,42 @@
         "verified": true
     },
     {
-        "name": "Coffee Bara 1",
+        "name": "Coffee Bara Rumenačka",
         "lat": 45.2638,
         "lng": 19.8169,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Coffee, desserts and breakfasts",
+        "description": "Coffee, desserts and breakfasts",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/coffeebara.srbija\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/vJ2KQQZzo16JBysw7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/coffeebara.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts",
+            "breakfast"
         ],
-        "verified": false
+        "verified": true
     },
     {
-        "name": "Coffee Bara 2",
-        "lat": 45.2467,
-        "lng": 19.8337,
-        "shirt_description": "",
-        "description": "",
+        "name": "Coffee Bara Gogoljeva",
+        "lat": 45.24669,
+        "lng": 19.83378,
+        "shirt_description": "Coffee, desserts and breakfasts",
+        "description": "Coffee, desserts and breakfasts",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/coffeebara.srbija\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/3VoggdtrDjNW54ja8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/coffeebara.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "desserts",
+            "breakfast"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Tischler ",
@@ -715,16 +721,22 @@
         "name": "Petrus Caffe",
         "lat": 45.2543,
         "lng": 19.8464,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "A large restaurant with a non-smoking lounge on the second floor and a summer terrace.",
+        "description": "A large restaurant with a non-smoking lounge on the second floor and a summer terrace.",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/petrus_ns\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/3rMC5BuvBJCz1XwE8",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/petrus.png",
         "attributes": [
-            ""
+            "smoke",
+            "bar",
+            "coffee_shop",
+            "desserts",
+            "food",
+            "breakfast",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "tiho i toplo",
@@ -1028,21 +1040,6 @@
             "beans_sale"
         ],
         "verified": true
-    },
-    {
-        "name": "Gorski smeško",
-        "lat": 45.18408,
-        "lng": 19.82271,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "https:\/\/maps.app.goo.gl\/Co9w4ZBCpTtpfN8v9",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
     },
     {
         "name": "Coffee House Tulip",
