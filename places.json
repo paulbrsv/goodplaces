@@ -1047,19 +1047,22 @@
         "verified": false
     },
     {
-        "name": "Tramontana",
+        "name": "Tramontana pizza & wine bar",
         "lat": 45.25785,
         "lng": 19.8465,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Probably the best pizza in town, N94 the best pizza in the WORLD ",
+        "description": "Probably the best pizza in town, N94 the best pizza in the WORLD ",
         "link": "",
-        "instagram": "",
-        "maps_url": "https:\/\/maps.app.goo.gl\/53xQ25qHrLKCikib8",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/tramontana_novisad",
+        "maps_url": "https:\/\/maps.app.goo.gl\/nRbNJSsBGQ2e4AdVA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/tramontana.png",
         "attributes": [
-            ""
+            "no_smoking",
+            "bar",
+            "wine",
+            "food"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Radio Cafe",
