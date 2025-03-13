@@ -564,21 +564,6 @@
         "verified": true
     },
     {
-        "name": "Kafeterija Zrno",
-        "lat": 45.2405,
-        "lng": 19.8152,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
-    },
-    {
         "name": "MLIN Coffee GARDEN",
         "lat": 45.2498,
         "lng": 19.8007,
@@ -725,36 +710,6 @@
         "name": "Petrus Caffe",
         "lat": 45.2543,
         "lng": 19.8464,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
-    },
-    {
-        "name": "Korpa Deli Bistro",
-        "lat": 45.2532,
-        "lng": 19.8143,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
-    },
-    {
-        "name": "Park Novi Restaurants",
-        "lat": 45.25869,
-        "lng": 19.80708,
         "shirt_description": "",
         "description": "",
         "link": "",
@@ -961,17 +916,19 @@
         "name": "Mandarin",
         "lat": 45.24888,
         "lng": 19.83378,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "Spacious cafe bar, coffee, juices, light alcohol on the menu. The cafe regularly hosts various events",
+        "description": "Spacious cafe bar, coffee, juices, light alcohol on the menu. The cafe regularly hosts various events",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/mandarin_novi_sad",
+        "maps_url": "https:\/\/maps.app.goo.gl\/TaC4LityzwjC2D4r7",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/mandarin.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "bar"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Nomad Cocktail Bar",
@@ -1113,21 +1070,6 @@
         "link": "",
         "instagram": "",
         "maps_url": "https:\/\/maps.app.goo.gl\/uWPtGTqP4i2ohztT6",
-        "image": "",
-        "attributes": [
-            ""
-        ],
-        "verified": false
-    },
-    {
-        "name": "философ",
-        "lat": 0,
-        "lng": 0,
-        "shirt_description": "",
-        "description": "",
-        "link": "",
-        "instagram": "",
-        "maps_url": "",
         "image": "",
         "attributes": [
             ""
