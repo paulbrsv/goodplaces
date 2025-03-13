@@ -1107,19 +1107,23 @@
         "verified": false
     },
     {
-        "name": "вельвет",
-        "lat": 0,
-        "lng": 0,
-        "shirt_description": "тераса",
-        "description": "",
+        "name": "Velvet NS",
+        "lat": 45.24364,
+        "lng": 19.83554,
+        "shirt_description": "Large terrace and garden, varied menu",
+        "description": "Large terrace and garden, varied menu",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/velvet_novi_sad\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/53Z27uGCXKf5FYALA",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/velvet.png",
         "attributes": [
-            ""
+            "bar",
+            "coffee_shop",
+            "food",
+            "terrace",
+            "breakfast"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Loft Bašta",
