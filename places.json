@@ -601,17 +601,19 @@
         "name": "Čarolija Kafe",
         "lat": 45.24195,
         "lng": 19.84725,
-        "shirt_description": "",
-        "description": "",
+        "shirt_description": "The non-smoking lounge is separated from the main one. In summer, there is a terrace hidden in the backstreets. ",
+        "description": "The non-smoking lounge is separated from the main one. In summer, there is a terrace hidden in the backstreets. ",
         "link": "",
-        "instagram": "",
-        "maps_url": "",
-        "image": "",
+        "instagram": "https:\/\/www.instagram.com\/carolijapecivakafe\/",
+        "maps_url": "https:\/\/maps.app.goo.gl\/kMm8dU8M2Q1eoHrh9",
+        "image": "https:\/\/paulbrsv.github.io\/goodplaces\/image\/carolia.png",
         "attributes": [
-            "",
-            "no_smoking"
+            "no_smoking",
+            "pets_allowed",
+            "coffee_shop",
+            "terrace"
         ],
-        "verified": false
+        "verified": true
     },
     {
         "name": "Šeherezada 021",
